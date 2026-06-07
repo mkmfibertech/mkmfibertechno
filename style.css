@@ -53,3 +53,15 @@ footer{
     padding:20px;
     margin-top:20px;
 }
+
+nav{
+    background:#FFD700;
+    padding:15px;
+}
+
+nav a{
+    color:#003366;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
