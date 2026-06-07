@@ -65,3 +65,8 @@ nav a{
     margin:10px;
     font-weight:bold;
 }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
