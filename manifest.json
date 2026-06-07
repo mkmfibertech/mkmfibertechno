@@ -1,0 +1,9 @@
+{
+  "name": "MKM FiberTechno",
+  "short_name": "MKM Fiber",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#003366",
+  "icons": []
+}
