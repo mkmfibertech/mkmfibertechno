@@ -70,3 +70,10 @@ nav {
     top: 0;
     z-index: 1000;
 }
+h2 {
+    border-bottom: 3px solid #FFC107;
+    display: inline-block;
+}
+section {
+    margin: 40px 0;
+}
