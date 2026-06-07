@@ -76,3 +76,20 @@ h2 {
 }
 section {    margin: 30px 0;
 }
+.floating-btn{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    color:white;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    z-index:9999;
+}
