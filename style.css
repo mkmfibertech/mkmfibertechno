@@ -265,7 +265,12 @@ footer p {
   background: #003366;
   color: white;
 }
-
+   
+.main-nav a.active {
+  background: #003366;
+  color: white;
+}
+   
   .card {
     margin: 10px 15px;
   }
