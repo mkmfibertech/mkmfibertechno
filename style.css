@@ -85,15 +85,18 @@ nav a:hover {
    BUTTONS (PRO STYLE)
 ========================= */
 .btn {
-  display: inline-block;
-  background: #25d366;
-  color: white;
-  padding: 12px 22px;
+  display: inline-flex;
+  background: #003366;
+  color: #ffffff;
+  padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    align-items:center;
+    gap:8px;
+
 }
 
 .btn:hover {
