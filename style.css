@@ -299,8 +299,10 @@ footer p {
 .social-icons a{
     font-size:42px;
     transition:0.3s;
+    color:#FFC107;
 }
 
 .social-icons a:hover{
     transform:scale(1.2);
+    color: white;
    }
