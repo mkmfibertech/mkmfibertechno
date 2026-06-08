@@ -1,6 +1,7 @@
 body {
   font-family: Arial;
   margin: 0;
+  padding: 0;
   background: #f4f4f4;
   text-align: center;
 }
@@ -8,8 +9,13 @@ body {
 header {
   background: #003366;
   color: #FFD700;
-  padding: 20px;
-}
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  }
 
 .hero {
   padding: 20px;
