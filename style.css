@@ -132,3 +132,20 @@ section {    margin: 30px 0;
     object-fit:cover;
     display:block;
 }
+
+.social-icons{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:20px 0;
+}
+
+.social-icons a{
+font-size:28px;
+color:#0056B3;
+transition:.3s;
+}
+
+.social-icons a:hover{
+transform:translateY(-4px);
+}
