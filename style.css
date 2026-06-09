@@ -119,9 +119,9 @@ nav a:hover {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  background: #0055aa
-   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+    background: #0055aa;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 .btn i {
     font-size: 18px;
@@ -242,39 +242,22 @@ h2::after {
   line-height: 1.6;
 }
 
+
 @media (max-width: 768px) {
 
-  .hero-slider {
-    height: 250px;
-    border-radius: 12px;
-     margin: 10px auto;
-  }
-
-
-  .slide-content {
-    bottom: 10px;
-    right: 10px;
-    left: 10px;
-    padding: 10px;
-  }
-   .slide img {
-        height: 300px;
+    .hero-slider {
+        ...
     }
-   
 
-  .slide-content h2 {
-    font-size: 1.2rem;
-  }
+    .slide-content {
+        ...
+    }
 
-  .slide-content p {
-    font-size: 0.95rem;
-  }
-   }
-
-  .btn {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
 
 /* =========================
    FOOTER
