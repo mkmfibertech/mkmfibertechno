@@ -2,107 +2,146 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>معرض الأعمال - MKM FiberTechno</title>
-<link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>معرض الأعمال - MKM FiberTechno</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
-   
-  <nav class="main-nav">
-  <a href="index.html">الرئيسية</a>
-  <a href="pricing.html">الأسعار</a>
-  <a href="products.html">المنتجات</a>
-  <a href="gallery.html" class="active">معرض الأعمال</a>
-  <a href="videos.html">الفيديوهات</a>
-</nav>
 
 <body>
-<a href="gallery.html">Gallery</a>
-<section id="gallery">
-   ...
-</section>
 
-  
-</header>
- 
+    <!-- القائمة الرئيسية -->
 
-  
+    <nav class="main-nav">
 
-  <img src="images/onu-cairo-new-capital.jpg"
-     alt="تركيب ONU بالقاهرة الجديدة">
-  <img src="images/onu-cairo-new-capital.jpg"
-     alt="تركيب ONU بالقاهرة الجديدة">
-  <img src="images/onu-cairo-new-capital.jpg"
-     alt="تركيب ONU بالقاهرة الجديدة">
-  <--end اول ٣ صور بدون lazy-->
-    
-  <div class="gallery-card">
-    <img src="images/onu1.jpg"
-         alt="تركيب ONU داخل منزل"
-         loading="lazy"
-      width="400"
-     height="300">
-    
-    <p>تركيب ONU داخل منزل</p>
-</div>
+        <a href="index.html">الرئيسية</a>
 
-<div class="gallery-card">
-    <img src="images/fiber1.jpg"
-         alt="تمديد كابل فايبر"
-         loading="lazy"
-      width="400"
-     height="300">
-  
-    <p>تمديد كابل فايبر داخلي</p>
-</div>
+        <a href="pricing.html">الأسعار</a>
 
-<div class="gallery-card">
-    <img src="images/router1.jpg"
-         alt="تركيب راوتر"
-         loading="lazy"
-      width="400"
-     height="300">
+        <a href="products.html">المنتجات</a>
 
-    <p>تعليق وتركيب راوتر</p>
-</div>
-  <div class="gallery">
-  <img src="images/gallery/img-1.jpg">
-  <img src="images/gallery/img-2.jpg">
-  <img src="images/gallery/img-3.jpg">
-  </div>
-<div class="gallery-card">
-  <img src="images/onu1.jpg">
-  <h4>تركيب ONU</h4>
-  <p>القاهرة - اختبار إشارة قبل التسليم</p>
-</div>
-<header>
-<h1>معرض أعمالنا</h1>
-<p>نماذج من أعمال الفايبر المنزلية</p>
-<section class="gallery">
+        <a href="gallery.html" class="active">معرض الأعمال</a>
 
-<div class="gallery-card">
-<img src="images/onu1.jpg">
-<p>تركيب ONU داخل منزل</p>
-</div>
+        <a href="videos.html">الفيديوهات</a>
 
-<div class="gallery-card">
-<img src="images/fiber1.jpg">
-<p>تمديد كابل فايبر داخلي</p>
-</div>
+    </nav>
 
-</section>
+    <!-- عنوان الصفحة -->
 
-  <section>
-<h2>مشاريعنا</h2>
-<p>كل صورة هنا تم تنفيذها فعليًا داخل مواقع عملاء</p>
-  </section>
+    <header class="page-header">
 
-<footer>
+        <h1>معرض أعمالنا</h1>
 
-</footer>
+        <p>نماذج من أعمال الفايبر المنزلية</p>
+
+    </header>
+
+    <!-- معرض الصور -->
+
+    <section class="gallery">
+
+        <!-- أول 3 صور بدون Lazy Loading -->
+
+        <div class="gallery-card">
+
+            <img src="images/onu-cairo-new-capital.jpg"
+                 alt="تركيب ONU بالقاهرة الجديدة"
+                 width="400"
+                 height="300">
+
+            <p>تركيب ONU بالقاهرة الجديدة</p>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/onu-cairo-new-capital.jpg"
+                 alt="تركيب ONU بالقاهرة الجديدة"
+                 width="400"
+                 height="300">
+
+            <p>تركيب ONU بالقاهرة الجديدة</p>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/onu-cairo-new-capital.jpg"
+                 alt="تركيب ONU بالقاهرة الجديدة"
+                 width="400"
+                 height="300">
+
+            <p>تركيب ONU بالقاهرة الجديدة</p>
+
+        </div>
+
+        <!-- باقي الصور بـ Lazy Loading -->
+
+        <div class="gallery-card">
+
+            <img src="images/onu1.jpg"
+                 alt="تركيب ONU داخل منزل"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+
+            <p>تركيب ONU داخل منزل</p>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/fiber1.jpg"
+                 alt="تمديد كابل فايبر داخلي"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+
+            <p>تمديد كابل فايبر داخلي</p>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/router1.jpg"
+                 alt="تعليق وتركيب راوتر"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+
+            <p>تعليق وتركيب راوتر</p>
+
+        </div>
+
+    </section>
+
+    <!-- قسم المشاريع -->
+
+    <section class="projects-section">
+
+        <h2>مشاريعنا</h2>
+
+        <p>كل صورة هنا تم تنفيذها فعليًا داخل مواقع عملاء</p>
+
+    </section>
+
+    <!-- الفوتر -->
+
+    <footer>
+
+        <p>
+            © 2026 MKM FiberTechno - جميع الحقوق محفوظة
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
