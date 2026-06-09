@@ -86,13 +86,14 @@ nav a:hover {
    BUTTONS (PRO STYLE)
 ========================= */
 .btn {
-  display: inline-flex;
+  display: inline-block;
   background: #003366;
-  color: #ffffff;
-  padding: 12px 24px;
+  color: #fff;
+  padding: 12px 25px;
+   margin: 10px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: bold;
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     align-items:center;
@@ -101,8 +102,8 @@ nav a:hover {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  background: #1ebe5d;
+  transform: translateY(-2px);
+  background: #0055aa;
 }
 
 /* =========================
@@ -280,9 +281,11 @@ footer p{
   background: #ffd700;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 12px;
+      align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px;
+      white-space: nowrap;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -307,6 +310,9 @@ footer p{
   background: #003366;
   color: white;
 }
+   .main-nav span {
+   color: #999;
+   }
    
   .card {
     margin: 10px 15px;
