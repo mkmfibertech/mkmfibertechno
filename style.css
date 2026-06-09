@@ -50,7 +50,7 @@ header h1 {
    NAVBAR
 ========================= */
 nav {
-  background: #ffd700;
+ background:#003366;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
