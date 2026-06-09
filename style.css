@@ -476,8 +476,9 @@ gap:20px;
 }
 
 .logo {
-    width: 200px;
+    width: 220px;
     height: auto;
+   max-width: 100%;
 }
 
 .main-header h1 {
