@@ -206,19 +206,34 @@ h2::after {
 /* =========================
    FOOTER
 ========================= */
-footer {
-  background: #003366;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-    
-    
-    
+footer{
+    background:#003366;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
 }
 
-footer p {
-  margin: 5px 0;
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:20px;
+}
+
+.social-icons a{
+    color:#fff;
+    font-size:38px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#FFC107;
+    transform:translateY(-3px);
+}
+
+footer p{
+    margin:10px 0;
+    line-height:1.8;
 }
 
 /* =========================
@@ -308,6 +323,7 @@ footer p {
   opacity: 1;
   transform: scale(1);
    }
+/* old code "gold icons"
 .social-icons{
     display:flex;
     justify-content:center;
@@ -325,7 +341,7 @@ footer p {
 .social-icons a:hover{
     transform:scale(1.2);
     color: white;
-   }
+   }*/
 
 .page-header {
     padding-top: 120px;
