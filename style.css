@@ -338,6 +338,19 @@ footer p{
     color: rgba(255,255,255,0.5);
     font-weight: normal;
 }
+
+   @media (max-width: 768px) {
+
+    .main-nav a {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    .main-nav {
+        gap: 5px;
+    }
+
+   }
 .slide {
   position: absolute;
   width: 100%;
