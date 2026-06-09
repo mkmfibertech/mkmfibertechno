@@ -120,12 +120,12 @@ h2 {
 
 h2::after {
   content: "";
-  width: 60px;
-  height: 3px;
-  background: #ffd700;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
   display: block;
-  margin: 8px auto 0;
-  border-radius: 5px;
+  margin: 10px auto 0;
+  border-radius: 10px;
 }
 
 /* =========================
@@ -343,6 +343,11 @@ footer p{
     color: white;
    }*/
 
+
+
+
+
+/*------ اmaybe code damage images page
 .page-header {
     padding-top: 120px;
     text-align: center;
@@ -357,7 +362,11 @@ footer p{
 .page-header p {
     color: #666;
     font-size: 18px;
-}
+}------*/
+
+
+
+
 
 .gallery {
     display: grid;
