@@ -400,23 +400,28 @@ footer p{
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
 }
 
 .gallery-card {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
 }
 
 .gallery-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    display: block;
 }
 
 .gallery-card p {
