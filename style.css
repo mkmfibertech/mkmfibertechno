@@ -131,25 +131,30 @@ nav a:hover {
    SECTIONS
 ========================= */
 section {
-  padding: 20px 20px;
+  padding: 60px 20px;
    text-align: center;
 }
 .section-title {
     margin-bottom: 20px;
 }
 
+section h2 {
+    margin-bottom: 30px;
+}
+
 h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: #003366;
   position: relative;
+   font-size:2rem;
 }
 
 h2::after {
   content: "";
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #ffd700, #ffb300);
+  width: 70px;
+  height: 3px;
+  background: #ffc107;
   display: block;
   margin: 10px auto 0;
   border-radius: 10px;
@@ -166,18 +171,20 @@ h2::after {
 }
 
 .card {
-  background: white;
-  padding: 18px;
+  background: #fff;
+  padding: 25px;
   margin: 12px auto;
   max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+   text-align: center;
+   height: 100%;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
 /* =========================
