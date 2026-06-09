@@ -30,6 +30,22 @@ header h1 {
   letter-spacing: 1px;
 }
 
+.main-header {
+    background: linear-gradient(135deg,#003366,#00509e);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    opacity: 0.9;
+}
+
 /* =========================
    NAVBAR
 ========================= */
