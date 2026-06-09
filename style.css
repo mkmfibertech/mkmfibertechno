@@ -237,6 +237,7 @@ h2::after {
     border-radius: 12px;
      margin: 10px auto;
   }
+}
 
   .slide-content {
     bottom: 10px;
@@ -257,7 +258,7 @@ h2::after {
     padding: 8px 15px;
     font-size: 14px;
   }
-}
+
 /* =========================
    FOOTER
 ========================= */
@@ -328,7 +329,7 @@ footer p{
   nav {
     gap: 8px;
   }
-
+}
 
 
 .main-nav {
@@ -376,11 +377,6 @@ footer p{
   opacity: 1;
   transform: scale(1);
    }
-
-
-
-
-
 
 
 
