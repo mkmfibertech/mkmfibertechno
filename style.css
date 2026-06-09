@@ -153,6 +153,13 @@ h2::after {
 /* =========================
    CARDS (MODERN STYLE)
 ========================= */
+
+.steps {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
 .card {
   background: white;
   padding: 18px;
