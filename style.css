@@ -102,24 +102,29 @@ nav a:hover {
    BUTTONS (PRO STYLE)
 ========================= */
 .btn {
-  display: inline-block;
+  display: inline-flex;
   background: #003366;
-  color: #fff;
-  padding: 12px 25px;
+  color: white ;
+  padding: 14px 28px;
    margin: 10px;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  font-weight: 700;
+  transition:all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     align-items:center;
+   justify-content: center;
     gap:8px;
 
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  background: #0055aa;
+  transform: translateY(-3px);
+  background: #0055aa
+   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+.btn i {
+    font-size: 18px;
 }
 
 /* =========================
