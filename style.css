@@ -12,6 +12,7 @@ body {
   background: #f5f7fb;
   color: #222;
   line-height: 1.6;
+   text-align: center;
 }
 
 /* =========================
@@ -109,6 +110,7 @@ nav a:hover {
 ========================= */
 section {
   padding: 30px 15px;
+   text-align: center;
 }
 
 h2 {
