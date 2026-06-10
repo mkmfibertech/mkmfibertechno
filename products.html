@@ -40,27 +40,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 اطلب الآن
 </a>
      </div>
-    <div class="card">
-        <h3>Patch Cord</h3>
+    <<div class="product-card">
+    <img src="images/products/patch-cord.jpg"
+         alt="Patch Cord">
 
-        <p>الأطوال المتوفرة:</p>
+    <h3>Patch Cord SC/APC</h3>
 
-        <ul>
-            <li>1 متر</li>
-            <li>5 متر</li>
-            <li>10 متر</li>
-            <li>15 متر</li>
-            <li>20 متر</li>
-            <li>30 متر</li>
-        </ul>
-
-        <p>💡 قد تحتاج أيضاً إلى: Coupler</p>
-
-        <a class="btn"
-           href="https://wa.me/201012646236?text=استفسار عن Patch Cord">
-            استفسر عبر واتساب
-        </a>
-    </div>
+    <button onclick="openModal()"
+            class="btn">
+        عرض التفاصيل
+    </button>
+</div>
 
 
     <section>
@@ -112,6 +102,60 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     
 
 </footer>
+<footer>
+...
+</footer>
 
+<div id="productModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img src="images/products/patch-cord.jpg"
+             alt="Patch Cord">
+
+        <h2>Patch Cord SC/APC</h2>
+
+        <p>
+            متوفر بالأطوال:
+            <br>
+            5 متر - 10 متر - 15 متر - 20 متر - 30 متر
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function openModal() {
+    document.getElementById("productModal")
+            .style.display = "block";
+}
+
+document.querySelector(".close")
+        .onclick = function() {
+
+    document.getElementById("productModal")
+            .style.display = "none";
+}
+
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById("productModal");
+
+    if (event.target == modal) {
+
+        modal.style.display = "none";
+
+    }
+}
+
+</script>
+
+</body>
+    
 </body>
 </html>
