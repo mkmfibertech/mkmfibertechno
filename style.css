@@ -548,3 +548,37 @@ gap:20px;
     background: #FFC107;
     color: #003366;
 }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
