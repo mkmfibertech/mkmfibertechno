@@ -30,34 +30,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="main-header">
-
-  <div class="logo-container">
-     <div>        
-            <p></p>حلول الفايبر المنزليه </p>
-        </div>
-        <img src="images/logo.svg"
-             alt="MKM FiberTechno Logo"
-             class="logo">
-
-    </div>
-
-</header>
-
-<!-- ================= NAV ================= -->
-
- <nav class="main-nav">
-    <a href="index.html" class="active">الرئيسية</a>
-    <a href="pricing.html">الأسعار</a>
-    <a href="products.html">المنتجات</a>
-    <a href="gallery.html">معرض الأعمال</a>
-    <a href="videos.html">الفيديوهات</a>
-</nav>
-
-  <div class="beta-notice">
-    🚧 نسخة تجريبية (Beta) - نعمل باستمرار على تحسين وتطوير الموقع
-  </div>
+<!-- ================= HEADER.html ================= -->
+<div id="header-container"></div>
 
 <!-- ================= slide ================= -->
   
@@ -380,5 +354,29 @@ setInterval(() => {
   <a href="#" class="back-to-top">
     <i class="fas fa-arrow-up"></i>
 </a>
+
+
+  <script>
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+
+        const currentPage =
+            window.location.pathname.split('/').pop()
+            || 'index.html';
+
+        document.querySelectorAll('.main-nav a')
+            .forEach(link => {
+
+            if (link.getAttribute('href')
+                === currentPage) {
+
+                link.classList.add('active');
+            }
+
+        });
+    });
+          </script>
 </body>
 </html>
