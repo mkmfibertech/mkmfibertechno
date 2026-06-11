@@ -120,6 +120,15 @@ nav a:hover {
   color: white;
 }
 
+.beta-notice {
+    background: #fff3cd;
+    color: #856404;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #ffeeba;
+}
 /* =========================
    HERO / TEXT SECTION
 ========================= */
