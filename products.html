@@ -1,183 +1,223 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منتجات MKM FiberTechno</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+<meta charset="UTF-8">
+<title>MKM Fiber Store</title>
 
-<div id="header-container"></div>
-    
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f5f5f5;
+}
+
+header{
+    background:#111;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+    font-size:20px;
+    position:sticky;
+    top:0;
+}
+
+.container{
+    padding:15px;
+}
+
+.section-title{
+    margin:20px 0 10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:10px;
+}
+
+.card{
+    background:#fff;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+button{
+    background:#25D366;
+    color:#fff;
+    border:none;
+    padding:8px;
+    margin-top:5px;
+    width:100%;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.cart-box{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#fff;
+    border-top:2px solid #ddd;
+    padding:10px;
+    max-height:200px;
+    overflow:auto;
+}
+
+.cart-title{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.send-btn{
+    background:#007bff;
+    margin-top:10px;
+}
+</style>
+
+</head>
 <body>
 
 <header>
-    <h1>منتجات MKM FiberTechno</h1>
-    <p>الأكثر طلباً من منتجات الفايبر</p>
+🛒 MKM Fiber Store
 </header>
 
-<a href="https://wa.me/201012646236" class="floating-btn">
-💬
-</a>
-    
-    
-<section>
+<div class="container">
 
-     <div class="card">
-<h3>Drop Cable 2 Core</h3>
-<p>الأكثر استخدامًا في التمديدات المنزلية</p>
+<!-- العملاء -->
+<div class="section-title">👤 العملاء</div>
 
-<a class="btn" href="products.html">
-اطلب الآن
-</a>
-     </div>
-    <<div class="product-card">
-    <img src="images/products/patch-cord.jpeg"
-         alt="Patch Cord">
-
-    <h3>Patch Cord SC/APC</h3>
-        <p class="product-lengths">
-        متوفر بالأطوال:
-        <br>
-        5م • 10م • 15م
-        <br>
-        20م • 30م
-        </p>
-
-    
-</div>
-
-
-    <section>
-
-<h2>ثقة العملاء</h2>
+<div class="grid">
 
 <div class="card">
-⭐ تم تنفيذ خدمات داخل القاهرة والقاهرة الجديدة
+<img src="patch-cord1.jpg">
+<h4>Patch Cord</h4>
+<button onclick="addToCart('Patch Cord')">أضف للسلة</button>
 </div>
 
 <div class="card">
-🔧 خبرة عملية في شبكات الفايبر المنزلية
+<img src="coupler.jpg">
+<h4>Coupler</h4>
+<button onclick="addToCart('Coupler')">أضف للسلة</button>
 </div>
 
 <div class="card">
-📡 تعامل مباشر بدون وسطاء
+<img src="termination-box2coupler.jpg">
+<h4>Termination Box</h4>
+<button onclick="addToCart('Termination Box')">أضف للسلة</button>
 </div>
 
-</section>
+</div>
 
-    <div class="card">
-        <h3>Fast Connector</h3>
 
-        <p>حل سريع وفعال لإنهاء كابلات الفايبر.</p>
+<!-- الفنيين -->
+<div class="section-title">🧑‍🔧 الفنيين والشركات</div>
 
-        <p>💡 قد تحتاج أيضاً إلى: Fiber Cleaver</p>
+<div class="grid">
 
-        <a class="btn"
-           href="https://wa.me/201012646236?text=استفسار عن Fast Connector">
-            استفسر عبر واتساب
-        </a>
-    </div>
+<div class="card">
+<img src="fastconnectorgray.jpg">
+<h4>Fast Connector</h4>
+<button onclick="addToCart('Fast Connector')">أضف للسلة</button>
+</div>
 
-    <div class="card">
-        <h3>Termination Box</h3>
+<div class="card">
+<img src="cleaver-fc-6s.jpg">
+<h4>Cleaver FC-6S</h4>
+<button onclick="addToCart('Cleaver FC-6S')">أضف للسلة</button>
+</div>
 
-        <p>بوكسات إنهاء الفايبر المنزلية.</p>
+<div class="card">
+<img src="strip-green.jpg">
+<h4>Stripper</h4>
+<button onclick="addToCart('Stripper Green')">أضف للسلة</button>
+</div>
 
-        <a class="btn"
-           href="https://wa.me/201012646236?text=استفسار عن Termination Box">
-            استفسر عبر واتساب
-        </a>
-    </div>
+<div class="card">
+<img src="rj-strip.jpg">
+<h4>RJ Stripper</h4>
+<button onclick="addToCart('RJ Stripper')">أضف للسلة</button>
+</div>
 
-</section>
+<div class="card">
+<img src="kohol-bottle.jpeg">
+<h4>Kohol Bottle</h4>
+<button onclick="addToCart('Kohol Bottle')">أضف للسلة</button>
+</div>
 
-<footer>
+<div class="card">
+<img src="fiberheatshrink6cm.jpg">
+<h4>Heatshrink 6cm</h4>
+<button onclick="addToCart('Heatshrink 6cm')">أضف للسلة</button>
+</div>
 
-    
+</div>
 
-</footer>
-<footer>
-...
-</footer>
+</div>
 
-<div id="productModal" class="modal">
+<!-- السلة -->
+<div class="cart-box">
 
-    <div class="modal-content">
+<div class="cart-title">🛒 السلة</div>
 
-        <span class="close">&times;</span>
+<div id="cart"></div>
 
-        <img src="images/products/patch-cord.jpg"
-             alt="Patch Cord">
-
-        <h2>Patch Cord SC/APC</h2>
-
-        <p>
-            متوفر بالأطوال:
-            <br>
-            5 متر - 10 متر - 15 متر - 20 متر - 30 متر
-        </p>
-
-    </div>
+<button class="send-btn" onclick="sendWhatsApp()">
+📲 إرسال الطلب على واتساب
+</button>
 
 </div>
 
 <script>
 
-function openModal() {
-    document.getElementById("productModal")
-            .style.display = "block";
-}
+let cart = [];
 
-document.querySelector(".close")
-        .onclick = function() {
+function addToCart(name){
+    let item = cart.find(i => i.name === name);
 
-    document.getElementById("productModal")
-            .style.display = "none";
-}
-
-window.onclick = function(event) {
-
-    const modal =
-        document.getElementById("productModal");
-
-    if (event.target == modal) {
-
-        modal.style.display = "none";
-
+    if(item){
+        item.qty++;
+    } else {
+        cart.push({name:name, qty:1});
     }
+
+    renderCart();
+}
+
+function renderCart(){
+    let box = document.getElementById("cart");
+    box.innerHTML = "";
+
+    cart.forEach(i=>{
+        box.innerHTML += `<div>${i.name} x ${i.qty}</div>`;
+    });
+}
+
+function sendWhatsApp(){
+
+    let phone = "201012646236"; // 👈 غير الرقم ده
+    let msg = "طلب جديد من المتجر:%0A%0A";
+
+    cart.forEach(i=>{
+        msg += `- ${i.name} x ${i.qty}%0A`;
+    });
+
+    let url = `https://wa.me/${phone}?text=${msg}`;
+    window.open(url, "_blank");
 }
 
 </script>
 
-
-<script>
-fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header-container').innerHTML = data;
-
-        const currentPage =
-            window.location.pathname.split('/').pop()
-            || 'index.html';
-
-        document.querySelectorAll('.main-nav a')
-            .forEach(link => {
-
-            if (link.getAttribute('href')
-                === currentPage) {
-
-                link.classList.add('active');
-            }
-
-        });
-    });
-</script>
-    
-</body>
-    
 </body>
 </html>
