@@ -24,6 +24,49 @@ body {
     text-align: center;
 }
 
+/* ==========================================
+   LARGE CATEGORY BUTTONS (أزرار الأقسام الكبيرة)
+============================================ */
+
+.category-header-btn {
+    display: block;
+    width: 100%;
+    max-width: 1200px; /* يتناسب مع عرض شبكة المنتجات */
+    margin: 40px auto 25px auto; /* مسافة مريحة بين الأقسام */
+    padding: 15px 25px;
+    background: #003366; /* نفس اللون الكحلي الفخم للـ Nav */
+    color: #ffffff !important;
+    text-align: right; /* محاذاة النص لليمين */
+    font-family: 'Cairo', Arial, sans-serif; /* نفس نوع خط القائمة الرئيسية */
+    font-size: 18px; /* حجم خط كبير وواضح تماماً */
+    font-weight: 700; /* خط عريض واحترافي */
+    border-radius: 10px; /* زوايا دائرية ناعمة */
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15); /* ظل خفيف لإبراز الزر */
+    border-right: 6px solid #25D366; /* شريط أخضر مبهج جهة اليمين يعطي لمسة جمالية */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/* تأثير خفيف عند مرور الماوس على الزر الكبير للابتوب */
+.category-header-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* لون مميز ومختلف قليلاً لقسم الفنيين لإضفاء حيوية على التصميم */
+.category-header-btn.technicians-btn {
+    background: #002244; /* كحلي أغمق هادئ */
+    border-right-color: #ffcc00; /* شريط ذهبي/أصفر لتمييز المهندسين والشركات */
+}
+
+/* ضبط المسافات في الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+    .category-header-btn {
+        font-size: 16px; /* تصغير ذكي يناسب حجم شاشة الموبايل */
+        padding: 12px 20px;
+        margin: 30px auto 15px auto;
+    }
+}
+
 ::selection {
     background: #FFC107;
     color: #003366;
