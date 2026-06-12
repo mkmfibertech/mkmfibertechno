@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 694 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="source-77">
+    </g>
+    <g id="source-128">
+    </g>
+    <g id="source-203">
+    </g>
+    <g id="source-206">
+    </g>
+    <g id="source-209">
+    </g>
+    <g id="source-242">
+    </g>
+    <g id="source-245">
+    </g>
+    <g id="source-266">
+    </g>
+    <g id="source-269">
+    </g>
+    <g id="source-272">
+    </g>
+    <g id="source-293">
+    </g>
+    <g id="Artboard1" transform="matrix(0.904177,0,0,0.49359,-97.178885,-137.743619)">
+        <rect x="107.478" y="279.065" width="767.429" height="294.15" style="fill:none;"/>
+        <g transform="matrix(1.56897,0,0,3.074777,-199.636343,-825.425725)">
+            <path d="M489.585,365.801C514.945,365.801 535.503,385.018 535.503,408.722L535.503,408.724C535.503,432.428 514.945,451.645 489.585,451.645L245.789,451.645C220.429,451.645 199.871,432.428 199.871,408.724L199.871,408.722C199.871,385.018 220.429,365.801 245.789,365.801L489.585,365.801Z" style="fill:rgb(88,89,91);"/>
+        </g>
+        <g transform="matrix(1.457666,0,0,2.424574,85.908564,-559.672976)">
+            <path d="M496.53,365.801C518.054,365.801 535.503,385.018 535.503,408.723L535.503,408.723C535.503,432.428 518.054,451.645 496.53,451.645L238.844,451.645C217.32,451.645 199.871,432.428 199.871,408.723L199.871,408.723C199.871,385.018 217.32,365.801 238.844,365.801L496.53,365.801Z" style="fill:rgb(255,242,0);"/>
+        </g>
+        <g transform="matrix(8.873329,0,0,16.783422,-1096.567351,-6685.30696)">
+            <g transform="matrix(12,0,0,12,164.862575,428.025361)">
+            </g>
+            <text x="139.532px" y="428.025px" style="font-family:'BritannicBold', 'Britannic Bold', sans-serif;font-size:12px;fill:rgb(0,174,239);">MKM</text>
+        </g>
+        <g transform="matrix(6.478472,0,0,12.253679,-494.013355,-4764.181478)">
+            <g transform="matrix(12,0,0,12,204.583278,428.025361)">
+            </g>
+            <text x="139.532px" y="428.025px" style="font-family:'BritannicBold', 'Britannic Bold', sans-serif;font-size:12px;fill:rgb(88,89,91);">FiberTechno</text>
+        </g>
+    </g>
+</svg>
