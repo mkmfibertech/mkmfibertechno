@@ -9,6 +9,7 @@ body{
     font-family: Arial;
     margin:0;
     background:#f5f5f5;
+	 padding-bottom: 220px;
 }
 
 
@@ -202,38 +203,68 @@ button{
 
 let cart = [];
 
-function addToCart(name){
+function addToCart(name, price){
     let item = cart.find(i => i.name === name);
 
     if(item){
         item.qty++;
     } else {
-        cart.push({name:name, qty:1});
+        cart.push({
+            name: name,
+            price: price,
+            qty: 1
+        });
     }
 
     renderCart();
 }
 
 function renderCart(){
+
     let box = document.getElementById("cart");
+    let total = 0;
+
     box.innerHTML = "";
 
-    cart.forEach(i=>{
-        box.innerHTML += `<div>${i.name} x ${i.qty}</div>`;
+    cart.forEach(i => {
+
+        total += i.price * i.qty;
+
+        box.innerHTML += `
+        <div>
+            ${i.name} × ${i.qty}
+            = ${i.price * i.qty} EGP
+        </div>
+        `;
     });
+
+    box.innerHTML += `
+        <hr>
+        <strong>الإجمالي: ${total} EGP</strong>
+    `;
 }
 
 function sendWhatsApp(){
 
-    let phone = "201012646236"; // 👈 غير الرقم ده
-    let msg = "طلب جديد من المتجر:%0A%0A";
+    let phone = "201012646236";
 
-    cart.forEach(i=>{
-        msg += `- ${i.name} x ${i.qty}%0A`;
+    let total = 0;
+
+    let msg = "طلب جديد من MKM Fiber Techno:%0A%0A";
+
+    cart.forEach(i => {
+
+        total += i.price * i.qty;
+
+        msg += `• ${i.name} × ${i.qty} = ${i.price * i.qty} EGP%0A`;
     });
 
-    let url = `https://wa.me/${phone}?text=${msg}`;
-    window.open(url, "_blank");
+    msg += `%0Aالإجمالي: ${total} EGP`;
+
+    window.open(
+      `https://wa.me/${phone}?text=${msg}`,
+      "_blank"
+    );
 }
 
 </script>
