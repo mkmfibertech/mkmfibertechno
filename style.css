@@ -33,10 +33,10 @@ body {
    PRODUCTS STYLE (تنسيقات المنتجات)
 ============================================ */
 .products-body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cairo', Arial, sans-serif;
     margin: 0;
     background: #f5f5f5;
-    padding-bottom: 280px;
+    padding-bottom: 40px; /* تم تصغيره من 280px لمنع الفراغ */
 }
 
 .products-container {
@@ -85,24 +85,55 @@ body {
 
 .products-cart-box {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 2px solid #ddd;
-    padding: 10px;
-    max-height: 200px;
-    overflow: auto;
+    bottom: 20px;
+    left: 20px; /* تثبيت السلة في الجانب الأيسر */
+    right: auto;
+    width: 320px; /* تحديد عرض مناسب للمربع */
+    max-height: 400px;
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10000; /* لتظهر فوق كل العناصر */
+    overflow-y: auto;
+    direction: rtl;
+    text-align: right;
 }
 
 .products-cart-title {
+  font-size: 16px;
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #003366;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 5px;
 }
 
 .products-send-btn {
-    background: #007bff;
-    margin-top: 10px;
+    background: #25D366 !important; /* تحويله للون الواتساب الأخضر المألوف */
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+   .products-send-btn:hover {
+    background: #20ba5a !important;
+}
+
+@media (max-width: 480px) {
+    .products-cart-box {
+        width: calc(100% - 40px);
+        left: 20px;
+        bottom: 15px;
+        max-height: 250px;
+    }
 }
 
 .products-price {
@@ -128,7 +159,18 @@ body {
     max-width: 400px;
     margin: 15px auto;
 }
-
+#cart div {
+    font-size: 13px !important; /* خط ناعم ومتناسق */
+    color: #444;
+    padding: 4px 0;
+    border-bottom: 1px dashed #f0f0f0;
+   #cart strong {
+    font-size: 15px !important;
+    color: #25D366;
+    display: block;
+    margin-top: 10px;
+}
+}
 /* ==========================================
    HEADER & NAVBAR (الهيدر وشريط التنقل)
 ============================================ */
