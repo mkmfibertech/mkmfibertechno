@@ -204,52 +204,9 @@ href="https://wa.me/201012646236?text=مرحباً، أريد الاستفسار
 
 </section>
 
-<footer>
 
 
 
-</footer>
-
-  
-<script>
-fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-
-        document.getElementById(
-            'header-container'
-        ).innerHTML = data;
-
-        const currentPage =
-            window.location.pathname
-            .split('/')
-            .pop() || 'index.html';
-
-        document.querySelectorAll(
-            '.main-nav a'
-        ).forEach(link => {
-
-            if (
-                link.getAttribute('href')
-                === currentPage
-            ) {
-
-                link.classList.add(
-                    'active'
-                );
-            }
-        });
-    });
-
-fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-
-        document.getElementById(
-            'footer-container'
-        ).innerHTML = data;
-    });
-</script>
   <div id="footer-container"></div>
 
 <script src="js/layout.js"></script>
