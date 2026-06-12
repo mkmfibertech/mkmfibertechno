@@ -113,81 +113,10 @@ target="_blank">
 </div>
 
 </section> 
-</section>  
+
 
     
-<footer>
 
-<div class="social-buttons">
-
-<a href="https://www.tiktok.com/@mkm.fibertechno"
-   target="_blank"
-   class="btn">
-
-   تابعنا على TikTok
-
-</a>
-
-<a href="رابط_صفحة_الفيسبوك"
-   target="_blank"
-   class="btn">
-
-   تابعنا على Facebook
-
-</a>
-
-<a href="https://www.instagram.com/mkm.fibertechno"
-   target="_blank"
-   class="btn">
-
-   عرض جميع الصور على Instagram
-
-</a>
-
-</div>
-
-<p>© 2026 MKM FiberTechno</p>
-
-</footer>
-<script>
-fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-
-        document.getElementById(
-            'header-container'
-        ).innerHTML = data;
-
-        const currentPage =
-            window.location.pathname
-            .split('/')
-            .pop() || 'index.html';
-
-        document.querySelectorAll(
-            '.main-nav a'
-        ).forEach(link => {
-
-            if (
-                link.getAttribute('href')
-                === currentPage
-            ) {
-
-                link.classList.add(
-                    'active'
-                );
-            }
-        });
-    });
-
-fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-
-        document.getElementById(
-            'footer-container'
-        ).innerHTML = data;
-    });
-</script>
 
     <div id="footer-container"></div>
 
