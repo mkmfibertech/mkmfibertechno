@@ -336,6 +336,13 @@ nav a:hover {
     font-weight: 600;
     border-bottom: 1px solid #ffeeba;
 }
+.beta-text {
+    font-size: 11px !important; /* حجم صغير وناعم */
+    font-weight: normal !important; /* إلغاء التضخيم أو البولد */
+    opacity: 0.85; /* جعل اللون هادئاً وقريباً من لون الخلفية فلا يشتت العين */
+    margin: 0 0 5px 0 !important; /* تقليص المسافات (المارجن) تماماً لعدم أخذ حيز */
+    letter-spacing: 0.5px;
+}
 
 /* ==========================================
    HERO & SLIDER (قسم الواجهة والسلايدر)
