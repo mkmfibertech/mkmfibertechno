@@ -83,40 +83,49 @@ body {
     cursor: pointer;
 }
 
+#cart {
+    flex-grow: 1;
+    overflow-y: auto; /* التمرير داخل السلة فقط إذا كانت المنتجات كثيرة */
+}
+
 .products-cart-box {
     position: fixed;
+   top: 0;
     bottom: 20px;
-    left: 20px; /* تثبيت السلة في الجانب الأيسر */
+    left: -350px;/* تبدأ السلة خارج الشاشة تماماً من اليسار فلا تغطي أي شيء */
     right: auto;
     width: 320px; /* تحديد عرض مناسب للمربع */
-    max-height: 400px;
+    height: 100vh; /* تأخذ طول الشاشة بالكامل */
     background: #ffffff;
     border: 1px solid #e1e1e1;
     border-radius: 14px;
-    padding: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
     z-index: 10000; /* لتظهر فوق كل العناصر */
     overflow-y: auto;
     direction: rtl;
     text-align: right;
+   z-index: 10000;
+   transition: 0.4s ease; /* حركة انزلاق ناعمة عند الفتح */
+   display: flex;
+   flex-direction: column;
 }
 
 .products-cart-title {
-  font-size: 16px;
+ font-size: 18px;
     font-weight: bold;
     color: #003366;
-    margin-bottom: 10px;
+    margin: 10px 0;
     border-bottom: 2px solid #f5f5f5;
     padding-bottom: 5px;
 }
 
 .products-send-btn {
-    background: #25D366 !important; /* تحويله للون الواتساب الأخضر المألوف */
+    background: #25D366 !important;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    padding: 10px;
-    margin-top: 12px;
+    padding: 12px;
     border-radius: 8px;
     width: 100%;
     border: none;
@@ -125,6 +134,52 @@ body {
 }
    .products-send-btn:hover {
     background: #20ba5a !important;
+}
+
+.cart-badge-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px; /* يمكنك تغييرها إلى right: 25px إذا كانت تتداخل مع زر آخر */
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.cart-badge-btn:hover {
+    transform: scale(1.05);
+    background: #0055aa;
+}
+
+#cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 12px;
+}
+
+/* زر إغلاق السلة */
+.close-cart-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #666;
+    align-self: flex-start;
+}
+.close-cart-btn:hover {
+    color: red;
 }
 
 @media (max-width: 480px) {
@@ -160,16 +215,19 @@ body {
     margin: 15px auto;
 }
 #cart div {
-    font-size: 13px !important; /* خط ناعم ومتناسق */
+    font-size: 13px !important;
     color: #444;
-    padding: 4px 0;
+    padding: 8px 0;
     border-bottom: 1px dashed #f0f0f0;
-   #cart strong {
+    text-align: right;
+}
+
+#cart strong {
     font-size: 15px !important;
     color: #25D366;
     display: block;
-    margin-top: 10px;
-}
+    margin-top: 15px;
+    text-align: right;
 }
 /* ==========================================
    HEADER & NAVBAR (الهيدر وشريط التنقل)
