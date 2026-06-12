@@ -187,10 +187,15 @@ header h1 {
 }
 
 .main-header {
-    background: linear-gradient(135deg, #003366, #00509e);
+    background: #003366; /* لون أزرق موحد مثل الفوتر */
     color: white;
     text-align: center;
-    padding: 3px 20px;
+    padding: 30px 20px; /* نفس المساحة الداخلية للفوتر تماماً */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px; /* ضمان حد أدنى للارتفاع متطابق */
 }
 
 .main-header h1 {
@@ -635,10 +640,15 @@ img {
    FOOTER (التذييل)
 ============================================ */
 footer {
-    background: #003366;
+   background: #003366; /* نفس اللون */
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px 20px; /* نفس المساحة الداخلية للهيدر تماماً */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px; /* نفس الحد الأدنى للارتفاع */
 }
 
 .footer-contact {
