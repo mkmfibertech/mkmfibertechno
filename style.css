@@ -190,11 +190,11 @@ header h1 {
     background: #003366; /* لون أزرق موحد مثل الفوتر */
     color: white;
     text-align: center;
-    padding: 30px 20px; /* نفس المساحة الداخلية للفوتر تماماً */
+    padding: 20px 40px; /* نفس المساحة الداخلية للفوتر تماماً */
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 140px; /* ضمان حد أدنى للارتفاع متطابق */
 }
 
@@ -213,25 +213,25 @@ header h1 {
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    justify-content: flex-start;
+     margin:0;
 }
 
 .logo {
    width: 150px; /* حجم مناسب وموحد */
     height: auto;
     max-width: 100%;
-    margin: 0; /* إلغاء المارجن السلبي القديم */
+   display: block;
 }
 
 /* تعديل مشكلة اختفاء نصوص شريط التنقل */
 nav {
     background: #003366;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 10px;
+    padding: 10px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -700,6 +700,11 @@ footer p {
    MEDIA QUERIES (التجاوب مع الشاشات الصغيرة)
 ============================================ */
 @media (max-width: 768px) {
+   .main-header {
+        flex-direction: column; /* يعود لترتيب عمودي في الموبايل */
+        justify-content: center;
+        padding: 20px;
+    }
     header h1 {
         font-size: 20px;
     }
@@ -710,7 +715,8 @@ footer p {
     }
 
     nav {
-        gap: 8px;
+      justify-content: center; /* توسيط القائمة في الموبايل */
+        padding: 10px;
     }
 
     .slide-content {
