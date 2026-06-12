@@ -494,10 +494,9 @@ footer p {
 
 
 .main-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
+  
+ align-items: center;
+   
    }
 
 .main-nav a {
