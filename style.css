@@ -199,13 +199,15 @@ header h1 {
 }
 
 .main-header h1 {
-    font-size: 2.5rem;
-    margin: 0 0 10px 0;
+   font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 
-.main-header p {
-    opacity: 0.9;
-    margin-top: 5px;
+.main-header p, footer p {
+   font-size: 14px;
+    opacity: 0.8;
+    margin: 5px 0 0 0;
 }
 
 .logo-container {
@@ -216,10 +218,10 @@ header h1 {
 }
 
 .logo {
-    width: 180px;
+   width: 150px; /* حجم مناسب وموحد */
     height: auto;
     max-width: 100%;
-    margin: -20px;
+    margin: 0; /* إلغاء المارجن السلبي القديم */
 }
 
 /* تعديل مشكلة اختفاء نصوص شريط التنقل */
