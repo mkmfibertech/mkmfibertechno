@@ -380,33 +380,54 @@ h2::after {
 /* =========================
    FOOTER
 ========================= */
+
+
 footer {
     background: #003366;
     color: white;
     text-align: center;
-    padding: 25px 15px;
+    padding: 30px 20px;
 }
 
 .footer-contact {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .footer-btn {
-    background: rgba(255,255,255,0.1);
+    background: #25D366;
     color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
+    padding: 12px 20px;
+    border-radius: 10px;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.footer-btn:hover {
-    background: rgba(255,255,255,0.2);
+.social-icons {
+    margin: 20px 0;
 }
 
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+    transform: translateY(-3px);
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 14px;
+}
 .social-icons {
     margin-bottom: 15px;
 }
