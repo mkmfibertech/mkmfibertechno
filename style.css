@@ -62,7 +62,7 @@ body {
 /* =========================
    HEADER
 ========================= */
-header {
+.page-header {
   background: linear-gradient(135deg, #003366, #0056b3);
   color: #fff;
   text-align: center;
