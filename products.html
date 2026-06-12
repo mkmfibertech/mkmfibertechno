@@ -122,18 +122,31 @@
             </div>
         </div>
 
-        <div class="products-cart-box">
-            <div class="products-cart-title">🛒 السلة</div>
+        <button class="cart-badge-btn" onclick="toggleCart()">
+            🛒 السلة <span id="cart-count">0</span>
+        </button>
+
+        <div class="products-cart-box" id="sidebar-cart">
+            <button class="close-cart-btn" onclick="toggleCart()">✕</button>
+            <div class="products-cart-title">🛒 سلة المشتريات</div>
             <div id="cart">السلة فارغة حالياً.</div>
             <button class="products-button products-send-btn" onclick="sendWhatsApp()">
                 📲 إرسال الطلب على واتساب
             </button>
         </div>
 
-    </div> <div id="footer-container"></div>
+    </div> 
+    
+    <div id="footer-container"></div>
 
     <script>
     let cart = [];
+
+    // دالة فتح وإغلاق السلة الجانبية بسلاسة
+    function toggleCart() {
+        const sidebar = document.getElementById("sidebar-cart");
+        sidebar.classList.toggle("active");
+    }
 
     function addToCart(name, productsPrice = 0){
         let item = cart.find(i => i.name === name);
@@ -148,11 +161,23 @@
             });
         }
         renderCart();
+
+        // حركة ذكية: فتح السلة الجانبية فوراً عند إضافة منتج لتنبيه المستخدم
+        const sidebar = document.getElementById("sidebar-cart");
+        if(!sidebar.classList.contains("active")) {
+            sidebar.classList.add("active");
+        }
     }
 
     function renderCart(){
         let box = document.getElementById("cart");
+        let countBadge = document.getElementById("cart-count");
         let total = 0;
+        let totalQty = 0;
+
+        // تحديث عداد القطع في الأيقونة العائمة
+        cart.forEach(i => totalQty += i.qty);
+        countBadge.innerText = totalQty;
 
         if (cart.length === 0) {
             box.innerHTML = "السلة فارغة حالياً.";
@@ -164,7 +189,7 @@
         cart.forEach(i => {
             total += i.productsPrice * i.qty;
             box.innerHTML += `
-            <div style="margin: 5px 0; font-size: 14px; text-align: right; direction: rtl;">
+            <div>
                 🔹 ${i.name} × ${i.qty} = ${i.productsPrice * i.qty} EGP
             </div>
             `;
@@ -172,7 +197,7 @@
 
         box.innerHTML += `
             <hr style="border: 0; border-top: 1px solid #ddd; margin: 10px 0;">
-            <strong style="color: #25D366; font-size: 16px; display: block; text-align: right;">الإجمالي: ${total} EGP</strong>
+            <strong>الإجمالي: ${total} EGP</strong>
         `;
     }
 
