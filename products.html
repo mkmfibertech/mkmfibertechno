@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
-
-	<link rel="stylesheet" href="style.css">
-  
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <a href="https://wa.me/201012646236" class="floating-btn">
-💬
-</a>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MKM Fiber Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 	
 <body class="products-body">
@@ -81,7 +73,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <img src="images/products/fastconnector-white-scapc.png" alt="Fast Connector">
                 <h4>Fast Connector</h4>
                 <p class="products-price">
-                    <span class="products-old-price">490 EGP</span>
+                    <span class="products-old-price">490 EGP</span><br>
                     <span class="products-new-price">385 EGP</span>
                 </p>
                 <button class="products-button" onclick="addToCart('Fast Connector SC/APC', 385)">أضف للسلة</button>
@@ -90,42 +82,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             <div class="products-card">
                 <img src="images/products/cleaver-fc-6s.jpg" alt="Cleaver FC-6S">
                 <h4>Cleaver FC-6S</h4>
-                <p class="products-price">0 EGP</p> <button class="products-button" onclick="addToCart('Cleaver FC-6S', 0)">أضف للسلة</button>
+                <p class="products-price">1500 EGP</p>
+                <button class="products-button" onclick="addToCart('Cleaver FC-6S', 1500)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/strip-green.jpg" alt="Stripper">
                 <h4>Stripper</h4>
-                <p class="products-price">0 EGP</p>
-                <button class="products-button" onclick="addToCart('Stripper Green', 0)">أضف للسلة</button>
+                <p class="products-price">250 EGP</p>
+                <button class="products-button" onclick="addToCart('Stripper Green', 250)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/rj-strip.jpg" alt="RJ Stripper">
                 <h4>RJ Stripper</h4>
-                <p class="products-price">0 EGP</p>
-                <button class="products-button" onclick="addToCart('RJ Stripper', 0)">أضف للسلة</button>
+                <p class="products-price">180 EGP</p>
+                <button class="products-button" onclick="addToCart('RJ Stripper', 180)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/kohol-bottle.jpeg" alt="Kohol Bottle">
                 <h4>Kohol Bottle</h4>
-                <p class="products-price">0 EGP</p>
-                <button class="products-button" onclick="addToCart('Kohol Bottle', 0)">أضف للسلة</button>
+                <p class="products-price">90 EGP</p>
+                <button class="products-button" onclick="addToCart('Kohol Bottle', 90)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/fiberheatshrink6cm.jpg" alt="Heatshrink 6cm">
                 <h4>Heatshrink 6cm</h4>
-                <p class="products-price">0 EGP</p>
-                <button class="products-button" onclick="addToCart('Heatshrink 6cm', 0)">أضف للسلة</button>
+                <p class="products-price">40 EGP</p>
+                <button class="products-button" onclick="addToCart('Heatshrink 6cm', 40)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/tools-kit-6tools.jpg" alt="Tools Kit">
                 <h4>Tools Kit 6 Tools</h4>
-                <p class="products-price">0 EGP</p>
-                <button class="products-button" onclick="addToCart('Tools Kit 6 Tools', 0)">أضف للسلة</button>
+                <p class="products-price">3500 EGP</p>
+                <button class="products-button" onclick="addToCart('Tools Kit 6 Tools', 3500)">أضف للسلة</button>
             </div>
         </div>
 
@@ -171,7 +164,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         cart.forEach(i => {
             total += i.productsPrice * i.qty;
             box.innerHTML += `
-            <div style="margin: 5px 0; font-size: 14px;">
+            <div style="margin: 5px 0; font-size: 14px; text-align: right; direction: rtl;">
                 🔹 ${i.name} × ${i.qty} = ${i.productsPrice * i.qty} EGP
             </div>
             `;
@@ -179,7 +172,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         box.innerHTML += `
             <hr style="border: 0; border-top: 1px solid #ddd; margin: 10px 0;">
-            <strong style="color: #25D366; font-size: 16px;">الإجمالي: ${total} EGP</strong>
+            <strong style="color: #25D366; font-size: 16px; display: block; text-align: right;">الإجمالي: ${total} EGP</strong>
         `;
     }
 
@@ -205,9 +198,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           "_blank"
         );
     }
-
-    console.log("Header Container:", document.getElementById('header-container'));
-    console.log("Footer Container:", document.getElementById('footer-container'));
     </script>
 
     <script src="js/layout.js"></script>
