@@ -151,7 +151,7 @@ button{
 <h4>Fast Connector</h4>
 	<span class="old-price">490 EGP</span>
 <span class="new-price">385 EGP</span>
-<button onclick="addToCart('Fast Connector sc apc')">أضف للسلة</button>
+<button onclick="addToCart('Fast Connector' SC/APC',385)">أضف للسلة</button>
 </div>
 
 <div class="card">
@@ -220,7 +220,8 @@ function addToCart(name, price){
     } else {
         cart.push({
             name: name,
-            price: price,
+        price: price || 0,
+			
             qty: 1
         });
     }
@@ -254,12 +255,17 @@ function renderCart(){
 }
 
 function sendWhatsApp(){
+	if(cart.length === 0){
+    alert("السلة فارغة");
+    return;
+}
 
     let phone = "201012646236";
 
     let total = 0;
 
     let msg = "طلب جديد من MKM Fiber Techno:%0A%0A";
+	
 
     cart.forEach(i => {
 
