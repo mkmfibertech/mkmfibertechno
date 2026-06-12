@@ -212,7 +212,7 @@ button{
 
 let cart = [];
 
-function addToCart(name, price){
+function addToCart(name, price= 0){
     let item = cart.find(i => i.name === name);
 
     if(item){
