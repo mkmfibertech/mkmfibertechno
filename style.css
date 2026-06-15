@@ -493,7 +493,35 @@ nav a:hover {
 /* ==========================================
    BUTTONS & SECTIONS (الأزرار والأقسام)
 ============================================ */
+
+.service-order form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+    margin:auto;
+}
+
+.service-order input,
+.service-order select,
+.service-order textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.service-order button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+
+
 .btn {
+   
     display: inline-flex;
     background: #003366;
     color: white;
