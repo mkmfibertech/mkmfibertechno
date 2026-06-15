@@ -50,6 +50,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                اطلب الخدمة الآن
             </a>
         </div>
+
+  <!-- اطلب الخدمه واختارها -->
+
+<section class="service-order">
+    <div class="container">
+        <h2>اطلب خدمة الآن</h2>
+
+        <form id="serviceForm">
+
+            <input type="text"
+                   id="name"
+                   placeholder="الاسم بالكامل"
+                   required>
+
+            <input type="tel"
+                   id="phone"
+                   placeholder="رقم الهاتف"
+                   required>
+
+            <select id="service" required>
+                <option value="">اختر نوع الخدمة</option>
+                <option>تركيب شبكات Fiber Optic</option>
+                <option>تركيب شبكات UTP</option>
+                <option>لحام فايبر</option>
+                <option>صيانة أعطال الشبكات</option>
+                <option>تنظيم وتركيب Rack</option>
+                <option>اختبار واعتماد الشبكات</option>
+            </select>
+
+            <input type="text"
+                   id="address"
+                   placeholder="العنوان بالتفصيل"
+                   required>
+
+            <textarea id="details"
+                      rows="4"
+                      placeholder="تفاصيل إضافية (اختياري)"></textarea>
+
+            <button type="submit">
+                إرسال الطلب عبر واتساب
+            </button>
+
+        </form>
+    </div>
+</section>
+
+  <!--end اطلب الخدمه واختارها -->
+  
     </div>
 
     <div class="slide">
