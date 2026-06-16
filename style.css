@@ -913,3 +913,117 @@ footer p {
         padding: 4px 6px;
     }
 }
+
+
+.pricing-hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #003366, #00509e);
+    color: white;
+}
+
+.pricing-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.pricing-hero p {
+    max-width: 700px;
+    margin: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.pricing-table-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+th {
+    background: #003366;
+    color: #FFD700;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+.note {
+    width: 90%;
+    margin: 40px auto;
+    background: #fff3cd;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.pricing-cta {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #25D366;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    z-index: 1000;
+}
