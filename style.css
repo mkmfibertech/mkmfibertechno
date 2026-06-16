@@ -438,7 +438,9 @@ nav a:hover {
 }
 
 .slide {
-    position: absolute;
+    position: relative;
+	overflow: hidden;
+	height: 500px;
     inset: 0;
     opacity: 0;
     transform: scale(1.05);
