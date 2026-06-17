@@ -428,96 +428,100 @@ nav a:hover {
 }
 
 /* ==========================================
-   💥 SECTION: HERO SLIDER (MODIFIED) 💥
-   ========================================== */
-.slider-container {
-    width: 100%;
-    padding: 0 15px; /* حماية على الشاشات الصغيرة */
-    box-sizing: border-box;
-}
+   MODERN HERO SLIDER (تنسيق السلايدر المطور)
+============================================ */
 
-.hero-slider {
-    position: relative;
-    width: 100%;
-    height: 350px; /* ارتفاع مثالي ومتناسق على الموبايل والشاشات الكبيرة */
-    overflow: hidden;
-    margin: 20px auto;
-    border-radius: 20px;
-    max-width: 1100px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.slide {
-    position: absolute; /* تغييرها لـ absolute لضمان مطابقة الارتفاع تماماً */
-    inset: 0;
-    width: 100%;
-    height: 100%; /* تأخذ الـ 350px بالكامل */
-    opacity: 0;
-    transform: scale(1.03);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.slide.active {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 1;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* تحافظ على أبعاد الصورة بدون مط أو تشويه */
-}
-
-/* 🎯 تعديل صندوق النص ليكون 10% وفي الأسفل تماماً */
+/* صندوق المحتوى الرئيسي فوق الصورة */
 .slide-content {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
     left: 0;
-    height: auto; /* ترك المساحة تتحدد بذكاء حسب المحتوى الصغير */
-    min-height: 12%; /* يشغل حوالي 10% إلى 12% فقط من السلايدر */
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* تدرج أسود ناعم لا يغطي الصورة */
-    color: white;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* طبقة تعتيم خفيفة لإبراز النصوص */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 10px 10px 10px;
-    text-align: center;
+    justify-content: space-between; /* يوزع النصوص في الأعلى والزر في الأسفل تماماً */
+    padding: 25px 40px; /* مساحات داخلية مريحة تمنع خروج الزر */
+    box-sizing: border-box;
     z-index: 2;
 }
 
-/* تنسيق العنوان الصغير للحفاظ على مساحة الصورة */
-.slide-content h2 {
-    color: #FFD700; /* تغيير اللون للأصفر الذهبي ليزيد وضوحه فوق الشفافية */
-    font-size: 1.1rem;
-    margin: 0 0 4px 0;
-    font-weight: 600;
+/* الشريط العلوي (يضع العنوان والبيان بجوار بعضهما) */
+.slide-top-bar {
+    display: flex;
+    align-items: center; /* محاذاة عمودية في المنتصف */
+    justify-content: flex-start; /* يبدأ من اليمين */
+    gap: 20px; /* مسافة مريحة بين العنوان والبيان */
+    width: 100%;
+    text-align: right;
 }
 
-/* تنسيق الوصف */
-.slide-content p {
-    font-size: 0.85rem;
-    margin: 0 0 8px 0;
+/* تنسيق العنوان بالأعلى */
+.slide-title {
+    font-size: 24px !important;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 !important;
+    white-space: nowrap; /* يمنع العنوان من النزول لسطر جديد */
+}
+
+/* تنسيق البيان بجوار العنوان */
+.slide-desc {
+    font-size: 15px !important;
+    color: #f1f1f1;
+    margin: 0 !important;
+    font-weight: normal;
     opacity: 0.9;
 }
 
-/* زر طلب الخدمة داخل السلايدر */
-.slide-content .btn {
-    padding: 5px 15px;
-    font-size: 0.8rem;
-    background-color: #00509e;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
+/* 🟢 تنسيق الزر السفلي (أخضر متناسق مع بقية الموقع وظاهر بالكامل) */
+.slide-btn {
+    align-self: center; /* يتوسط الزر في أسفل السلايدر */
+    background: #25D366 !important; /* اللون الأخضر الخاص بموقعك */
+    color: #ffffff !important;
+    border: none;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px; /* زوايا دائرية ناعمة للازرار */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 10px; /* يضمن عدم اختفاء أو قطع الزر من الأسفل */
 }
 
-.slide-content .btn:hover {
-    background-color: #FFD700;
-    color: #003366;
+.slide-btn:hover {
+    background: #1ebd56 !important; /* درجة أغمق قليلاً عند مرور الماوس */
+    transform: translateY(-2px);
 }
+
+/* 📱 ضبط التجاوب للهواتف (الموبايل) لكي لا تتداخل العناصر بجانب بعضها */
+@media (max-width: 768px) {
+    .slide-top-bar {
+        flex-direction: column; /* يعود لترتيب عمودي في الشاشات الصغيرة لضيق المساحة */
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .slide-title {
+        font-size: 18px !important;
+    }
+    
+    .slide-desc {
+        font-size: 13px !important;
+    }
+    
+    .slide-content {
+        padding: 15px;
+    }
+    
+    .slide-btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
 
 /* ==========================================
    BUTTONS & SECTIONS (الأزرار والأقسام)
