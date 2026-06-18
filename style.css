@@ -481,117 +481,197 @@ nav a:hover {
     }
 }
 
-
 /* ==========================================
-   PRICING PAGES & TABLES STYLE
-   (تنسيق مميز واحترافي لصفحة وباقات الأسعار)
+   PRICING PAGE CUSTOM STYLE (تنسيق صفحة الأسعار المطور)
 ============================================ */
 
-/* تنسيق حاوية كروت الأسعار */
-.pricing-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    box-sizing: border-box;
-}
-
-/* المربع المميز لباقات الأسعار */
-.pricing-card, .pricing-table, .pricing-box {
-    background: #ffffff !important;
-    border-radius: 16px !important; /* حواف دائرية ناعمة */
-    padding: 30px 20px !important;
-    margin: 20px auto !important;
-    width: 100% !important;
-    max-width: 350px !important; /* عرض مناسب للكروت بجانب بعضها */
-    box-sizing: border-box !important;
+/* 1. تنسيق الهيدر العلوي لصفحة الأسعار (Hero Section) */
+.pricing-hero {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%) !important;
+    color: white !important;
     text-align: center !important;
-    
-    /* خط جانبي مميز بلون الهوية الكحلي وعمق ثلاثي الأبعاد */
-    border-top: 5px solid #003366 !important; 
-    border-right: 1px solid #f0f0f0 !important;
-    border-left: 1px solid #f0f0f0 !important;
-    border-bottom: 1px solid #f0f0f0 !important;
-    
-    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-color 0.3s ease !important;
-    position: relative;
-    overflow: hidden;
+    padding: 50px 20px !important;
+    margin-bottom: 30px !important;
 }
 
-/* تأثير تفاعلي رائع عند تمرير الماوس أو اللمس من الهاتف */
-.pricing-card:hover, .pricing-table:hover, .pricing-box:hover {
-    transform: translateY(-6px) !important; /* ارتفاع خفيف للأعلى */
-    border-top-color: #25D366 !important; /* يتحول الخط العلوي للأخضر عند التفاعل لفت الانتباه */
-    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.15) !important;
-}
-
-/* تنسيق عنوان الباقة أو الخدمة داخل كرت السعر */
-.pricing-card h3, .pricing-box h3 {
-    color: #003366 !important;
-    font-size: 20px !important;
+.pricing-hero h1 {
+    font-size: 28px !important;
     font-weight: 700 !important;
     margin-bottom: 15px !important;
     font-family: 'Cairo', sans-serif !important;
 }
 
-/* تمييز الرقم والسعر بشكل جذاب */
-.pricing-card .price, .pricing-box .price {
-    font-size: 28px !important;
-    color: #25D366 !important; /* اللون الأخضر المميز لـ واتساب وجاذب للعين مالياً */
+.pricing-hero p {
+    font-size: 16px !important;
+    max-width: 600px !important;
+    margin: 0 auto 25px auto !important;
+    opacity: 0.9 !important;
+    line-height: 1.6 !important;
+}
+
+/* 2. تنسيق شبكة المربعات (Features Grid) */
+.features-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. المربعات المميزة (Feature Cards) بنفس سياق الرئيسية */
+.feature-card, section .note {
+    background: #ffffff !important;
+    border-radius: 16px !important; /* حواف دائرية ناعمة */
+    padding: 25px 20px !important;
+    flex: 1 1 280px !important; /* توزيع مرن بجانب بعضهم */
+    max-width: 350px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    
+    /* إطار خفيف وجذاب مع الخط الجانبي الكحلي */
+    border-right: 5px solid #003366 !important; 
+    border-top: 1px solid #eaeaea !important;
+    border-left: 1px solid #eaeaea !important;
+    border-bottom: 1px solid #eaeaea !important;
+    
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-right-color 0.3s ease !important;
+}
+
+/* تأثير حركي عند التمرير أو اللمس للفت الانتباه */
+.feature-card:hover, section .note:hover {
+    transform: translateY(-5px) !important;
+    border-right-color: #25D366 !important; /* ينقلب للأخضر الجذاب */
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12) !important;
+}
+
+/* تنسيق الأيقونات والعناوين داخل المربعات */
+.feature-card i {
+    font-size: 30px !important;
+    color: #003366 !important;
+    margin-bottom: 15px !important;
+}
+
+.feature-card h3, section .note h3 {
+    color: #003366 !important;
+    font-size: 18px !important;
     font-weight: 700 !important;
-    margin: 15px 0 !important;
-    display: block !important;
+    margin: 0 0 10px 0 !important;
     font-family: 'Cairo', sans-serif !important;
 }
 
-/* تنسيق قائمة المميزات المكتوبة داخل كرت السعر */
-.pricing-card ul, .pricing-box ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 20px 0 !important;
-    text-align: right !important; /* محاذاة لليمين لراحة قراءة المميزات بالعربي */
-}
-
-.pricing-card ul li, .pricing-box ul li {
-    font-size: 14px !important;
+.feature-card p, section .note p {
     color: #555555 !important;
-    padding: 8px 0 !important;
-    border-bottom: 1px dashed #f0f0f0 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* 4. قسم الملاحظات المهمة (Note) المربع الكبير المميز */
+section .note {
+    max-width: 700px !important;
+    margin: 40px auto !important;
+    text-align: right !important; /* محاذاة لليمين لسهولة القراءة */
+    display: block !important;
+}
+
+section .note p {
+    margin-bottom: 10px !important;
+    font-weight: 600 !important;
+}
+
+/* 5. تنسيق جدول الأسعار الاحترافي ليكون مريحاً جداً للعين */
+.pricing-table-section {
+    max-width: 800px !important;
+    margin: 40px auto !important;
+    padding: 0 15px !important;
+}
+
+.pricing-table-section h2, section h2 {
+    text-align: center !important;
+    color: #003366 !important;
+    font-size: 24px !important;
+    margin-bottom: 25px !important;
     font-family: 'Cairo', sans-serif !important;
 }
 
-/* تمييز علامة الصح أو الأيقونة داخل باقة السعر */
-.pricing-card ul li i, .pricing-box ul li i {
-    color: #25D366 !important;
-    margin-left: 8px !important;
+table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    overflow: hidden !important; /* لقص حواف الجدول داخل المنحنى */
+    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.05) !important;
+    font-family: 'Cairo', sans-serif !important;
 }
 
-/* 📱 ضبط الكروت بالكامل لتكون مرنة ومتجاوبة على الموبايل */
+th {
+    background-color: #003366 !important; /* كحلي فخم للعناوين */
+    color: white !important;
+    font-weight: 700 !important;
+    padding: 15px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+}
+
+td {
+    padding: 14px 15px !important;
+    border-bottom: 1px solid #eeeeee !important;
+    color: #333333 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+}
+
+/* تلوين السطور الفردية بلون خفيف جداً لراحة العين */
+tr:nth-child(even) {
+    background-color: #f9fbfd !important;
+}
+
+tr:hover td {
+    background-color: #f1f5f9 !important; /* تأثير تظليل خفيف عند المرور على السطر */
+}
+
+/* 6. قسم الدعوة لطلب الخدمة أسفل الصفحة (CTA) */
+.pricing-cta {
+    text-align: center !important;
+    background: #ffffff !important;
+    padding: 40px 20px !important;
+    margin-top: 50px !important;
+    border-top: 1px solid #eaeaea !important;
+}
+
+.pricing-cta h2 {
+    margin-bottom: 10px !important;
+}
+
+/* 📱 ضبط التجاوب الكامل للشاشات الصغيرة والموبايل */
 @media (max-width: 768px) {
-    .pricing-container {
-        padding: 0 15px;
-        gap: 15px;
-        margin: 20px auto;
+    .pricing-hero {
+        padding: 35px 15px !important;
     }
-    
-    .pricing-card, .pricing-table, .pricing-box {
-        max-width: 100% !important; /* تأخذ العرض الكامل بشكل منسق على الشاشات الصغيرة */
+    .pricing-hero h1 {
+        font-size: 22px !important;
+    }
+    .pricing-hero p {
+        font-size: 14px !important;
+    }
+    .features-grid {
+        gap: 15px !important;
+    }
+    .feature-card {
+        max-width: 100% !important; /* كارت كامل العرض على الموبايل */
         padding: 20px 15px !important;
-        border-radius: 12px !important;
     }
-    
-    .pricing-card h3, .pricing-box h3 {
-        font-size: 18px !important;
-    }
-    
-    .pricing-card .price, .pricing-box .price {
-        font-size: 24px !important;
+    th, td {
+        padding: 10px 8px !important; /* تقليل الحشو ليتناسب مع عرض شاشة الهاتف */
+        font-size: 12px !important;
     }
 }
+
 
 
 .service-order form {
