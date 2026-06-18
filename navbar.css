@@ -51,7 +51,7 @@
 }
 
 .logo-container::after {
-    content: "MKM FiberTechno";
+    
     font-size: 20px;
     font-weight: 800;
     background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
