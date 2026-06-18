@@ -514,54 +514,166 @@ section .note p { margin-bottom: 12px !important; font-weight: 600 !important; c
 .pricing-cta { text-align: center !important; background: #ffffff !important; padding: 40px 20px !important; margin-top: 50px !important; border-top: 1px solid #eaeaea !important; }
 
 /* ==========================================================================
-   6. GALLERY PAGE STYLE (صفحة معرض الأعمال المعدلة وبكامل وضوحها)
+   6. GALLERY PAGE STYLE (تنسيق صفحة معرض الأعمال الاحترافي والشبكة)
 ============================================================================ */
+
+/* عنوان الصفحة الخلفية الملونة (تم فصله تماماً عن الهيدر الرئيسي للموقع) */
 .page-header {
     background: linear-gradient(135deg, #003366 0%, #002244 100%) !important;
-    color: white !important; text-align: center !important; padding: 50px 20px !important; margin-bottom: 30px !important;
-}
-.page-header h1 { font-size: 28px !important; font-weight: 700 !important; margin-bottom: 12px !important; }
-.page-header p { font-size: 16px !important; max-width: 600px !important; margin: 0 auto !important; opacity: 0.9 !important; line-height: 1.6 !important; }
-
-.gallery .gallery-card img {
-    width: 100% !important; height: auto !important; max-height: 350px !important;
-    object-fit: contain !important; background-color: #f8fafc !important; display: block !important;
-    padding: 10px !important; box-sizing: border-box !important;
-}
-
-.gallery-card p, .gallery-card h3, .gallery-card figcaption, .gallery .gallery-card p {
-    font-size: 16px !important; font-weight: 700 !important; color: #003366 !important;
-    padding: 18px 12px !important; margin: 0 !important; line-height: 1.6 !important;
-    background: #ffffff !important; border-top: 1px solid #e2e8f0 !important; display: block !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 60px 20px !important;
+    margin-bottom: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    float: none !important; /* إلغاء أي تأثير طفو */
+    clear: both !important;
 }
 
+.page-header h1 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+.page-header p {
+    font-size: 16px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    opacity: 0.9 !important;
+    line-height: 1.6 !important;
+}
+
+/* شبكة المعرض (Grid) - توزيع تلقائي فخم */
+.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    max-width: 1200px !important;
+    margin: 0 auto 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* كرت الصورة الواحد */
 .gallery .gallery-card {
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-bottom: 5px solid #003366 !important;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease, border-bottom-color 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 !important; /* إلغاء الهوامش التلقائية القديمة */
+    width: 100% !important;
+    max-width: 100% !important;
 }
+
+/* ضبط حجم وعرض الصور داخل الكرت */
+.gallery .gallery-card img {
+    width: 100% !important;
+    height: 280px !important; /* توحيد ارتفاع الصور لتبدو متناسقة ومصطفة */
+    object-fit: cover !important; /* ملء المساحة بذكاء دون تشويه الصورة */
+    background-color: #f8fafc !important;
+    display: block !important;
+    border: none !important;
+}
+
+/* النصوص المكتوبة أسفل كل صورة */
+.gallery .gallery-card p {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #003366 !important;
+    padding: 15px 12px !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    background: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
+    text-align: center !important;
+    flex-grow: 1 !important; /* يضمن تساوى النصوص في الطول */
+}
+
+/* تأثير تحويم الماوس على كروت المعرض */
 .gallery .gallery-card:hover {
-    transform: translateY(-8px) !important; border-bottom-color: #25D366 !important;
-    box-shadow: 0 20px 35px rgba(0, 51, 102, 0.12), 0 0 15px rgba(37, 211, 102, 0.2) !important;
+    transform: translateY(-8px) !important;
+    border-bottom-color: #25D366 !important; /* يتحول للأخضر الخاص بالواتساب والفايبر النشط */
+    box-shadow: 0 20px 35px rgba(0, 51, 102, 0.12) !important;
 }
 
-.projects-section, .cta-section { text-align: center !important; max-width: 800px !important; margin: 50px auto !important; padding: 0 20px !important; }
-.projects-section h2, .cta-section h2 { color: #003366 !important; font-size: 24px !important; font-weight: 700 !important; margin-bottom: 15px !important; }
-.projects-section p, .cta-section p { color: #555555 !important; font-size: 15px !important; line-height: 1.7 !important; font-weight: 600 !important; }
+/* أقسام المشاريع وعبارات الدعوة للإجراء */
+.projects-section, .cta-section {
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 50px auto !important;
+    padding: 0 20px !important;
+}
+
+.projects-section h2, .cta-section h2 {
+    color: #003366 !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+}
+
+.projects-section p, .cta-section p {
+    color: #555555 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+}
+
+/* تخصيص زر طلب الخدمة ليكون عملاقاً وجذاباً */
 .cta-section .btn {
-    background: #25D366 !important; color: white !important; padding: 12px 30px !important; border-radius: 10px !important;
-    text-decoration: none !important; font-weight: bold !important; font-size: 16px !important; display: inline-block !important;
-    margin-top: 15px !important; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3) !important; transition: all 0.3s ease !important;
+    background: #25D366 !important;
+    color: white !important;
+    padding: 14px 35px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    display: inline-flex !important;
+    margin-top: 20px !important;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3) !important;
+    transition: all 0.3s ease !important;
 }
-.cta-section .btn:hover { background: #20ba5a !important; transform: translateY(-2px) !important; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important; }
 
-@media (max-width: 768px) {
-    .page-header { padding: 35px 15px !important; }
-    .page-header h1 { font-size: 22px !important; }
-    .page-header p { font-size: 14px !important; }
-    .gallery { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important; gap: 15px !important; padding: 0 15px !important; margin: 20px auto !important; }
-    .gallery .gallery-card img { max-height: 280px !important; padding: 6px !important; }
-    .gallery-card p, .gallery-card h3, .gallery-card figcaption, .gallery .gallery-card p { font-size: 14px !important; padding: 12px 8px !important; }
-    .projects-section h2, .cta-section h2 { font-size: 20px !important; }
+.cta-section .btn:hover {
+    background: #20ba5a !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4) !important;
 }
+
+/* ==========================================================================
+   التجاوب الكامل لمعرض الأعمال على شاشات الموبايل
+============================================================================ */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 40px 15px !important;
+    }
+    .page-header h1 {
+        font-size: 24px !important;
+    }
+    .page-header p {
+        font-size: 14px !important;
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        gap: 20px !important;
+        padding: 0 15px !important;
+    }
+    .gallery .gallery-card img {
+        height: 220px !important; /* تقليل الارتفاع قليلاً على الموبايل ليناسب الشاشات */
+    }
+    .projects-section h2, .cta-section h2 {
+        font-size: 21px !important;
+    }
+}
+
 
 /* ==========================================================================
    7. VIDEOS PAGE STYLE (صفحة الفيديوهات ومقاطع التيك توك والسوشيال)
