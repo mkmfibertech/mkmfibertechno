@@ -1,7 +1,8 @@
 /* ==========================================================================
-   GLOBAL & COMMON STYLES
+   1. RESET & BASE CONFIG (التجهيز الأساسي والخطوط)
 ============================================================================ */
 * {
+    box-shrink: 0;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,8 +17,8 @@ body {
     overflow-x: hidden;
 }
 
-/* الأزرار العامة المشتركة */
-.btn, .whatsapp-btn, .slide-btn, .products-button {
+/* الأزرار العامة - معزولة الفئات تماماً لعدم التداخل */
+.btn-shared, .whatsapp-shared-btn {
     font-family: 'Cairo', sans-serif;
     cursor: pointer;
     text-decoration: none;
@@ -25,43 +26,41 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
-/* عناوين الصفحات الداخلية المشتركة */
-.inner-page-hero, .page-header, .pricing-hero {
+/* الهيرو والترويسة المشتركة لجميع الصفحات الداخلية (الأسعار، المعرض، المتجر، الفيديوهات) */
+.inner-page-hero-section {
     background: linear-gradient(135deg, #002244 0%, #003366 50%, #0055aa 100%);
     color: #ffffff;
     text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 40px;
+    padding: 50px 20px;
+    margin-bottom: 30px;
     width: 100%;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 10px 30px rgba(0, 33, 68, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 33, 68, 0.08);
 }
-
-.inner-page-hero h1, .page-header h1, .pricing-hero h1 {
-    font-size: 32px;
+.inner-page-hero-section h1 {
+    font-size: 28px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
-
-.inner-page-hero p, .page-header p, .pricing-hero p {
-    font-size: 16px;
-    max-width: 700px;
-    margin: 0 auto 20px auto;
+.inner-page-hero-section p {
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto;
     opacity: 0.9;
 }
 
 /* ==========================================================================
-   MAIN FOOTER (الفوتر المشترك)
+   2. MAIN FOOTER (الفوتر المشترك لكل الصفحات)
 ============================================================================ */
-footer {
+.main-site-footer {
     background-color: #0b132b;
     color: #ffffff;
     padding: 40px 20px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +69,7 @@ footer {
     width: 100%;
 }
 
-.footer-contact {
+.footer-buttons-container {
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -78,34 +77,33 @@ footer {
     width: 100%;
 }
 
-.footer-btn {
+.footer-action-link {
     background-color: #1c2541;
     color: white;
-    padding: 12px 28px;
+    padding: 11px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: all 0.3s;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     border: 1px solid rgba(255,255,255,0.05);
 }
+.footer-action-link:hover { background-color: #0055aa; transform: translateY(-2px); }
+.footer-buttons-container a.footer-whatsapp-btn { background-color: #25D366; border: none; }
+.footer-buttons-container a.footer-whatsapp-btn:hover { background-color: #1ebd54; }
 
-.footer-btn:hover { background-color: #0055aa; transform: translateY(-2px); }
-.footer-contact a:first-child { background-color: #25D366; border: none; }
-.footer-contact a:first-child:hover { background-color: #1ebd54; }
+.footer-social-links { display: flex; gap: 20px; justify-content: center; }
+.footer-social-links a { color: #cbd5e1; font-size: 22px; transition: all 0.3s; text-decoration: none; }
+.footer-social-links a:hover { transform: scale(1.18); }
+.footer-social-links a[aria-label="YouTube"]:hover { color: #ff0000; }
+.footer-social-links a[aria-label="Facebook"]:hover { color: #1877f2; }
+.footer-social-links a[aria-label="TikTok"]:hover { color: #ffffff; }
+.footer-social-links a[aria-label="Instagram"]:hover { color: #c13584; }
 
-.social-icons { display: flex; gap: 22px; justify-content: center; }
-.social-icons a { color: #cbd5e1; font-size: 24px; transition: all 0.3s; }
-.social-icons a:hover { transform: scale(1.2); }
-.social-icons a[aria-label="YouTube"]:hover { color: #ff0000; }
-.social-icons a[aria-label="Facebook"]:hover { color: #1877f2; }
-.social-icons a[aria-label="TikTok"]:hover { color: #ffffff; }
-.social-icons a[aria-label="Instagram"]:hover { color: #c13584; }
+.main-site-footer p { font-size: 13px; opacity: 0.65; margin: 0; }
 
-footer p { font-size: 14px; opacity: 0.7; margin: 0; }
-
-.back-to-top { position: fixed; bottom: 20px; left: 20px; background: #003366; color: white; width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 2000; transition: all 0.3s; }
-.back-to-top:hover { background: #0055aa; transform: translateY(-3px); }
+.scroll-top-btn { position: fixed; bottom: 20px; left: 20px; background: #003366; color: white; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 2000; transition: all 0.3s; }
+.scroll-top-btn:hover { background: #0055aa; transform: translateY(-3px); }
