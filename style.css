@@ -1,175 +1,5 @@
 /* ==========================================================================
-   1. GENERAL STYLES (التنسيقات العامة والخطوط)
-============================================================================ */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
-    direction: rtl; /* ضمان الاتجاه العربي الصحيح */
-    overflow-x: hidden; /* منع الالتواء الأفقي للموقع */
-}
-
-/* الأزرار العامة في الموقع */
-.btn, .whatsapp-btn, .slide-btn, .products-button {
-    font-family: 'Cairo', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ==========================================================================
-   2. MODERN NAVIGATION & HEADER (ناف وهيدر عصري متميز)
-============================================================================ */
-.main-header {
-    background-color: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px); /* تأثير زجاجي فخم */
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 51, 102, 0.05);
-    padding: 14px 6%;
-    position: sticky;
-    top: 0;
-    z-index: 2500; /* قيمة صارمة تمنع تداخل أي عنصر بالصفحات فوق الهيدر */
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    direction: rtl;
-    border-bottom: 1px solid rgba(0, 51, 102, 0.06);
-}
-
-.header-top-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.logo-container img.logo {
-    height: 52px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.4s ease;
-}
-
-.logo-container:hover img.logo {
-    transform: rotate(5deg) scale(1.05); /* حركة خفيفة عند التحويم على اللوجو */
-}
-
-.logo-container p {
-    font-size: 14px;
-    font-weight: 600;
-    color: #64748b;
-    margin-bottom: -2px;
-}
-
-.logo-container::after {
-    content: "MKM FiberTechno";
-    font-size: 20px;
-    font-weight: 800;
-    background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-}
-
-/* التنسيق العصري والمتميز للروابط والـ Nav */
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background-color: #f1f5f9;
-    padding: 6px;
-    border-radius: 30px; /* جعل إطار الـ Nav دائري وعصري */
-    border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.main-nav a {
-    color: #475569;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 8px 18px;
-    border-radius: 25px;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* تأثير ذكي عند تحويم الماوس فوق روابط القائمة */
-.main-nav a:hover {
-    color: #003366;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.08);
-}
-
-/* تمييز تلقائي للصفحة النشطة */
-.main-nav a.active {
-    background-color: #003366;
-    color: #ffffff;
-}
-
-/* شريط التنبيهات (Beta) المطور */
-.beta-text {
-    background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%);
-    color: #b45309;
-    border: 1px solid #fde68a;
-    padding: 8px 15px;
-    font-size: 13px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 0;
-    font-weight: 600;
-    width: 100%;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-}
-
-/* ==========================================================================
-   3. INNER PAGES HEADERS (عناوين الصفحات الداخلية)
-============================================================================ */
-.inner-page-hero, .page-header, .pricing-hero {
-    background: linear-gradient(135deg, #002244 0%, #003366 50%, #0055aa 100%);
-    color: #ffffff;
-    text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 40px;
-    width: 100%;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 10px 30px rgba(0, 33, 68, 0.1);
-}
-
-.inner-page-hero h1, .page-header h1, .pricing-hero h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-}
-
-.inner-page-hero p, .page-header p, .pricing-hero p {
-    font-size: 16px;
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    opacity: 0.9;
-}
-
-/* ==========================================================================
-   4. HOME PAGE STYLES (السلايدر والنماذج والأقسام)
+   HOME PAGE - HERO SLIDER
 ============================================================================ */
 .slider-container {
     width: 100%;
@@ -233,7 +63,9 @@ body {
 .slide-btn { background: #0055aa; color: #fff; padding: 12px 30px; border-radius: 30px; font-weight: 600; box-shadow: 0 4px 15px rgba(0, 85, 170, 0.4); }
 .slide-btn:hover { background: #004488; transform: translateY(-2px); }
 
-/* نموذج طلب الخدمة المطور */
+/* ==========================================================================
+   SERVICE ORDER FORM
+============================================================================ */
 .service-order { padding: 45px 20px; background: #ffffff; max-width: 650px; margin: -40px auto 40px auto; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); position: relative; z-index: 10; border: 1px solid #f1f5f9; }
 .service-order h2 { text-align: center; margin-bottom: 25px; color: #003366; font-size: 24px; font-weight: 700; }
 .service-order form { display: flex; flex-direction: column; gap: 16px; }
@@ -242,7 +74,9 @@ body {
 .service-order button { background: #25D366; color: white; border: none; padding: 15px; font-weight: bold; border-radius: 8px; font-size: 16px; cursor: pointer; font-family: 'Cairo', sans-serif; transition: all 0.3s; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
 .service-order button:hover { background: #1ebd54; transform: translateY(-1px); }
 
-/* الأقسام العامة والتكرارية */
+/* ==========================================================================
+   HOME SECTIONS & SECTIONS COMMON CARDS
+============================================================================ */
 section { max-width: 1100px; margin: 50px auto; padding: 0 20px; text-align: center; }
 section h2 { color: #003366; margin-bottom: 25px; font-size: 26px; font-weight: 700; position: relative; display: inline-block; padding-bottom: 8px; }
 section h2::after { content: ""; position: absolute; bottom: 0; left: 25%; width: 50%; height: 3px; background: #0055aa; border-radius: 2px; }
@@ -250,5 +84,16 @@ section h2::after { content: ""; position: absolute; bottom: 0; left: 25%; width
 .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; transition: transform 0.3s; }
 .card:hover { transform: translateY(-3px); }
 
-/* زر الواتساب المستقل والسيرفس كارد */
-.service-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12
+.service-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; max-width: 400px; margin: 20px auto; }
+.btn { background: #003366; color: white; padding: 12px 28px; border-radius: 30px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,51,102,0.2); margin: 15px 0; }
+.btn:hover { background: #0055aa; transform: translateY(-2px); }
+
+/* ==========================================================================
+   RESPONSIVE HOME
+============================================================================ */
+@media (max-width: 768px) {
+    .slider-container { height: 260px; }
+    .slide-title { font-size: 20px; }
+    .slide-desc { font-size: 14px; }
+    .service-order { margin: -20px 15px 40px 15px; padding: 30px 15px; }
+}
