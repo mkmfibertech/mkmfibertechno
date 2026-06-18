@@ -766,67 +766,59 @@ h2::after {
     opacity: 0.9 !important;
     line-height: 1.6 !important;
 }
+/* ==========================================
+   UPGRADED GALLERY STYLE (تعديل وتطوير معرض الأعمال)
+============================================ */
 
-/* 2. تحويل حاوية المعرض إلى شبكة متجاوبة واحترافية */
-.gallery {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-    gap: 25px !important;
-    max-width: 1200px !important;
-    margin: 40px auto !important;
-    padding: 0 20px !important;
-    box-sizing: border-box !important;
-}
-
-/* 3. تنسيق بطاقات الصور (Gallery Cards) بنفس سياق ومربعات الرئيسية */
-.gallery .gallery-card {
-    background: #ffffff !important;
-    border-radius: 16px !important; /* حواف دائرية ناعمة */
-    overflow: hidden !important; /* لقص الصور داخل منحنـى الكارت */
-    box-sizing: border-box !important;
-    text-align: center !important;
-    
-    /* خط جانبي مميز بلون الهوية الكحلي وعمق ثلاثي الأبعاد */
-    border-bottom: 5px solid #003366 !important; 
-    border-right: 1px solid #f0f0f0 !important;
-    border-left: 1px solid #f0f0f0 !important;
-    border-top: 1px solid #f0f0f0 !important;
-    
-    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.04) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom-color 0.3s ease !important;
-}
-
-/* التأثير الحركي المبهج والجاذب للانتباه عند تمرير الماوس أو اللمس */
-.gallery .gallery-card:hover {
-    transform: translateY(-6px) !important;
-    border-bottom-color: #25D366 !important; /* يتحول الخط السفلي للأخضر الفايبر */
-    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12) !important;
-}
-
-/* 4. تظبيط مقاسات الصور بداخل الكروت لتبدو منسقة وموحدة العرض والارتفاع */
+/* ضبط حاوية الصور لتظهر بكامل مقاسها ونقائها */
 .gallery .gallery-card img {
     width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important; /* لقص الصورة بشكل ذكي متناسق دون مطها */
+    height: auto !important; /* جعل الارتفاع مرناً لعدم مط الصورة */
+    max-height: 350px !important; /* حد أقصى للارتفاع لتبقى البطاقات متناسقة */
+    object-fit: contain !important; /* إجبار الصورة على الظهور بالكامل بدون أي قص */
+    background-color: #f8fafc !important; /* خلفية هادئة جداً لتبرز أبعاد الصورة الأصلية */
     display: block !important;
-    transition: transform 0.3s ease !important;
+    padding: 10px !important; /* مسافة داخلية لحماية حواف الصورة */
+    box-sizing: border-box !important;
 }
 
-.gallery .gallery-card:hover img {
-    transform: scale(1.03) !important; /* زووم خفيف جداً يضفي حيوية للتصميم */
-}
-
-/* تنسيق النصوص والوصف أسفل صور المعرض */
+/* تكبير وتمييز عنوان ووصف الصورة ليصبح واضحاً ولائقاً */
 .gallery .gallery-card p {
-    font-size: 14px !important;
+    font-size: 16px !important; /* تكبير الخط ليكون واضحاً ومميزاً */
     font-weight: 700 !important;
-    color: #333333 !important;
-    padding: 15px 10px !important;
+    color: #003366 !important; /* تحويل لون الخط للكحلي الفخم ليطابق الهوية */
+    padding: 18px 12px !important;
     margin: 0 !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
     font-family: 'Cairo', sans-serif !important;
-    border-top: 1px solid #f5f5f5 !important;
+    background: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
 }
+
+/* 💡 إضافة من عندي: تأثير تفاعلي مطور عند تمرير الماوس أو اللمس */
+.gallery .gallery-card {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+.gallery .gallery-card:hover {
+    transform: translateY(-8px) !important; /* رفع الكارت للأعلى بنسبة مريحة للعين */
+    border-bottom-color: #25D366 !important;
+    /* تأثير توهج تكنولوجي خفيف حول الكارت لجذب الانتباه */
+    box-shadow: 0 20px 35px rgba(0, 51, 102, 0.12), 0 0 15px rgba(37, 211, 102, 0.2) !important;
+}
+
+/* 📱 ضبط المسافات والأحجام على الموبايل لتظل الصور واضحة تماماً */
+@media (max-width: 768px) {
+    .gallery .gallery-card img {
+        max-height: 280px !important; /* تقليل الحد الأقصى ليناسب شاشات الهواتف */
+        padding: 6px !important;
+    }
+    .gallery .gallery-card p {
+        font-size: 14px !important; /* حجم متناسق مع الموبايل */
+        padding: 12px 8px !important;
+    }
+}
+
 
 /* 5. تنسيق أقسام النصوص والمشاريع (Projects & CTA) */
 .projects-section, .cta-section {
