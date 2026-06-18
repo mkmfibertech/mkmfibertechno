@@ -615,62 +615,191 @@ section .note {
 
 section .note p {
     margin-bottom: 10px !important;
-    font-weight: 600 !important;
+/* ==========================================================================
+   COMPLETE & CLEAN PRICING PAGE STYLE (كود صفحة الأسعار الشامل والنهائي)
+============================================================================ */
+
+/* 1. تنسيق الهيدر العلوي لصفحة الأسعار (Hero Section) */
+.pricing-hero {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 50px 20px !important;
+    margin-bottom: 30px !important;
 }
 
-/* 5. تنسيق جدول الأسعار الاحترافي ليكون مريحاً جداً للعين */
-.pricing-table-section {
-    max-width: 800px !important;
-    margin: 40px auto !important;
+.pricing-hero h1 {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.pricing-hero p {
+    font-size: 16px !important;
+    max-width: 600px !important;
+    margin: 0 auto 25px auto !important;
+    opacity: 0.9 !important;
+    line-height: 1.6 !important;
+}
+
+/* 2. تنسيق شبكة ومربعات المميزات (Features Grid & Cards) */
+.features-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    max-width: 1200px !important;
+    margin: 30px auto !important;
     padding: 0 15px !important;
+    box-sizing: border-box !important;
 }
 
-.pricing-table-section h2, section h2 {
+.feature-card, section .note {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 25px 20px !important;
+    flex: 1 1 280px !important;
+    max-width: 350px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    border-right: 5px solid #003366 !important; 
+    border-top: 1px solid #eaeaea !important;
+    border-left: 1px solid #eaeaea !important;
+    border-bottom: 1px solid #eaeaea !important;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-right-color 0.3s ease !important;
+}
+
+.feature-card:hover, section .note:hover {
+    transform: translateY(-5px) !important;
+    border-right-color: #25D366 !important; /* ينقلب للأخضر عند التفاعل */
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12) !important;
+}
+
+.feature-card i {
+    font-size: 30px !important;
+    color: #003366 !important;
+    margin-bottom: 15px !important;
+}
+
+.feature-card h3, section .note h3 {
+    color: #003366 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.feature-card p, section .note p {
+    color: #555555 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* 3. قسم الملاحظات المهمة السفلي (Note Section) */
+section .note {
+    max-width: 750px !important;
+    margin: 40px auto !important;
+    text-align: right !important;
+    display: block !important;
+}
+
+section .note p {
+    margin-bottom: 12px !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+/* 4. تجديد جدول قائمة الأسعار الفخم (Premium Pricing Table) */
+.pricing-table-section {
+    max-width: 900px !important;
+    margin: 50px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.pricing-table-section h2 {
     text-align: center !important;
     color: #003366 !important;
-    font-size: 24px !important;
+    font-size: 26px !important;
     margin-bottom: 25px !important;
     font-family: 'Cairo', sans-serif !important;
 }
 
-table {
+.pricing-table-section table {
     width: 100% !important;
-    border-collapse: collapse !important;
-    background: #ffffff !important;
-    border-radius: 12px !important;
-    overflow: hidden !important; /* لقص حواف الجدول داخل المنحنى */
-    box-shadow: 0 8px 20px rgba(0, 51, 102, 0.05) !important;
-    font-family: 'Cairo', sans-serif !important;
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important; /* مسافات خفيفة بين السطور */
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
-th {
-    background-color: #003366 !important; /* كحلي فخم للعناوين */
-    color: white !important;
+.pricing-table-section th {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%) !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
-    padding: 15px !important;
-    font-size: 15px !important;
+    padding: 18px 15px !important;
     text-align: center !important;
+    font-family: 'Cairo', sans-serif !important;
+    border: none !important;
 }
 
-td {
-    padding: 14px 15px !important;
-    border-bottom: 1px solid #eeeeee !important;
-    color: #333333 !important;
+.pricing-table-section th:first-child { border-radius: 0 12px 12px 0 !important; }
+.pricing-table-section th:last-child { border-radius: 12px 0 0 12px !important; }
+
+.pricing-table-section tr:not(:first-child) {
+    background: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.03) !important;
+    transition: all 0.3s ease !important;
+}
+
+.pricing-table-section td {
+    padding: 16px 15px !important;
+    vertical-align: middle !important;
+    text-align: center !important;
     font-size: 14px !important;
-    font-weight: 600 !important;
-    text-align: center !important;
+    color: #4a5568 !important;
+    font-family: 'Cairo', sans-serif !important;
+    border-top: 1px solid #f0f4f8 !important;
+    border-bottom: 1px solid #f0f4f8 !important;
 }
 
-/* تلوين السطور الفردية بلون خفيف جداً لراحة العين */
-tr:nth-child(even) {
-    background-color: #f9fbfd !important;
+/* تمييز عمود اسم الخدمة */
+.pricing-table-section tr td:first-child {
+    border-right: 4px solid #003366 !important;
+    border-radius: 0 12px 12px 0 !important;
+    text-align: right !important;
+    font-weight: 700 !important;
+    color: #003366 !important;
+    font-size: 15px !important;
+}
+.pricing-table-section tr td:last-child {
+    border-radius: 12px 0 0 12px !important;
 }
 
-tr:hover td {
-    background-color: #f1f5f9 !important; /* تأثير تظليل خفيف عند المرور على السطر */
+/* بطاقات الأسعار الملونة (Price Tags) بداخل الجدول */
+.pricing-table-section td:not(:first-child) {
+    font-weight: 700 !important;
+    color: #2e7d32 !important;
+    background: #edf7ed !important; /* خلفية خضراء هادئة جداً */
+    border: 4px solid #ffffff !important; /* يعطي شكل بطاقة منفصلة داخل الجدول */
+    border-radius: 10px !important;
+    box-shadow: inset 0 0 0 1px rgba(46, 125, 50, 0.1) !important;
 }
 
-/* 6. قسم الدعوة لطلب الخدمة أسفل الصفحة (CTA) */
+.pricing-table-section tr:not(:first-child):hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(0, 51, 102, 0.08) !important;
+}
+.pricing-table-section tr:not(:first-child):hover td:first-child {
+    border-right-color: #25D366 !important;
+}
+
+/* 5. قسم الدعوة وحجز الخدمة (CTA) */
 .pricing-cta {
     text-align: center !important;
     background: #ffffff !important;
@@ -679,33 +808,23 @@ tr:hover td {
     border-top: 1px solid #eaeaea !important;
 }
 
-.pricing-cta h2 {
-    margin-bottom: 10px !important;
-}
-
-/* 📱 ضبط التجاوب الكامل للشاشات الصغيرة والموبايل */
+/* 📱 ضبط التجاوب الكامل والمرونة على الهواتف والموبايل */
 @media (max-width: 768px) {
-    .pricing-hero {
-        padding: 35px 15px !important;
-    }
-    .pricing-hero h1 {
-        font-size: 22px !important;
-    }
-    .pricing-hero p {
-        font-size: 14px !important;
-    }
-    .features-grid {
-        gap: 15px !important;
-    }
+    .pricing-hero { padding: 35px 15px !important; }
+    .pricing-hero h1 { font-size: 22px !important; }
+    .pricing-hero p { font-size: 14px !important; }
+    
     .feature-card {
-        max-width: 100% !important; /* كارت كامل العرض على الموبايل */
+        max-width: 100% !important;
         padding: 20px 15px !important;
     }
-    th, td {
-        padding: 10px 8px !important; /* تقليل الحشو ليتناسب مع عرض شاشة الهاتف */
-        font-size: 12px !important;
-    }
+    
+    .pricing-table-section { padding: 0 10px !important; margin: 30px auto !important; }
+    .pricing-table-section th { font-size: 13px !important; padding: 12px 8px !important; }
+    .pricing-table-section td { padding: 10px 6px !important; font-size: 12px !important; }
+    .pricing-table-section tr td:first-child { font-size: 12px !important; padding-right: 10px !important; }
 }
+
 
 
 
