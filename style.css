@@ -13,6 +13,7 @@ body {
     color: #333333;
     line-height: 1.6;
     direction: rtl; /* ضمان الاتجاه العربي الصحيح */
+    overflow-x: hidden; /* منع الالتواء الأفقي للموقع */
 }
 
 /* الأزرار العامة في الموقع */
@@ -36,7 +37,7 @@ body {
     padding: 12px 5%;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000; /* رفع الـ z-index لمنع تداخل كروت المنتجات والسلة فوقه */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -49,6 +50,7 @@ body {
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo-container {
@@ -74,7 +76,8 @@ body {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .main-nav a {
@@ -108,21 +111,22 @@ body {
 /* ==========================================================================
    3. INNER PAGES HEADERS (عناوين الصفحات الداخلية الفخمة)
 ============================================================================ */
-.inner-page-hero {
+.inner-page-hero, .page-header, .pricing-hero {
     background: linear-gradient(135deg, #003366 0%, #002244 100%);
     color: #ffffff;
     text-align: center;
     padding: 50px 20px;
     margin-bottom: 35px;
+    width: 100%;
 }
 
-.inner-page-hero h1 {
+.inner-page-hero h1, .page-header h1, .pricing-hero h1 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.inner-page-hero p {
+.inner-page-hero p, .page-header p, .pricing-hero p {
     font-size: 16px;
     max-width: 700px;
     margin: 0 auto 20px auto;
@@ -214,7 +218,7 @@ section h2 { color: #003366; margin-bottom: 20px; font-size: 24px; }
 
 .pricing-table-section { max-width: 900px; margin: 0 auto 40px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; text-align: right; }
-th, td { padding: 14px; border-bottom: 1px solid #e2e8f0; }
+th, td { padding: 14px; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
 th { background-color: #f8fafc; color: #003366; font-weight: 700; }
 tr:hover { background-color: #f8fafc; }
 
@@ -245,8 +249,8 @@ tr:hover { background-color: #f8fafc; }
 .products-button:hover { background: #0055aa; }
 
 /* السلة الجانبية العائمة */
-.cart-badge-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 12px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 999; font-family: 'Cairo'; }
-.products-cart-box { position: fixed; top: 0; left: -320px; width: 320px; height: 100%; background: white; box-shadow: 5px 0 15px rgba(0,0,0,0.15); z-index: 1001; padding: 20px; transition: left 0.3s ease; overflow-y: auto; text-align: right; }
+.cart-badge-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 12px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1500; font-family: 'Cairo'; }
+.products-cart-box { position: fixed; top: 0; left: -340px; width: 320px; height: 100%; background: white; box-shadow: 5px 0 15px rgba(0,0,0,0.15); z-index: 2500; padding: 20px; transition: left 0.3s ease; overflow-y: auto; text-align: right; }
 .products-cart-box.active { left: 0; }
 .close-cart-btn { background: none; border: none; font-size: 20px; cursor: pointer; float: left; }
 .products-cart-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: #003366; }
@@ -274,6 +278,7 @@ footer {
     align-items: center;
     gap: 20px;
     direction: rtl;
+    width: 100%;
 }
 
 .footer-contact {
@@ -281,16 +286,17 @@ footer {
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .footer-btn {
     background-color: #003366;
     color: white;
-    padding: 10px 24px;
+    padding: 12px 28px; /* تضخيم الأزرار قليلاً لسهولة اللمس على الهاتف */
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     transition: background 0.3s;
     display: inline-flex;
     align-items: center;
@@ -303,18 +309,18 @@ footer {
 
 .social-icons {
     display: flex;
-    gap: 18px;
+    gap: 22px;
     justify-content: center;
 }
 
 .social-icons a {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 24px; /* تكبير أيقونات التواصل */
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 .social-icons a[aria-label="YouTube"]:hover { color: #ff0000; }
 .social-icons a[aria-label="Facebook"]:hover { color: #1877f2; }
@@ -322,24 +328,26 @@ footer {
 .social-icons a[aria-label="Instagram"]:hover { color: #c13584; }
 
 footer p {
-    font-size: 13px;
+    font-size: 14px;
     opacity: 0.8;
     margin: 0;
 }
 
-.back-to-top { position: fixed; bottom: 20px; left: 20px; background: #003366; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 999; }
+.back-to-top { position: fixed; bottom: 20px; left: 20px; background: #003366; color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 1500; }
 
 /* ==========================================================================
    10. RESPONSIVE DESIGN (التجاوب الكامل مع الموبايل لكافة الأقسام)
 ============================================================================ */
 @media (max-width: 768px) {
     .main-header { padding: 12px 15px; gap: 15px; }
-    .header-top-container { flex-direction: column; justify-content: center; gap: 15px; }
-    .main-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 5px; }
+    .header-top-container { flex-direction: column; justify-content: center; gap: 10px; }
+    .main-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 4px; }
     .main-nav a { font-size: 14px; padding: 6px 10px; }
-    .inner-page-hero { padding: 35px 15px; }
-    .inner-page-hero h1 { font-size: 24px; }
-    .slider-container { height: 280px; }
-    .slide-title { font-size: 20px; }
-    th, td { padding: 8px; font-size: 13px; }
+    .inner-page-hero, .page-header, .pricing-hero { padding: 35px 15px; }
+    .inner-page-hero h1, .page-header h1, .pricing-hero h1 { font-size: 24px; }
+    .slider-container { height: 250px; }
+    .slide-title { font-size: 18px; }
+    .slide-desc { font-size: 14px; }
+    th, td { padding: 10px 6px; font-size: 13px; }
+    .pricing-table-section { padding: 15px; margin: 0 10px 40px 10px; }
 }
