@@ -995,6 +995,194 @@ section .card br + strong, .pricing .card br {
     }
 }
 
+/* ==========================================
+   VIDEOS PAGE CUSTOM STYLE (تنسيق صفحة الفيديوهات)
+============================================ */
+
+/* 1. تخصيص الهيدر لصفحة الفيديوهات ليتطابق مع باقي الصفحات */
+body:has(.video-grid) header {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 50px 20px !important;
+    margin-bottom: 30px !important;
+}
+
+body:has(.video-grid) header h1 {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+body:has(.video-grid) header p {
+    font-size: 16px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    opacity: 0.9 !important;
+    line-height: 1.6 !important;
+}
+
+/* 2. تحويل حاوية شبكة الفيديوهات إلى تصميم مرن ومتجاوب */
+.video-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 25px !important;
+    max-width: 1200px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. تنسيق كروت الفيديوهات المميزة (Video Cards) */
+.video-card {
+    background: #ffffff !important;
+    border-radius: 16px !important; /* حواف دائرية ناعمة */
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    
+    /* خط سفلي فخم بلون الهوية الكحلي وعمق ثلاثي الأبعاد */
+    border-bottom: 5px solid #003366 !important; 
+    border-right: 1px solid #f0f0f0 !important;
+    border-left: 1px solid #f0f0f0 !important;
+    border-top: 1px solid #f0f0f0 !important;
+    
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom-color 0.3s ease !important;
+}
+
+/* التأثير الحركي الجاذب للانتباه عند تمرير الماوس أو اللمس */
+.video-card:hover {
+    transform: translateY(-6px) !important;
+    border-bottom-color: #25D366 !important; /* ينقلب للون الأخضر */
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12) !important;
+}
+
+/* عناوين الفيديوهات أسفل الـ iframe */
+.video-card h3 {
+    color: #003366 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin: 15px 0 5px 0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* 4. تنسيق كرت تيك توك والسوشيال ميديا (Social Card) */
+.social-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 30px 20px !important;
+    margin: 40px auto !important;
+    max-width: 600px !important;
+    width: 90% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    
+    /* إطار جانبي مميز */
+    border-right: 5px solid #003366 !important;
+    border-top: 1px solid #f0f0f0 !important;
+    border-left: 1px solid #f0f0f0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.04) !important;
+    transition: all 0.3s ease !important;
+}
+
+.social-card:hover {
+    transform: translateY(-4px) !important;
+    border-right-color: #ff0050 !important; /* لون تيك توك الشهير عند التفاعل */
+    box-shadow: 0 15px 35px rgba(255, 0, 80, 0.1) !important;
+}
+
+.social-card h3 {
+    color: #003366 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.social-card p {
+    color: #555555 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 20px 0 !important;
+    font-weight: 600 !important;
+}
+
+/* 5. تنسيق الأزرار داخل الصفحة (تيك توك والعودة للرئيسية) */
+.social-card .btn, body > .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-family: 'Cairo', sans-serif !important;
+    transition: all 0.3s ease !important;
+}
+
+/* زر تيك توك الأسود الجذاب */
+.social-card .btn {
+    background: #010101 !important;
+    color: white !important;
+    padding: 10px 25px !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+}
+
+.social-card .btn:hover {
+    background: #ff0050 !important;
+    transform: scale(1.03) !important;
+}
+
+/* زر العودة للرئيسية أسفل الصفحة */
+body > .btn {
+    background: #003366 !important;
+    color: white !important;
+    padding: 12px 30px !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+    margin: 30px auto !important;
+    display: table !important; /* لجعله يتوسط الصفحة تلقائياً */
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15) !important;
+}
+
+body > .btn:hover {
+    background: #25D366 !important; /* ينقلب للأخضر عند الرغبة في العودة */
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25) !important;
+}
+
+/* العناوين الرئيسية للأقسام */
+body:has(.video-grid) h2 {
+    text-align: center !important;
+    color: #003366 !important;
+    font-size: 24px !important;
+    margin: 40px 0 20px 0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* 📱 ضبط التجاوب الكامل على الهواتف */
+@media (max-width: 768px) {
+    body:has(.video-grid) header {
+        padding: 35px 15px !important;
+    }
+    body:has(.video-grid) header h1 {
+        font-size: 22px !important;
+    }
+    body:has(.video-grid) h2 {
+        font-size: 20px !important;
+    }
+    .video-grid {
+        grid-template-columns: 1fr !important; /* فيديو واحد في السطر على الموبايل لراحة العين */
+        gap: 15px !important;
+        padding: 0 15px !important;
+    }
+    .video-card {
+        padding: 10px !important;
+    }
+}
 
 
 
