@@ -506,6 +506,86 @@ nav a:hover {
 .slide-desc {
     font-family: 'Cairo', Arial, sans-serif !important;
     font-size: 15px !important;
+/* =========================================================
+   FIXED HERO SLIDER - إصلاح السلايدر للشاشات الكبيرة والموبايل
+============================================================ */
+
+/* ضبط مساحة السلايدر الرئيسي وحمايته من التداخل */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 450px; /* طول مناسب جداً للسلايدر على الابتوب */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* الشريحة الواحدة داخل السلايدر */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: none;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+}
+
+/* تأمين وضبط حجم الصورة داخل السلايدر */
+.slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* يضمن عدم تمطيط أو تشويه الصورة */
+}
+
+/* صندوق المحتوى فوق الصورة (التعديل السحري) */
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* تعتيم احترافي مريح لرؤية الكلمات البيضاء */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يدفع النصوص للأعلى والزر للأسفل تماماً */
+    padding: 30px 40px !important; /* مسافة أمان داخلية تمنع قطع الزر */
+    box-sizing: border-box !important;
+    z-index: 5;
+}
+
+/* شريط النص العلوي (يضع العنوان والبيان بجوار بعضهما مجاناً على اللابتوب) */
+.slide-top-bar {
+    display: flex !important;
+    flex-direction: row !important; /* بجوار بعضهما */
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 25px !important; /* مسافة مريحة بين العنوان والبيان */
+    width: 100%;
+    text-align: right;
+}
+
+/* تنسيق العنوان الرئيسي */
+.slide-title {
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    white-space: nowrap; /* يمنع العنوان من الانقسام لسطرين */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* تنسيق البيان/الوصف بجوار العنوان */
+.slide-desc {
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 15px !important;
     color: #f1f1f1 !important;
     margin: 0 !important;
     font-weight: 400 !important;
@@ -569,7 +649,6 @@ nav a:hover {
         margin-bottom: 5px !important;
     }
 }
-
 
 
 /* ==========================================
