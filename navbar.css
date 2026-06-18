@@ -1,106 +1,166 @@
 /* ==========================================================================
-   EXCLUSIVE ONE-LINE NAVIGATION & HEADER
+   ULTRA-MODERN ULTRA-COLORFUL NAVIGATION (هيدر الحركات والتكات المطور)
 ============================================================================ */
 .main-header {
-    background-color: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0, 51, 102, 0.04);
-    padding: 10px 4%;
+    /* خلفية زجاجية فاخرة مع تدرج لوني خفيف جداً في الأطراف */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /* ظلال مجسمة ناعمة تعطي إيحاء بالعمق */
+    box-shadow: 0 4px 30px rgba(0, 51, 102, 0.06);
+    padding: 20px 20px 12px 20px;
     position: sticky;
     top: 0;
-    z-index: 9999; /* حماية مطلقة للهيدر فوق أي محتوى */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    direction: rtl;
-    border-bottom: 1px solid rgba(0, 51, 102, 0.06);
-    flex-wrap: nowrap;
+    z-index: 9999;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 85, 170, 0.1);
 }
 
+/* الحاوية الرأسية للأسطر الثلاثة */
 .header-top-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 15px; /* مسافة مريحة للعين لتبرز كل طبقة */
     width: 100%;
-    flex-wrap: nowrap;
-    gap: 15px;
 }
 
+/* --- 🌟 السطر الأول: اللوجو مع تأثير لمعان خفيف --- */
 .logo-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
+    width: 100%;
+    filter: drop-shadow(0 2px 8px rgba(0, 51, 102, 0.05));
 }
 
 .logo-container img.logo {
-    height: 44px;
+    height: 52px;
     width: auto;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-/* كبسولة التنقل المتقاربة جداً ويفصل بينها خط */
+/* حركة ذكية: اللوجو يتفاعل بنعومة عند مرور الماوس في الهيدر */
+.main-header:hover .logo-container img.logo {
+    transform: scale(1.02);
+}
+
+/* --- 🌟 السطر الثاني: كبسولة التنقل الملونة والمجسمة --- */
 .main-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0;
-    background-color: #f8fafc;
-    padding: 2px 8px;
-    border-radius: 20px;
-    border: 1px solid #e2e8f0;
+    /* خلفية داكنة فاخرة (Dark Navy) لتبرز الألوان بداخلها بشكل "سيك" */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 4px 12px;
+    border-radius: 30px; /* كبسولة دائرية تماماً */
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15), inset 0 1px 1px rgba(255,255,255,0.1);
     flex-wrap: nowrap;
+    max-width: max-content;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* تنسيق الروابط بداخل الكبسولة */
 .main-nav a {
-    color: #475569;
+    color: #cbd5e1; /* لون نص فضي ناعم في الحالة العادية */
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
-    padding: 6px 12px;
+    padding: 8px 16px;
     position: relative;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
 }
 
-/* خط فاصل عمودي ناعم بين الأزرار */
+/* الخط الفاصل العمودي الملون (بين الأزرار) */
 .main-nav a:not(:last-child)::after {
     content: "";
     position: absolute;
     left: 0;
-    top: 25%;
-    height: 50%;
+    top: 30%;
+    height: 40%;
     width: 1px;
-    background-color: #cbd5e1;
+    background: linear-gradient(to bottom, transparent, rgba(56, 189, 248, 0.4), transparent);
 }
 
+/* --- 🔥 التكات والحركات (Hover Effects) --- */
+
+/* 1. تأثير توهج للنص عند الوقوف عليه */
 .main-nav a:hover {
-    color: #0055aa;
+    color: #38bdf8 !important; /* لون أزرق فيروزي مضيء (Cyan Neon) */
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
 }
 
+/* 2. حركة الخط السفلي الذكي الذي يظهر من المنتصف */
+.main-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #38bdf8, #0055aa);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover::before {
+    width: 60%; /* يتمدد الخط بشكل أنيق عند التحويم */
+}
+
+/* --- 💎 الصفحة النشطة (Active Page) بلون مميز جداً --- */
 .main-nav a.active {
-    color: #003366;
+    color: #38bdf8 !important;
     font-weight: 800;
+    background: rgba(56, 189, 248, 0.1); /* كبسولة داخلية مضيئة خفيفة */
+    border-radius: 20px;
+    box-shadow: inset 0 0 8px rgba(56, 189, 248, 0.2);
 }
 
-/* إخفاء نص البيتا لضمان المساحة الكاملة ومنع السطرين */
+.main-nav a.active::before {
+    width: 70%;
+}
+
+/* --- 🌟 السطر الثالث: نص البيتا المتوهج بنعومة --- */
 .beta-text {
-    display: none !important; 
+    display: block !important;
+    font-size: 10px !important;
+    color: #0055aa !important; /* لون الهوية الأزرق */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 4px;
+    text-align: center;
+    width: 100%;
+    opacity: 0.8;
+    animation: pulseGlow 2s infinite alternate; /* حركة نبض ناعمة لتبدو متطورة */
 }
 
-/* التجاوب السلس مع الشاشات الصغيرة للموبايل */
+/* أنيميشن النبض الخاص بنص البيتا */
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.03); opacity: 1; text-shadow: 0 0 8px rgba(0, 85, 170, 0.3); }
+}
+
+/* ==========================================================================
+   RESPONSIVE (التجاوب الذكي مع الموبايل)
+============================================================================ */
 @media (max-width: 768px) {
-    .main-header { padding: 8px 12px; }
-    .main-nav a { font-size: 12px; padding: 4px 8px; }
-    .logo-container img.logo { height: 35px; }
+    .main-header { padding: 15px 15px 10px 15px; }
+    .logo-container img.logo { height: 42px; }
+    .main-nav a { font-size: 12px; padding: 6px 12px; }
 }
 
 @media (max-width: 480px) {
     .main-nav {
         overflow-x: auto;
-        max-width: 210px;
-        white-space: nowrap;
+        max-width: 100%;
+        padding: 4px 6px;
     }
     .main-nav::-webkit-scrollbar { display: none; }
 }
