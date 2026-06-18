@@ -481,6 +481,119 @@ nav a:hover {
     }
 }
 
+
+/* ==========================================
+   PRICING PAGES & TABLES STYLE
+   (تنسيق مميز واحترافي لصفحة وباقات الأسعار)
+============================================ */
+
+/* تنسيق حاوية كروت الأسعار */
+.pricing-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+/* المربع المميز لباقات الأسعار */
+.pricing-card, .pricing-table, .pricing-box {
+    background: #ffffff !important;
+    border-radius: 16px !important; /* حواف دائرية ناعمة */
+    padding: 30px 20px !important;
+    margin: 20px auto !important;
+    width: 100% !important;
+    max-width: 350px !important; /* عرض مناسب للكروت بجانب بعضها */
+    box-sizing: border-box !important;
+    text-align: center !important;
+    
+    /* خط جانبي مميز بلون الهوية الكحلي وعمق ثلاثي الأبعاد */
+    border-top: 5px solid #003366 !important; 
+    border-right: 1px solid #f0f0f0 !important;
+    border-left: 1px solid #f0f0f0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-color 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير تفاعلي رائع عند تمرير الماوس أو اللمس من الهاتف */
+.pricing-card:hover, .pricing-table:hover, .pricing-box:hover {
+    transform: translateY(-6px) !important; /* ارتفاع خفيف للأعلى */
+    border-top-color: #25D366 !important; /* يتحول الخط العلوي للأخضر عند التفاعل لفت الانتباه */
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.15) !important;
+}
+
+/* تنسيق عنوان الباقة أو الخدمة داخل كرت السعر */
+.pricing-card h3, .pricing-box h3 {
+    color: #003366 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* تمييز الرقم والسعر بشكل جذاب */
+.pricing-card .price, .pricing-box .price {
+    font-size: 28px !important;
+    color: #25D366 !important; /* اللون الأخضر المميز لـ واتساب وجاذب للعين مالياً */
+    font-weight: 700 !important;
+    margin: 15px 0 !important;
+    display: block !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* تنسيق قائمة المميزات المكتوبة داخل كرت السعر */
+.pricing-card ul, .pricing-box ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 20px 0 !important;
+    text-align: right !important; /* محاذاة لليمين لراحة قراءة المميزات بالعربي */
+}
+
+.pricing-card ul li, .pricing-box ul li {
+    font-size: 14px !important;
+    color: #555555 !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px dashed #f0f0f0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* تمييز علامة الصح أو الأيقونة داخل باقة السعر */
+.pricing-card ul li i, .pricing-box ul li i {
+    color: #25D366 !important;
+    margin-left: 8px !important;
+}
+
+/* 📱 ضبط الكروت بالكامل لتكون مرنة ومتجاوبة على الموبايل */
+@media (max-width: 768px) {
+    .pricing-container {
+        padding: 0 15px;
+        gap: 15px;
+        margin: 20px auto;
+    }
+    
+    .pricing-card, .pricing-table, .pricing-box {
+        max-width: 100% !important; /* تأخذ العرض الكامل بشكل منسق على الشاشات الصغيرة */
+        padding: 20px 15px !important;
+        border-radius: 12px !important;
+    }
+    
+    .pricing-card h3, .pricing-box h3 {
+        font-size: 18px !important;
+    }
+    
+    .pricing-card .price, .pricing-box .price {
+        font-size: 24px !important;
+    }
+}
+
+
 .service-order form {
     display: flex;
     flex-direction: column;
