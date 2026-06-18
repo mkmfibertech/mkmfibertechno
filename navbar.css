@@ -1,20 +1,22 @@
 /* ==========================================================================
-   MODERN FUTURISTIC NAVIGATION & HEADER
+   EXCLUSIVE & ULTRA-COMPACT MODERN NAVIGATION (هيدر حصري في سطر واحد)
 ============================================================================ */
 .main-header {
-    background-color: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 51, 102, 0.05);
-    padding: 14px 6%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 51, 102, 0.04);
+    padding: 10px 4%; /* تقليل الارتفاع ليكون رشيقاً */
     position: sticky;
     top: 0;
-    z-index: 9999; /* حماية مطلقة تمنع أي عنصر بالموقع من الصعود فوق الهيدر */
+    z-index: 9999;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row; /* جعل العناصر كلها في سطر واحد إجباري */
+    align-items: center;
+    justify-content: space-between;
     direction: rtl;
     border-bottom: 1px solid rgba(0, 51, 102, 0.06);
+    flex-wrap: nowrap; /* منع النزول لسطر جديد نهائياً */
 }
 
 .header-top-container {
@@ -22,94 +24,100 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: nowrap; /* منع الالتواء */
+    gap: 15px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 8px;
+    flex-shrink: 0; /* منع انكماش اللوجو */
 }
 
 .logo-container img.logo {
-    height: 52px;
+    height: 44px; /* حجم متناسق ورشيق */
     width: auto;
     object-fit: contain;
-    transition: transform 0.4s ease;
 }
 
-.logo-container:hover img.logo {
-    transform: rotate(5deg) scale(1.05);
-}
-
-.logo-container p {
-    font-size: 14px;
-    font-weight: 600;
-    color: #64748b;
-    margin-bottom: -2px;
-}
-
-.logo-container::after {
-    
-    font-size: 20px;
-    font-weight: 800;
-    background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-}
-
+/* القائمة الحصرية المتقاربة جداً وبترتيب السطر الواحد */
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 6px;
-    background-color: #f1f5f9;
-    padding: 6px;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    gap: 0; /* إلغاء المسافات لتعتمد بالكامل على الخط الفاصل */
+    background-color: #f8fafc;
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    flex-wrap: nowrap; /* إجبار السطر الواحد */
 }
 
 .main-nav a {
     color: #475569;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px; /* حجم خط مثالي للسطر الواحد */
     font-weight: 700;
-    padding: 8px 18px;
-    border-radius: 25px;
+    padding: 6px 12px; /* مسافات داخلية متقاربة ومدروسة */
     position: relative;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
+    white-space: nowrap; /* منع الكلمات من الانقسام أو النزول */
 }
 
+/* إضافة خط فاصل عمودي أنيق جداً بين الروابط */
+.main-nav a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: #cbd5e1; /* لون الخط الفاصل */
+}
+
+/* تأثير تحويم ناعم وحصري (تغيير لون النص فقط بدون خلفية عريضة لتجنب اتساع السطر) */
 .main-nav a:hover {
-    color: #003366;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.08);
+    color: #0055aa;
 }
 
+/* الصفحة النشطة بلون مميز وراقي */
 .main-nav a.active {
-    background-color: #003366;
-    color: #ffffff;
+    color: #003366;
+    font-weight: 800;
 }
 
+/* إخفاء التنبيه من الهيدر لتوخي المساحة التامة ومنع السطرين */
 .beta-text {
-    background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%);
-    color: #b45309;
-    border: 1px solid #fde68a;
-    padding: 8px 15px;
-    font-size: 13px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 0;
-    font-weight: 600;
-    width: 100%;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+    display: none; 
 }
 
-/* responsive navbar */
+/* ==========================================================================
+   RESPONSIVE (التجاوب الذكي جداً للموبايل)
+============================================================================ */
 @media (max-width: 768px) {
-    .main-header { padding: 14px 20px; gap: 15px; }
-    .header-top-container { flex-direction: column; justify-content: center; gap: 14px; text-align: center; }
-    .main-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 4px; border-radius: 14px; padding: 4px; }
-    .main-nav a { font-size: 13px; padding: 6px 12px; border-radius: 10px; }
+    .main-header {
+        padding: 10px 15px;
+    }
+    
+    /* في الموبايل تصبح مرنة بمسافات أصغر لتبقى في سطر واحد أيضاً لو أمكن */
+    .main-nav a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    
+    .logo-container img.logo {
+        height: 36px;
+    }
+}
+
+/* لو الشاشة صغيرة جداً (موبايل قديم) يسمح بالتمرير الأفقي اللطيف للقائمة دون تخريب التصميم */
+@media (max-width: 480px) {
+    .main-nav {
+        overflow-x: auto;
+        max-width: 220px;
+        white-space: nowrap;
+    }
+    .main-nav::-webkit-scrollbar {
+        display: none; /* إخفاء شريط التمرير لمظهر نظيف */
+    }
 }
