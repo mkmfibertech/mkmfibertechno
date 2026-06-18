@@ -122,61 +122,113 @@ nav a, .main-nav a {
     transition: all 0.3s ease !important;
     white-space: nowrap !important;
 }
+/* ==========================================================================
+   2. MAIN HEADER & NAVIGATION (تنسيق الهيدر العلوي والقائمة)
+============================================================================ */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* استخدام نظام table-row/display block للتوافق وتوزيع العناصر */
+    display: block; 
+    direction: rtl; /* لضمان الترتيب العربي الصحيح من اليمين لليسار */
+}
 
-nav a:hover, .main-nav a:hover {
-    color: #FFC107 !important;
-    background: transparent !important;
+/* حاوية اللوجو واسم الموقع */
+.logo-container {
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.logo-container img.logo {
+    height: 45px;
+    width: auto;
+    order: 2; /* يضمن ظهور اللوجو على اليمين والنص بجانبه */
+}
+
+.logo-container p {
+    font-size: 16px;
+    font-weight: 750;
+    color: #003366; /* الأزرق الملكي الخاص بهوية الفايبر */
+    margin: 0;
+    order: 1;
+}
+
+/* القائمة الاستكشافية (الروابط) */
+.main-nav {
+    float: left;
+    margin-top: 12px;
+}
+
+.main-nav a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 20px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* تأثير تحويم الماوس على روابط القائمة */
+.main-nav a:hover {
+    color: #0055aa;
+    background-color: #f0f7ff;
+}
+
+/* تنبيه النسخة التجريبية (Beta) */
+.beta-text {
+    clear: both;
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 6px 15px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 12px 0 0 0;
+    font-weight: 500;
+}
+
+/* تنظيف الطفو (Clearfix) لضمان عدم تداخل العناصر */
+.main-header::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* ==========================================================================
-   3. FINAL RADICAL NAV FIX FOR MOBILE (التعديل الجذري لمنع اختفاء روابط الموبايل)
+   تجاوب الهيدر مع الشاشات الصغيرة والموبايل (Responsive)
 ============================================================================ */
 @media (max-width: 768px) {
-    .main-header, header:has(nav) {
-        display: flex !important;
-        flex-direction: column !important; /* لوجو فوق وروابط تحت */
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 12px 8px !important;
-        height: auto !important;
-        position: relative !important;
-        gap: 10px !important;
-    }
-
-    .logo-container img, .logo {
-        height: 40px !important;
-        width: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-
-    nav, .main-nav {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap !important; /* منع الاختفاء والالتفاف بمرونة */
-        gap: 8px !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    nav a, .main-nav a {
-        font-size: 13px !important;
-        font-weight: 700 !important;
-        padding: 6px 10px !important;
-        color: #ffffff !important;
-        white-space: nowrap !important;
-        background: rgba(255, 255, 255, 0.08) !important;
-        border-radius: 6px !important;
+    .logo-container {
+        float: none;
+        justify-content: center;
+        margin-bottom: 15px;
     }
     
-    nav a:hover, .main-nav a:hover {
-        background: #25D366 !important;
-        color: white !important;
+    .main-nav {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .main-nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: 14px;
+        padding: 5px 10px;
     }
 }
+
 
 /* ==========================================================================
    4. HOME PAGE & SLIDER COMPONENTS (مكونات الصفحة الرئيسية والسلايدر)
@@ -536,14 +588,98 @@ body:has(.video-grid) h2 { text-align: center !important; color: #003366 !import
 .service-order button { padding: 15px; border: none; border-radius: 10px; cursor: pointer; background: #25D366; color: white; font-weight: bold; font-size: 16px; }
 
 /* ==========================================================================
-   10. FOOTER, WHATSAPP, AND FLOATING BUTTONS (الفوتر والأزرار العائمة الثابتة)
+   /* ==========================================================================
+   10. FOOTER, WHATSAPP, AND FLOATING BUTTONS (تنسيق الفوتر المطور والأزرار)
 ============================================================================ */
-footer { background: #003366; color: white; text-align: center; padding: 25px 20px; margin-top: 40px; clear: both; position: relative; z-index: 99; }
-footer p { font-size: 14px; opacity: 0.8; margin: 5px 0; }
-.footer-social-icons { margin-top: 15px; display: flex; justify-content: center; gap: 15px; }
-.footer-social-icons a { color: white !important; font-size: 20px; transition: transform 0.3s ease, color 0.3s ease; text-decoration: none; }
-.footer-social-icons a:hover { color: #FFC107 !important; transform: translateY(-3px); }
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+    clear: both;
+    position: relative;
+    z-index: 99;
+}
 
+/* حاوية أزرار الاتصال والواتساب داخل الفوتر */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* لضمان الترتيب على الموبايل */
+}
+
+/* تنسيق أزرار الفوتر (واتساب واتصال) لتبدو كأزرار فخمة */
+.footer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none !important;
+    border-radius: 8px;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    min-width: 140px;
+}
+
+/* تلوين زر الواتساب داخل الفوتر باللون الأخضر */
+.footer-btn[href*="wa.me"] {
+    background: #25D366;
+}
+.footer-btn[href*="wa.me"]:hover {
+    background: #20ba5a;
+    transform: translateY(-3px);
+}
+
+/* تلوين زر الاتصال داخل الفوتر باللون الأزرق المشرق */
+.footer-btn[href*="tel"] {
+    background: #0055aa;
+}
+.footer-btn[href*="tel"]:hover {
+    background: #004488;
+    transform: translateY(-3px);
+}
+
+/* تكبير وتنسيق أيقونات السوشيال ميديا وتوسيع المسافات بينها */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* مسافة ممتازة بين الأيقونات */
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: white !important;
+    font-size: 28px; /* تكبير حجم الأيقونات لتكون واضحة جداً ومريحة للمس */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* تأثيرات الألوان الفخمة عند تمرير الماوس فوق كل شبكة */
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+.social-icons a[aria-label="YouTube"]:hover { color: #ff0000 !important; }
+.social-icons a[aria-label="Facebook"]:hover { color: #1877f2 !important; }
+.social-icons a[aria-label="TikTok"]:hover { color: #010101 !important; text-shadow: 1px 1px #ff0050, -1px -1px #00f2fe; }
+.social-icons a[aria-label="Instagram"]:hover { color: #e1306c !important; }
+
+/* نص الحقوق أسفل الفوتر */
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 10px 0 0 0;
+    font-weight: 500;
+}
+
+/* الأزرار العائمة خارج الفوتر (إن وجدت في صفحاتك) */
 .whatsapp-btn { background: #25D366; color: white !important; padding: 12px 25px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: all 0.3s ease; }
 .whatsapp-btn:hover { background: #20ba5a; transform: translateY(-2px); }
 
@@ -553,6 +689,21 @@ footer p { font-size: 14px; opacity: 0.8; margin: 5px 0; }
 .back-to-top { position: fixed; bottom: 25px; right: 25px; background: #FFC107; color: #003366 !important; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 9999; transition: all 0.3s ease; }
 .back-to-top:hover { transform: translateY(-5px); background: #e0a800; }
 
+/* ضبط التجاوب الكامل على الشاشات الصغيرة والموبايل */
 @media (max-width: 480px) {
-    .whatsapp-btn, .phone-call-btn { width: 100%; max-width: 280px; justify-content: center; font-size: 15px; padding: 10px 20px; }
+    .footer-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .footer-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    .social-icons {
+        gap: 20px;
+    }
+    .social-icons a {
+        font-size: 26px;
+    }
 }
