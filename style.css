@@ -651,6 +651,94 @@ h2::after {
 }
 
 
+/* ==========================================
+   FEATURED SECTIONS & CARDS STYLE
+   (تنسيق احترافي ومميز لأقسام ومربعات الصفحة الرئيسية)
+============================================ */
+
+/* التنسيق المطور للمربعات (الـ Cards) لتبدو مميزة وجاذبة للانتباه */
+section .card, .pricing .card, .contact .card, .policy .card, .faq-item {
+    background: #ffffff !important;
+    border-radius: 16px !important; /* حواف دائرية ناعمة وعصرية */
+    padding: 25px 20px !important;
+    margin: 20px auto !important;
+    max-width: 650px !important; /* عرض مثالي ومريح للقراءة */
+    width: 90% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    
+    /* إطار خفيف وجذاب بلون الهوية الكحلي */
+    border-right: 5px solid #003366 !important; 
+    border-top: 1px solid #f0f0f0 !important;
+    border-left: 1px solid #f0f0f0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    
+    /* ظلال ناعمة تعطى تأثيراً ثلاثي الأبعاد فخماً */
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05) !important;
+    
+    /* حركة انسيابية مريحة للعين عند التفاعل */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-right-color 0.3s ease !important;
+}
+
+/* تأثير رائع عند تحريك الماوس أو اللمس من الهاتف للفت الانتباه */
+section .card:hover, .pricing .card:hover, .contact .card:hover, .policy .card:hover, .faq-item:hover {
+    transform: translateY(-4px) !important; /* ارتفاع خفيف للأعلى */
+    border-right-color: #25D366 !important; /* يتحول لون الخط الجانبي للأخضر الجذاب */
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12) !important; /* تعميق الظل */
+}
+
+/* تنسيق خاص ومميز جداً لقسم الأسئلة الشائعة (FAQ) */
+.faq-item {
+    text-align: right !important; /* محاذاة النص لليمين لسهولة قراءة السؤال والجواب */
+    margin-bottom: 15px !important;
+}
+
+.faq-item h3 {
+    color: #003366 !important; /* لون السؤال كحلي فخم */
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.faq-item p {
+    color: #555555 !important; /* لون الإجابة رمادي مريح للعين */
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* تنسيق النصوص داخل كروت (مواعيد العمل، وسائل الدفع، السياسة) */
+section .card, .pricing .card, .contact .card, .policy .card {
+    font-size: 15px !important;
+    color: #333333 !important;
+    line-height: 1.8 !important;
+    font-weight: 600 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* تمييز العناوين الفرعية (مثل الأيام أو وسائل الدفع الرئيسية) */
+section .card br + strong, .pricing .card br {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* 📱 ضبط المسافات والحواف لتكون مثالية تماماً على شاشات الهواتف الذكية */
+@media (max-width: 768px) {
+    section .card, .pricing .card, .contact .card, .policy .card, .faq-item {
+        padding: 20px 15px !important;
+        margin: 15px auto !important;
+        font-size: 14px !important;
+        border-radius: 12px !important;
+    }
+    .faq-item h3 {
+        font-size: 15px !important;
+    }
+}
+
+
+
 
 
 /* ==========================================
