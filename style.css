@@ -310,24 +310,61 @@ nav a:hover, .main-nav a:hover {
     background: transparent !important;
 }
 
-/* 📱 التجاوب الأصلي المريح للموبايل */
+
+
+/* ==========================================
+   MOBILE NAV & SLIDER CONFLICT FIX
+   (حل تعارض الموبايل بين شريط التنقل والسلايدر)
+============================================ */
+
 @media (max-width: 768px) {
+    /* 1. إجبار الهيدر في الموبايل على سطر واحد مرن وبدون ارتفاعات تضغط على السلايدر */
     .main-header, header:has(nav) {
-        padding: 10px 20px !important;
-        flex-direction: column !important; /* النظام القديم المريح في الموبايل */
-        gap: 10px !important;
+        display: flex !important;
+        flex-direction: row !important; /* إجبار اللوجو والروابط بجانب بعضهما وليس تحت بعض */
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 12px !important;
+        height: 60px !important; /* ارتفاع ثابت ونحيف لراحة العين وعدم أخذ مساحة */
+        position: relative !important; /* إلغاء التثبيت المسبب للتعارض مع السلايدر */
+        top: auto !important;
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
     }
 
+    /* 2. ضبط القائمة بداخل الموبايل لتصطف في سطر واحد مستقيم */
     nav, .main-nav {
-        justify-content: center !important;
-        gap: 12px !important;
+        display: flex !important;
+        flex-direction: row !important; /* في سطر واحد */
+        align-items: center !important;
+        gap: 6px !important; /* مسافات صغيرة ومحكمة لتناسب عرض الشاشة */
+        flex-wrap: nowrap !important; /* منع النزول لسطر جديد نهائياً */
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
+    /* 3. تصغير حجم الروابط واللوجو قليلاً ليتناسبوا مع شاشة الهاتف */
     nav a, .main-nav a {
-        font-size: 14px !important;
-        padding: 5px 8px !important;
+        font-size: 11px !important; /* خط صغير ونحيف لراحة العين */
+        padding: 4px 6px !important;
+        white-space: nowrap !important; /* منع الكلمة من الانقسام */
+    }
+
+    .logo-container img, .logo {
+        height: 35px !important; /* تصغير اللوجو ليترك مساحة مريحة للروابط */
+        width: auto !important;
+    }
+
+    /* 4. إبعاد السلايدر أو المحتوى العلوي عن الهيدر لعدم حدوث تداخل */
+    .slider-container, .main-slider, main {
+        margin-top: 0 !important;
+        position: relative !important;
+        z-index: 1 !important;
     }
 }
+
+
+
 
 
 .beta-notice {
