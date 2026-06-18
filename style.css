@@ -846,12 +846,17 @@ h2::after {
 
 /* 📱 ضبط المسافات والأحجام على الموبايل لتظل الصور واضحة تماماً */
 @media (max-width: 768px) {
-    .gallery .gallery-card img {
+    .gallery-card img {
         max-height: 280px !important; /* تقليل الحد الأقصى ليناسب شاشات الهواتف */
         padding: 6px !important;
     }
+
+    .gallery,
+    .gallery-card p, 
+    .gallery-card h3, 
+    .gallery-card figcaption,
     .gallery .gallery-card p {
-        font-size: 14px !important; /* حجم متناسق مع الموبايل */
+        font-size: 14px !important; /* تصغير متناسق ومريح على شاشة الموبايل */
         padding: 12px 8px !important;
     }
 }
