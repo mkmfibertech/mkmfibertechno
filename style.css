@@ -313,55 +313,61 @@ nav a:hover, .main-nav a:hover {
 
 
 /* ==========================================
-   MOBILE NAV & SLIDER CONFLICT FIX
-   (حل تعارض الموبايل بين شريط التنقل والسلايدر)
+   FINAL RADICAL NAV FIX FOR MOBILE
+   (الإصلاح الجذري والنهائي لقائمة الموبايل واللوجو)
 ============================================ */
 
 @media (max-width: 768px) {
-    /* 1. إجبار الهيدر في الموبايل على سطر واحد مرن وبدون ارتفاعات تضغط على السلايدر */
+    /* 1. إعادة ترتيب الهيدر ليكون عمودياً متمركزاً ليحتوي كل العناصر بدون اختفاء */
     .main-header, header:has(nav) {
         display: flex !important;
-        flex-direction: row !important; /* إجبار اللوجو والروابط بجانب بعضهما وليس تحت بعض */
-        justify-content: space-between !important;
+        flex-direction: column !important; /* وضع اللوجو فوق والروابط تحت */
+        justify-content: center !important;
         align-items: center !important;
-        padding: 8px 12px !important;
-        height: 60px !important; /* ارتفاع ثابت ونحيف لراحة العين وعدم أخذ مساحة */
-        position: relative !important; /* إلغاء التثبيت المسبب للتعارض مع السلايدر */
-        top: auto !important;
-        z-index: 9999 !important;
-        box-sizing: border-box !important;
+        padding: 12px 8px !important;
+        height: auto !important; /* جعل الارتفاع مرناً ليستوعب السطرين */
+        position: relative !important;
+        gap: 10px !important; /* مسافة مريحة بين اللوجو والروابط */
     }
 
-    /* 2. ضبط القائمة بداخل الموبايل لتصطف في سطر واحد مستقيم */
+    /* 2. ضبط حجم اللوجو ليكون متناسقاً وليس ضخماً */
+    .logo-container img, .logo {
+        height: 40px !important; /* مقاس مثالي ومحدد للوجو على الموبايل */
+        width: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* 3. ضبط شريط الروابط ليتوسط السطر الثاني تماماً ويظهر كاملاً */
     nav, .main-nav {
         display: flex !important;
-        flex-direction: row !important; /* في سطر واحد */
+        flex-direction: row !important; /* الروابط بجانب بعضها في سطرها الخاص */
+        justify-content: center !important;
         align-items: center !important;
-        gap: 6px !important; /* مسافات صغيرة ومحكمة لتناسب عرض الشاشة */
-        flex-wrap: nowrap !important; /* منع النزول لسطر جديد نهائياً */
+        flex-wrap: wrap !important; /* السماح للروابط بالالتفاف بسلاسة لو كانت الشاشة صغيرة جداً */
+        gap: 8px !important; /* مسافة محكمة وممتازة بين الروابط */
+        width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
     }
 
-    /* 3. تصغير حجم الروابط واللوجو قليلاً ليتناسبوا مع شاشة الهاتف */
+    /* 4. تنسيق الروابط لتبدو كأزرار صغيرة أنيقة ومريحة للمس باليد */
     nav a, .main-nav a {
-        font-size: 11px !important; /* خط صغير ونحيف لراحة العين */
-        padding: 4px 6px !important;
-        white-space: nowrap !important; /* منع الكلمة من الانقسام */
+        font-size: 13px !important; /* حجم خط ممتاز وواضح جداً للقراءة */
+        font-weight: 700 !important;
+        padding: 6px 10px !important;
+        color: #ffffff !important;
+        white-space: nowrap !important; /* يمنع انقسام الكلمة */
+        background: rgba(255, 255, 255, 0.08) !important; /* خلفية خفيفة جداً تبرز الروابط */
+        border-radius: 6px !important;
     }
-
-    .logo-container img, .logo {
-        height: 35px !important; /* تصغير اللوجو ليترك مساحة مريحة للروابط */
-        width: auto !important;
-    }
-
-    /* 4. إبعاد السلايدر أو المحتوى العلوي عن الهيدر لعدم حدوث تداخل */
-    .slider-container, .main-slider, main {
-        margin-top: 0 !important;
-        position: relative !important;
-        z-index: 1 !important;
+    
+    nav a:hover, .main-nav a:hover {
+        background: #25D366 !important; /* تلوين الرابط بالأخضر عند اللمس */
+        color: white !important;
     }
 }
+
 
 
 
