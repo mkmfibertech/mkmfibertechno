@@ -1,22 +1,22 @@
 /* ==========================================================================
-   EXCLUSIVE & ULTRA-COMPACT MODERN NAVIGATION (هيدر حصري في سطر واحد)
+   EXCLUSIVE ONE-LINE NAVIGATION & HEADER
 ============================================================================ */
 .main-header {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 51, 102, 0.04);
-    padding: 10px 4%; /* تقليل الارتفاع ليكون رشيقاً */
+    padding: 10px 4%;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 9999; /* حماية مطلقة للهيدر فوق أي محتوى */
     display: flex;
-    flex-direction: row; /* جعل العناصر كلها في سطر واحد إجباري */
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     direction: rtl;
     border-bottom: 1px solid rgba(0, 51, 102, 0.06);
-    flex-wrap: nowrap; /* منع النزول لسطر جديد نهائياً */
+    flex-wrap: nowrap;
 }
 
 .header-top-container {
@@ -24,7 +24,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-wrap: nowrap; /* منع الالتواء */
+    flex-wrap: nowrap;
     gap: 15px;
 }
 
@@ -32,39 +32,39 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-shrink: 0; /* منع انكماش اللوجو */
+    flex-shrink: 0;
 }
 
 .logo-container img.logo {
-    height: 44px; /* حجم متناسق ورشيق */
+    height: 44px;
     width: auto;
     object-fit: contain;
 }
 
-/* القائمة الحصرية المتقاربة جداً وبترتيب السطر الواحد */
+/* كبسولة التنقل المتقاربة جداً ويفصل بينها خط */
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 0; /* إلغاء المسافات لتعتمد بالكامل على الخط الفاصل */
+    gap: 0;
     background-color: #f8fafc;
-    padding: 2px 10px;
+    padding: 2px 8px;
     border-radius: 20px;
     border: 1px solid #e2e8f0;
-    flex-wrap: nowrap; /* إجبار السطر الواحد */
+    flex-wrap: nowrap;
 }
 
 .main-nav a {
     color: #475569;
     text-decoration: none;
-    font-size: 14px; /* حجم خط مثالي للسطر الواحد */
+    font-size: 14px;
     font-weight: 700;
-    padding: 6px 12px; /* مسافات داخلية متقاربة ومدروسة */
+    padding: 6px 12px;
     position: relative;
     transition: all 0.2s ease;
-    white-space: nowrap; /* منع الكلمات من الانقسام أو النزول */
+    white-space: nowrap;
 }
 
-/* إضافة خط فاصل عمودي أنيق جداً بين الروابط */
+/* خط فاصل عمودي ناعم بين الأزرار */
 .main-nav a:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -72,52 +72,35 @@
     top: 25%;
     height: 50%;
     width: 1px;
-    background-color: #cbd5e1; /* لون الخط الفاصل */
+    background-color: #cbd5e1;
 }
 
-/* تأثير تحويم ناعم وحصري (تغيير لون النص فقط بدون خلفية عريضة لتجنب اتساع السطر) */
 .main-nav a:hover {
     color: #0055aa;
 }
 
-/* الصفحة النشطة بلون مميز وراقي */
 .main-nav a.active {
     color: #003366;
     font-weight: 800;
 }
 
-/* إخفاء التنبيه من الهيدر لتوخي المساحة التامة ومنع السطرين */
+/* إخفاء نص البيتا لضمان المساحة الكاملة ومنع السطرين */
 .beta-text {
-    display: none; 
+    display: none !important; 
 }
 
-/* ==========================================================================
-   RESPONSIVE (التجاوب الذكي جداً للموبايل)
-============================================================================ */
+/* التجاوب السلس مع الشاشات الصغيرة للموبايل */
 @media (max-width: 768px) {
-    .main-header {
-        padding: 10px 15px;
-    }
-    
-    /* في الموبايل تصبح مرنة بمسافات أصغر لتبقى في سطر واحد أيضاً لو أمكن */
-    .main-nav a {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-    
-    .logo-container img.logo {
-        height: 36px;
-    }
+    .main-header { padding: 8px 12px; }
+    .main-nav a { font-size: 12px; padding: 4px 8px; }
+    .logo-container img.logo { height: 35px; }
 }
 
-/* لو الشاشة صغيرة جداً (موبايل قديم) يسمح بالتمرير الأفقي اللطيف للقائمة دون تخريب التصميم */
 @media (max-width: 480px) {
     .main-nav {
         overflow-x: auto;
-        max-width: 220px;
+        max-width: 210px;
         white-space: nowrap;
     }
-    .main-nav::-webkit-scrollbar {
-        display: none; /* إخفاء شريط التمرير لمظهر نظيف */
-    }
+    .main-nav::-webkit-scrollbar { display: none; }
 }
