@@ -171,63 +171,130 @@ nav a, .main-nav a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
-    margin-right: 20px;
-    padding: 6px 12px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+/* ==========================================================================
+   2. MAIN HEADER & NAVIGATION (تنسيق الهيدر المطور بنظام Flexbox الحديث)
+============================================================================ */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    padding: 12px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    direction: rtl; /* ترتيب لغوي صحيح من اليمين لليسار */
+    
+    /* استخدام نظام المرونة الحديث لمنع التداخل تماماً */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* تأثير تحويم الماوس على روابط القائمة */
+/* حاوية علوية تجمع اللوجو والقائمة جنباً إلى جنب */
+.header-top-container {
+    display: flex;
+    justify-content: space-between; /* يضع اللوجو في أقصى اليمين والقائمة في أقصى اليسار */
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* لمنع انضغاط العناصر */
+}
+
+/* حاوية اللوجو واسم الموقع */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img.logo {
+    height: 48px; /* حجم مثالي ومناسب جداً للوجو */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-container p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #003366; /* لون الهوية الأزرق الملكي */
+    margin: 0;
+    white-space: nowrap; /* يمنع النص من النزول لسطر جديد */
+}
+
+/* القائمة الاستكشافية (الروابط) */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* المسافة بين روابط التنقل */
+}
+
+.main-nav a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+/* تأثير تحويم الماوس والتركيز على روابط القائمة */
 .main-nav a:hover {
     color: #0055aa;
     background-color: #f0f7ff;
 }
 
-/* تنبيه النسخة التجريبية (Beta) */
+/* شريط تنبيه النسخة التجريبية (Beta) ممتد بالكامل بالأسفل */
 .beta-text {
-    clear: both;
     background: #fff3cd;
     color: #856404;
     border: 1px solid #ffeeba;
     padding: 6px 15px;
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
-    border-radius: 5px;
-    margin: 12px 0 0 0;
+    border-radius: 6px;
+    margin: 4px 0 0 0;
     font-weight: 500;
-}
-
-/* تنظيف الطفو (Clearfix) لضمان عدم تداخل العناصر */
-.main-header::after {
-    content: "";
-    display: table;
-    clear: both;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
-   تجاوب الهيدر مع الشاشات الصغيرة والموبايل (Responsive)
+   التجاوب الكامل والمثالي مع الموبايل والشاشات الصغيرة
 ============================================================================ */
 @media (max-width: 768px) {
-    .logo-container {
-        float: none;
+    .main-header {
+        padding: 12px 15px;
+        gap: 15px;
+    }
+    
+    /* تحويل التوزيع ليكون عمودياً مريحاً في الموبايل */
+    .header-top-container {
+        flex-direction: column;
         justify-content: center;
-        margin-bottom: 15px;
+        gap: 15px;
+    }
+    
+    .logo-container {
+        flex-direction: row; /* الحفاظ على اللوجو بجانب النص */
+        justify-content: center;
     }
     
     .main-nav {
-        float: none;
-        text-align: center;
-        margin-bottom: 10px;
-        display: block;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* إذا كانت الشاشة صغيرة جداً تترتب الأزرار بسلاسة */
+        gap: 5px;
     }
     
     .main-nav a {
-        display: inline-block;
-        margin: 5px 8px;
         font-size: 14px;
-        padding: 5px 10px;
+        padding: 6px 12px;
+    }
+    
+    .beta-text {
+        font-size: 12px;
     }
 }
+
 
 
 /* ==========================================================================
