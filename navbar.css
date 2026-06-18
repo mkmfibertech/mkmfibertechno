@@ -1,0 +1,115 @@
+/* ==========================================================================
+   MODERN FUTURISTIC NAVIGATION & HEADER
+============================================================================ */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 51, 102, 0.05);
+    padding: 14px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* حماية مطلقة تمنع أي عنصر بالموقع من الصعود فوق الهيدر */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    direction: rtl;
+    border-bottom: 1px solid rgba(0, 51, 102, 0.06);
+}
+
+.header-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-container img.logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.logo-container:hover img.logo {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.logo-container p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: -2px;
+}
+
+.logo-container::after {
+    content: "MKM FiberTechno";
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f1f5f9;
+    padding: 6px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.main-nav a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav a:hover {
+    color: #003366;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.08);
+}
+
+.main-nav a.active {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+.beta-text {
+    background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%);
+    color: #b45309;
+    border: 1px solid #fde68a;
+    padding: 8px 15px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0;
+    font-weight: 600;
+    width: 100%;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* responsive navbar */
+@media (max-width: 768px) {
+    .main-header { padding: 14px 20px; gap: 15px; }
+    .header-top-container { flex-direction: column; justify-content: center; gap: 14px; text-align: center; }
+    .main-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 4px; border-radius: 14px; padding: 4px; }
+    .main-nav a { font-size: 13px; padding: 6px 12px; border-radius: 10px; }
+}
