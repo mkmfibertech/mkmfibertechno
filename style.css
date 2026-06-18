@@ -748,100 +748,165 @@ h2::after {
 }
 
 /* ==========================================
-   PORTFOLIO & GALLERY STYLE
-   (استرجاع تنسيق معرض الأعمال بالكامل)
+   GALLERY PAGE CUSTOM STYLE (تنسيق صفحة معرض الأعمال)
 ============================================ */
 
-/* حاوية معرض الأعمال الرئيسية */
-.gallery-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+/* 1. تنسيق الهيدر العلوي لصفحة المعرض */
+.page-header {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 50px 20px !important;
+    margin-bottom: 30px !important;
 }
 
-/* توزيع الصور والمشاريع بشكل شبكي احترافي */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+.page-header h1 {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+    font-family: 'Cairo', sans-serif !important;
 }
 
-/* بطاقة العمل أو المشروع */
-.gallery-card {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: right; /* محاذاة النص لليمين */
-    border: 1px solid #eaeaea;
+.page-header p {
+    font-size: 16px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    opacity: 0.9 !important;
+    line-height: 1.6 !important;
 }
 
-.gallery-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
+/* 2. تحويل حاوية المعرض إلى شبكة متجاوبة واحترافية */
+.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 25px !important;
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
 }
 
-/* تنسيق صور معرض الأعمال */
-.gallery-card img {
+/* 3. تنسيق بطاقات الصور (Gallery Cards) بنفس سياق ومربعات الرئيسية */
+.gallery .gallery-card {
+    background: #ffffff !important;
+    border-radius: 16px !important; /* حواف دائرية ناعمة */
+    overflow: hidden !important; /* لقص الصور داخل منحنـى الكارت */
+    box-sizing: border-box !important;
+    text-align: center !important;
+    
+    /* خط جانبي مميز بلون الهوية الكحلي وعمق ثلاثي الأبعاد */
+    border-bottom: 5px solid #003366 !important; 
+    border-right: 1px solid #f0f0f0 !important;
+    border-left: 1px solid #f0f0f0 !important;
+    border-top: 1px solid #f0f0f0 !important;
+    
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom-color 0.3s ease !important;
+}
+
+/* التأثير الحركي المبهج والجاذب للانتباه عند تمرير الماوس أو اللمس */
+.gallery .gallery-card:hover {
+    transform: translateY(-6px) !important;
+    border-bottom-color: #25D366 !important; /* يتحول الخط السفلي للأخضر الفايبر */
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12) !important;
+}
+
+/* 4. تظبيط مقاسات الصور بداخل الكروت لتبدو منسقة وموحدة العرض والارتفاع */
+.gallery .gallery-card img {
     width: 100% !important;
     height: 220px !important;
-    object-fit: cover !important; /* لقص الصورة بشكل متناسق دون مطها */
-    display: block;
-    transition: transform 0.3s ease;
+    object-fit: cover !important; /* لقص الصورة بشكل ذكي متناسق دون مطها */
+    display: block !important;
+    transition: transform 0.3s ease !important;
 }
 
-.gallery-card:hover img {
-    transform: scale(1.03); /* تأثير زووم خفيف عند تمرير الماوس */
+.gallery .gallery-card:hover img {
+    transform: scale(1.03) !important; /* زووم خفيف جداً يضفي حيوية للتصميم */
 }
 
-/* تفاصيل المشروع تحت الصورة */
-.gallery-info {
-    padding: 15px 20px;
+/* تنسيق النصوص والوصف أسفل صور المعرض */
+.gallery .gallery-card p {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #333333 !important;
+    padding: 15px 10px !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    font-family: 'Cairo', sans-serif !important;
+    border-top: 1px solid #f5f5f5 !important;
 }
 
-.gallery-info h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #003366; /* الكحلي الفخم */
-    margin: 0 0 8px 0;
-    font-family: 'Cairo', sans-serif;
+/* 5. تنسيق أقسام النصوص والمشاريع (Projects & CTA) */
+.projects-section, .cta-section {
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 50px auto !important;
+    padding: 0 20px !important;
 }
 
-.gallery-info p {
-    font-size: 13px;
-    color: #666666;
-    margin: 0;
-    line-height: 1.5;
-    font-family: 'Cairo', sans-serif;
+.projects-section h2, .cta-section h2 {
+    color: #003366 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    font-family: 'Cairo', sans-serif !important;
 }
 
-/* 📱 تجاوب المعرض على الهواتف الذكية */
+.projects-section p, .cta-section p {
+    color: #555555 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    font-weight: 600 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* 6. زر طلب الخدمة أسفل المعرض ليكون فخماً وجذاباً */
+.cta-section .btn {
+    background: #25D366 !important; /* الأخضر المميز للواتساب والخدمات السريعة */
+    color: white !important;
+    padding: 12px 30px !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    display: inline-block !important;
+    margin-top: 15px !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3) !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.cta-section .btn:hover {
+    background: #20ba5a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+}
+
+/* 📱 تجاوب كامل ومرونة مطلقة لشاشات الموبايل */
 @media (max-width: 768px) {
-    .gallery-container {
-        margin: 25px auto;
-        padding: 0 15px;
+    .page-header {
+        padding: 35px 15px !important;
     }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 15px;
+    .page-header h1 {
+        font-size: 22px !important;
     }
-    
-    .gallery-card img {
-        height: 180px !important; /* تقليل ارتفاع الصور قليلاً على الموبايل لراحة العين */
+    .page-header p {
+        font-size: 14px !important;
     }
-    
-    .gallery-info {
-        padding: 12px 15px;
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
+        margin: 20px auto !important;
     }
-    
-    .gallery-info h3 {
-        font-size: 15px;
+    .gallery .gallery-card img {
+        height: 180px !important; /* تقليل الارتفاع بالموبايل لراحة العين والـ Scrolling */
+    }
+    .projects-section h2, .cta-section h2 {
+        font-size: 20px !important;
     }
 }
+
 
 
 /* ==========================================
