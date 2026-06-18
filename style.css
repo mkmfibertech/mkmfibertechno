@@ -349,3 +349,64 @@ td strong, .price-text {
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     border-radius: 12px;
 }
+
+
+/* ==========================================================================
+   F. LUXURY CLASSIC TOUCHES (تكات وحركات الفخامة الكلاسيكية للموقع)
+============================================================================ */
+
+/* 1. حركة التمرير الانسيابي الفاخر */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* 2. تخصيص شريط التمرير الجانبي للمتصفح ليناسب الهوية */
+::-webkit-scrollbar {
+    width: 10px !important; /* تنحيف الشريط */
+    background-color: #f1f5f9 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #0f172a, #0055aa) !important; /* تدرج كحلي ملكي */
+    border-radius: 10px !important;
+    border: 2px solid #f1f5f9 !important; /* إطار مفرغ ليعطي شياكة */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #003366 !important;
+}
+
+/* 3. تأثير نبض الفايبر الضوئي للأزرار الرئيسية */
+.service-order button, .store-add-to-cart-btn, .products-button {
+    position: relative;
+    overflow: hidden;
+    /* أنيميشن النبض الهادئ حول الزر */
+    animation: fiberGlowBtn 2.5s infinite alternate ease-in-out;
+}
+
+/* التكة: تأثير لمعان خاطف يمر على الأزرار كل بضع ثوانٍ */
+.service-order button::after, .store-add-to-cart-btn::after, .products-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-25deg);
+    transition: none;
+    animation: lightSweep 4s infinite ease-in-out;
+}
+
+/* حركة اللمعان الخاطف */
+@keyframes lightSweep {
+    0% { left: -100%; }
+    30% { left: 150%; }
+    100% { left: 150%; }
+}
+
+/* حركة نبض الظل الخفيف حول الأزرار */
+@keyframes fiberGlowBtn {
+    0% { box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2); }
+    100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); }
+}
