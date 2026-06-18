@@ -619,36 +619,219 @@ nav a:hover {
 }
 
 /* 📱 ضبط التجاوب الكامل للشاشات الصغيرة والموبايل لمنع التداخل */
+/* =========================================================
+   PERFECT HERO SLIDER - التوسيط الكامل والترتيب الصحيح عناصر
+============================================================ */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* طول مريح ومتناسق للسلايدر */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: none;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* صندوق المحتوى فوق الصورة */
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* تعتيم لإبراز النصوص */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يدفع النصوص للأعلى والزر للأسفل تماماً */
+    padding: 40px 20px !important;
+    box-sizing: border-box !important;
+    z-index: 5;
+    align-items: center; /* 🎯 توسيط الزر وأي عنصر آخر أفقياً */
+}
+
+/* الشريط العلوي (يجمع العنوان والبيان في نفس السطر ممركزين) */
+.slide-top-bar {
+    display: flex !important;
+    flex-direction: row !important; /* في نفس السطر */
+    align-items: center !important;
+    justify-content: center !important; /* 🎯 توسيط النصوص في منتصف السطر تماماً */
+    gap: 15px !important; /* مسافة ناعمة بين العنوان والبيان */
+    width: 100%;
+    text-align: center; /* 🎯 توسيط الكلام داخلياً */
+}
+
+/* 1. تصغير العنوان الكبير وتوسيطه */
+.slide-title {
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 20px !important; /* 🎯 تصغير الحجم ليكون ناعماً ولا يأخذ حيزاً */
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    white-space: nowrap; /* يمنعه من النزول لسطر جديد */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 2. الكلمات الأخرى (البيان) بعد العنوان في نفس السطر */
+.slide-desc {
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 14px !important; /* حجم متناسق ومصغر */
+/* =========================================================
+   PERFECT HERO SLIDER - التوسيط الكامل والترتيب الصحيح عناصر
+============================================================ */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* طول مريح ومتناسق للسلايدر */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: none;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* صندوق المحتوى فوق الصورة */
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* تعتيم لإبراز النصوص */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يدفع النصوص للأعلى والزر للأسفل تماماً */
+    padding: 40px 20px !important;
+    box-sizing: border-box !important;
+    z-index: 5;
+    align-items: center; /* 🎯 توسيط الزر وأي عنصر آخر أفقياً */
+}
+
+/* الشريط العلوي (يجمع العنوان والبيان في نفس السطر ممركزين) */
+.slide-top-bar {
+    display: flex !important;
+    flex-direction: row !important; /* في نفس السطر */
+    align-items: center !important;
+    justify-content: center !important; /* 🎯 توسيط النصوص في منتصف السطر تماماً */
+    gap: 15px !important; /* مسافة ناعمة بين العنوان والبيان */
+    width: 100%;
+    text-align: center; /* 🎯 توسيط الكلام داخلياً */
+}
+
+/* 1. تصغير العنوان الكبير وتوسيطه */
+.slide-title {
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 20px !important; /* 🎯 تصغير الحجم ليكون ناعماً ولا يأخذ حيزاً */
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    white-space: nowrap; /* يمنعه من النزول لسطر جديد */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 2. الكلمات الأخرى (البيان) بعد العنوان في نفس السطر */
+.slide-desc {
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 14px !important; /* حجم متناسق ومصغر */
+    color: #e0e0e0 !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+    opacity: 0.9;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* 3. وضع الزر في الأسفل تماماً بلون أخضر ممركز */
+.slide-btn {
+    display: inline-block !important;
+    background: #25D366 !important; /* اللون الأخضر لموقعك */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 12px 35px !important;
+    font-family: 'Cairo', Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-bottom: 10px !important; /* مسافة أمان سفلية */
+}
+
+.slide-btn:hover {
+    background: #1ebd56 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 📱 التجاوب مع شاشات الموبايل الضيقة لعدم خروج الكلام */
 @media (max-width: 768px) {
     .hero-slider {
-        height: 320px; /* تقليص طول السلايدر ليناسب الموبايل */
+        height: 300px;
     }
     
     .slide-top-bar {
-        flex-direction: column !important; /* يعود لترتيب عمودي لضيق المساحة في الموبايل */
-        align-items: flex-start !important;
-        gap: 10px !important;
+        flex-direction: column !important; /* يعود لسطرين فقط في الموبايل لضيق الشاشة */
+        gap: 8px !important;
     }
     
     .slide-title {
-        font-size: 18px !important;
-        white-space: normal; /* السماح بالنزول لسطر جديد في الموبايل */
+        font-size: 17px !important;
+        white-space: normal;
     }
     
     .slide-desc {
         font-size: 13px !important;
     }
     
-    .slide-content {
-        padding: 20px !important;
-    }
-    
     .slide-btn {
         padding: 10px 25px !important;
         font-size: 13px !important;
-        margin-bottom: 5px !important;
     }
 }
+
+
 
 
 /* ==========================================
