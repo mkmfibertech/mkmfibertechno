@@ -53,23 +53,24 @@ body {
 }
 
 /* ==========================================================================
-   2. MAIN FOOTER (الفوتر المشترك لكل الصفحات)
+   MAIN FOOTER (الفوتر المشترك - يطبق تلقائياً على كل الصفحات)
 ============================================================================ */
-.main-site-footer {
-    background-color: #0b132b;
-    color: #ffffff;
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    direction: rtl;
-    width: 100%;
+footer {
+    background-color: #0b132b !important;
+    color: #ffffff !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+    margin-top: 50px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    direction: rtl !important;
+    width: 100% !important;
 }
 
-.footer-buttons-container {
+/* حاوية الأزرار بالداخل */
+footer div, .footer-contact, .footer-buttons-container {
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -77,12 +78,13 @@ body {
     width: 100%;
 }
 
-.footer-action-link {
+/* تنسيق الروابط والأزرار داخل الفوتر */
+footer a {
     background-color: #1c2541;
-    color: white;
+    color: white !important;
     padding: 11px 25px;
     border-radius: 30px;
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 600;
     font-size: 14px;
     transition: all 0.3s;
@@ -91,19 +93,67 @@ body {
     gap: 8px;
     border: 1px solid rgba(255,255,255,0.05);
 }
-.footer-action-link:hover { background-color: #0055aa; transform: translateY(-2px); }
-.footer-buttons-container a.footer-whatsapp-btn { background-color: #25D366; border: none; }
-.footer-buttons-container a.footer-whatsapp-btn:hover { background-color: #1ebd54; }
 
-.footer-social-links { display: flex; gap: 20px; justify-content: center; }
-.footer-social-links a { color: #cbd5e1; font-size: 22px; transition: all 0.3s; text-decoration: none; }
-.footer-social-links a:hover { transform: scale(1.18); }
-.footer-social-links a[aria-label="YouTube"]:hover { color: #ff0000; }
-.footer-social-links a[aria-label="Facebook"]:hover { color: #1877f2; }
-.footer-social-links a[aria-label="TikTok"]:hover { color: #ffffff; }
-.footer-social-links a[aria-label="Instagram"]:hover { color: #c13584; }
+footer a:hover { 
+    background-color: #0055aa; 
+    transform: translateY(-2px); 
+}
 
-.main-site-footer p { font-size: 13px; opacity: 0.65; margin: 0; }
+/* زر الواتساب المخصص داخل الفوتر */
+footer a[href*="wa.me"], footer a[href*="whatsapp"] {
+    background-color: #25D366 !important;
+}
+footer a[href*="wa.me"]:hover, footer a[href*="whatsapp"]:hover {
+    background-color: #1ebd54 !important;
+}
 
-.scroll-top-btn { position: fixed; bottom: 20px; left: 20px; background: #003366; color: white; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 2000; transition: all 0.3s; }
-.scroll-top-btn:hover { background: #0055aa; transform: translateY(-3px); }
+/* أيقونات التواصل الاجتماعي */
+.social-icons, .footer-social-links { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.social-icons a, .footer-social-links a { 
+    color: #cbd5e1 !important; 
+    font-size: 22px; 
+    background: none !important; 
+    border: none !important; 
+    padding: 0 !important; 
+    transition: all 0.3s;
+}
+.social-icons a:hover, .footer-social-links a:hover { transform: scale(1.18); }
+.social-icons a[aria-label="YouTube"]:hover, .footer-social-links a[aria-label="YouTube"]:hover { color: #ff0000 !important; }
+.social-icons a[aria-label="Facebook"]:hover, .footer-social-links a[aria-label="Facebook"]:hover { color: #1877f2 !important; }
+.social-icons a[aria-label="TikTok"]:hover, .footer-social-links a[aria-label="TikTok"]:hover { color: #ffffff !important; }
+.social-icons a[aria-label="Instagram"]:hover, .footer-social-links a[aria-label="Instagram"]:hover { color: #c13584 !important; }
+
+/* نصوص الحقوق */
+footer p { 
+    font-size: 13px; 
+    opacity: 0.65; 
+    margin: 0; 
+}
+
+/* زر الصعود للأعلى (Scroll to Top) */
+.scroll-top-btn, .back-to-top { 
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    background: #003366; 
+    color: white !important; 
+    width: 44px; 
+    height: 44px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    z-index: 2000; 
+    transition: all 0.3s; 
+}
+.scroll-top-btn:hover, .back-to-top:hover { 
+    background: #0055aa; 
+    transform: translateY(-3px); 
+}
