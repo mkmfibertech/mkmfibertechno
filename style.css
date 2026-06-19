@@ -350,65 +350,69 @@ td strong, .price-text {
 }
 
 /* ==========================================================================
-   E. VIDEOS GALLERY (تنسيقات شاشات عرض الفيديو الكلاسيكية)
+   E. VIDEOS PAGE SPECIFIC (صفحة الفيديوهات - شاشات عرض فاخرة كلاسيك)
 ============================================================================ */
+/* حاوية شبكة الفيديوهات */
 .videos-container, .videos-gallery-layout {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 30px !important;
-    max-width: 1100px !important;
+    gap: 35px !important; /* مسافة هندسية مريحة لإبراز فخامة كل فيديو */
+    max-width: 1150px !important;
     margin: 40px auto !important;
     padding: 0 20px !important;
 }
 
-/* شاشة تشغيل الفيديو */
+/* كارت شاشة الفيديو الكلاسيكية */
 .video-card, .video-responsive-card {
     background: #ffffff !important;
-    border-radius: 12px !important;
+    border-radius: 16px !important; /* زوايا دائرية أكثر شياكة تماثل الشاشات الحديثة */
     overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.04) !important;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.03) !important;
     border: 1px solid #e2e8f0 !important;
-    transition: all 0.4s ease !important;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+/* --- 🔥 التكات والحركات عند تمرير الماوس فوق الفيديو --- */
 .video-card:hover, .video-responsive-card:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.08) !important;
+    transform: translateY(-6px) !important; /* رفعة كلاسيكية ناعمة */
+    border-color: #0055aa !important; /* تضيء أطراف الشاشة بلون الفايبر الأزرق */
+    /* ظلال عميقة تمنح الفيديو حيزاً بارزاً ثلاثي الأبعاد */
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08) !important; 
 }
 
+/* تنسيق الـ iframe (مشغل اليوتيوب أو الفيديو الداخلي) */
 .video-card iframe, .video-responsive-card iframe {
     width: 100% !important;
-    aspect-ratio: 16/9 !important;
+    aspect-ratio: 16/9 !important; /* الأبعاد القياسية الفاخرة للشاشات العريضة */
     border: none !important;
     display: block !important;
+    transition: filter 0.4s ease !important;
+    filter: grayscale(10%) brightness(0.95); /* تكة كلاسيكية: الفيديو أهدأ قليلاً في الحالة العادية */
 }
 
+/* عند التحويم: ينبض الفيديو بألوانه الكاملة والمشرقة */
+.video-card:hover iframe, .video-responsive-card:hover iframe {
+    filter: grayscale(0%) brightness(1) !important;
+}
 
-/* ==========================================================================
-   E. VIDEOS PAGE SPECIFIC (صفحة الفيديوهات)
-============================================================================ */
-.videos-container, .videos-gallery-layout {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 25px !important;
-    max-width: 1100px !important;
-    margin: 30px auto !important;
-    padding: 0 20px !important;
+/* التكة الإضافية: إضافة شريط إضاءة سفلي رفيع جداً وذكي ينبض بنعومة تحت الفيديو المعروض */
+.video-card::after, .video-responsive-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #003366, #00a8cc);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
 }
-.video-card, .video-responsive-card {
-    background: #ffffff !important;
-    border-radius: 14px !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+
+.video-card:hover::after, .video-responsive-card:hover::after {
+    transform: scaleX(1); /* يتمدد الشريط الملون الانسيابي عند الوقوف على الفيديو */
 }
-.video-card iframe, .video-responsive-card iframe {
-    width: 100% !important;
-    aspect-ratio: 16/9 !important;
-    border: none !important;
-    display: block !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    border-radius: 12px;
-}
+
 
 
 /* ==========================================================================
