@@ -766,3 +766,8 @@ html {
     margin: 0 auto !important;
     box-sizing: border-box !important;
 }
+
+.inner-page-hero {
+    background: linear-gradient(0deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
+}
+
