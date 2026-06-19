@@ -250,51 +250,47 @@ td strong, .price-text { color: #0055aa !important; font-weight: 800 !important;
 /* ==========================================================================
    D. OUR WORK / GALLERY SPECIFIC (معرض الأعمال)
 ============================================================================ */
-.gallery-container, .gallery-pictures-layout {
+/* تحسين كروت المعرض */
+.gallery-container {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
     gap: 30px !important;
-    max-width: 1200px !important;
-    margin: 40px auto !important;
-    padding: 0 20px !important;
+    padding: 60px 20px !important;
 }
-.gallery-card, .gallery-picture-item-card {
-    background: #ffffff !important;
-    border-radius: 12px !important;
-    overflow: hidden !important; 
-    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.03) !important;
-    border: 1px solid #e2e8f0 !important;
-    border-bottom: 4px solid #003366 !important; 
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-.gallery-card:hover, .gallery-picture-item-card:hover {
-    transform: translateY(-6px) !important; 
-    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08) !important;
-    border-bottom-color: #0055aa !important; 
-}
-.gallery-card img, .gallery-picture-item-card img {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover !important;
-    display: block !important;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important; 
-    filter: brightness(0.95); 
-}
-.gallery-card:hover img, .gallery-picture-item-card:hover img { transform: scale(1.06) !important; filter: brightness(1); }
-.gallery-card p, .gallery-card h3, .gallery-picture-item-card p {
-    font-size: 14.5px !important;
-    font-weight: 700 !important;
-    color: #0f172a !important; 
-    padding: 16px !important;
-    margin: 0 !important;
-    text-align: center !important;
-    background-color: #ffffff !important;
-    border-top: 1px solid #f1f5f9 !important;
-    transition: color 0.3s ease !important;
-}
-.gallery-card:hover p, .gallery-card:hover h3, .gallery-picture-item-card:hover p { color: #0055aa !important; }
 
-.gallery-section { padding: 60px 20px; background: #ffffff; text-align: center; }
+.gallery-card {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1px solid #e2e8f0 !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05) !important;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 85, 170, 0.15) !important;
+}
+
+.gallery-card img {
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    transition: transform 0.6s ease !important;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08) !important;
+}
+
+.gallery-card p {
+    padding: 20px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #003366 !important;
+    margin: 0 !important;
+    border-top: 2px solid #00a8cc !important;
+}
 
 .section-subtitle { color: #64748b; margin-bottom: 40px; font-size: 16px; }
 
