@@ -664,8 +664,8 @@ html { scroll-behavior: smooth !important; }
 
 /* الزرار الموحد - الأناقة والتوحيد */
 .btn-unified {
-    background: #00a8cc !important; /* لون التركواز الخاص باللوجو */
-    color: #ffffff !important;      /* خط أوف وايت/أبيض ناصع للوضوح */
+    background: #00a8cc !important;
+    color: #ffffff !important;
     padding: 12px 28px !important;
     border-radius: 8px !important;
     font-weight: 700 !important;
@@ -677,14 +677,10 @@ html { scroll-behavior: smooth !important; }
     align-items: center !important;
     justify-content: center !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 10px rgba(0, 168, 204, 0.3) !important; /* سادو خفيف بلون التركواز */
+    box-shadow: 0 4px 10px rgba(0, 168, 204, 0.3) !important;
     font-family: 'Cairo', sans-serif !important;
 }
 
 /* تأثير الـ Hover (عند الوقوف بالماوس) */
-.btn-unified:hover {
-    background: #008fae !important; /* درجة أغمق قليلاً من التركواز */
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 15px rgba(0, 168, 204, 0.4) !important;
-}
+.btn-unified:hover { background: #008fae !important; transform: translateY(-2px) !important; box-shadow: 0 6px 15px rgba(0, 168, 204, 0.4) !important; }
 
