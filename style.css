@@ -409,19 +409,7 @@ html { scroll-behavior: smooth !important; }
     margin: 0 auto !important;
 }
 
-/* العنوان الرئيسي: أبيض ناصع صريح عشان ينطق فوق الأزرق */
-.inner-page-hero h1 {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-    font-size: 32px !important;
-    font-weight: 800 !important;
-    margin: 0 auto 15px auto !important;
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px; 
-}
+
 
 /* الأيقونة: تركواز مضيء وفاتح */
 
@@ -600,7 +588,7 @@ html { scroll-behavior: smooth !important; }
     .pricing-small .features-row {
         flex-wrap: nowrap;
     }
-}
+
 
     .pricing-small .feature-box h3 {
         font-size: 18px !important; /* عنوان أكبر في الديسكتوب */
@@ -679,7 +667,7 @@ html { scroll-behavior: smooth !important; }
 }
 
 .featured-product-card .product-image { flex: 2; padding: 10px; }
-.featured-product-card .product-info { fl x: 1; padding: 20px; }
+.featured-product-card .product-info { flex: 1; padding: 20px; }
 
 
 /* الزرار الموحد - الأناقة والتوحيد */
