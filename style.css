@@ -671,3 +671,37 @@ html { scroll-behavior: smooth !important; }
 /* تأثير الـ Hover (عند الوقوف بالماوس) */
 .btn-unified:hover { background: #008fae !important; transform: translateY(-2px) !important; box-shadow: 0 6px 15px rgba(0, 168, 204, 0.4) !important; }
 
+
+.laser-box {
+    display: flex;
+    align-items: center;
+    background: #001a33; /* خلفية كحلي غامق */
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.triangle-side {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* شكل المثلث (بالـ clip-path) */
+.triangle-side.right { clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); }
+.triangle-side.left { clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); }
+
+/* شعاع الليزر التركواز */
+.laser-beam {
+    width: 4px;
+    height: 150px;
+    background: #00a8cc;
+    box-shadow: 0 0 15px #00a8cc;
+    margin: 0 20px;
+}
+
+.triangle-side i { font-size: 40px; color: #00a8cc; margin-bottom: 10px; }
+.triangle-side h3 { margin: 5px 0; color: #fff; }
+.triangle-side p { font-size: 13px; color: #cbd5e1; }
