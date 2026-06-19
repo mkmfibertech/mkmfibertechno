@@ -132,75 +132,139 @@
 
   <!-- ================= SERVICE ORDER FORM ================= -->
   <section class="service-order">
-    <div class="container">
-      <h2>اطلب خدمة الآن</h2>
-      <form id="serviceForm">
-        <input type="text" id="name" placeholder="الاسم بالكامل" required>
-        <input type="tel" id="phone" placeholder="رقم الهاتف" required>
-        <select id="service" required>
-          <option value="">اختر نوع الخدمة</option>
-          <option>تركيب شبكات Fiber Optic</option>
-          <option>تركيب شبكات UTP</option>
-          <option>لحام فايبر</option>
-          <option>صيانة أعطال الشبكات</option>
-          <option>تنظيم وتركيب Rack</option>
-          <option>اختبار واعتماد الشبكات</option>
-        </select>
-        <input type="text" id="address" placeholder="العنوان بالتفصيل" required>
-        <textarea id="details" rows="4" placeholder="تفاصيل إضافية (اختياري)"></textarea>
-        <button type="submit">إرسال الطلب عبر واتساب</button>
-      </form>
+    <div class="container order-form-container">
+        <h2>اطلب خدمة الآن</h2>
+        <p class="form-subtitle">املأ البيانات وسنتواصل معك لتنفيذ الخدمة</p>
+        
+        <form id="serviceForm" class="order-form">
+            <input type="text" id="name" placeholder="الاسم بالكامل" required>
+            <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+            
+            <select id="service" required>
+                <option value="">اختر نوع الخدمة</option>
+                <option value="تركيب شبكات Fiber Optic">تركيب شبكات Fiber Optic</option>
+                <option value="تركيب شبكات UTP">تركيب شبكات UTP</option>
+                <option value="لحام فايبر">لحام فايبر</option>
+                <option value="صيانة أعطال الشبكات">صيانة أعطال الشبكات</option>
+                <option value="تنظيم وتركيب Rack">تنظيم وتركيب Rack</option>
+                <option value="اختبار واعتماد الشبكات">اختبار واعتماد الشبكات</option>
+            </select>
+            
+            <input type="text" id="address" placeholder="العنوان بالتفصيل" required>
+            <textarea id="details" rows="4" placeholder="تفاصيل إضافية (اختياري)"></textarea>
+            
+            <button type="submit" class="submit-btn">
+                <i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب
+            </button>
+        </form>
     </div>
-  </section>
+</section>
+
 
   <!-- ================= HERO FEATURES ================= -->
-  <section>
-    <h2>جاهز لحل مشكلة الفايبر لديك؟</h2>
-    <div class="hero">
-      <div class="hero-features">
-        <div class="feature">✔ تصليح واستبدال وتشخيص أعطال كيبل فاي</div>
-        <div class="feature">📶 تحسين تغطية الإنترنت داخل منزلك</div>
-        <div class="feature">📱 حجز سريع عبر واتساب</div>
-      </div>
-      <p>احصل على خدمة سريعة داخل القاهرة والقاهرة الجديدة والجيزة</p>
+<section class="hero-features-section">
+    <h2 class="section-title">جاهز لحل مشكلة الفايبر لديك؟</h2>
+    
+    <div class="hero-grid">
+        <div class="feature-card">
+            <i class="fas fa-tools"></i>
+            <p>تصليح واستبدال وتشخيص أعطال كيبل فايبر</p>
+        </div>
+        
+        <div class="feature-card">
+            <i class="fas fa-signal"></i>
+            <p>تحسين تغطية الإنترنت داخل منزلك</p>
+        </div>
+        
+        <div class="feature-card">
+            <i class="fab fa-whatsapp"></i>
+            <p>حجز سريع وسهل عبر واتساب</p>
+        </div>
     </div>
-  </section>
+    
+    <p class="service-location">
+        <i class="fas fa-map-marker-alt"></i> احصل على خدمة سريعة داخل القاهرة والقاهرة الجديدة والجيزة
+    </p>
+</section>
+
 
   <!-- ================= HOW IT WORKS ================= -->
-  <section>
-    <h2>احجز خدمتك في 3 خطوات</h2>
-    <div class="steps">
-      <div class="card">1️⃣ تواصل معنا</div>
-      <div class="card">2️⃣ حدد المشكلة</div>
-      <div class="card">3️⃣ التنفيذ السريع</div>
+  <section class="booking-steps-section">
+    <h2 class="section-title">احجز خدمتك في 3 خطوات</h2>
+    
+    <div class="steps-container">
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>تواصل معنا</h3>
+            <p>رسالة سريعة عبر واتساب</p>
+        </div>
+        
+        <div class="step-connector"></div> <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>حدد المشكلة</h3>
+            <p>أخبرنا بتفاصيل العطل</p>
+        </div>
+        
+        <div class="step-connector"></div> <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>التنفيذ السريع</h3>
+            <p>فني متخصص يصلك فوراً</p>
+        </div>
     </div>
-  </section>
+</section>
+
 
   <!-- ================= SERVICES ================= -->
-  <section class="services">
-    <h2>الخدمات</h2>
-    <div class="service-card">
-      <h3>تصليح كيبل فايبر</h3>
-      <p>تشخيص الأعطال واستبدال الكابلات التالفة.</p>
-    </div>
-  </section>
+ <section class="services-section">
+    <h2 class="section-title">خدماتنا الاحترافية</h2>
+    
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>تصليح كيبل فايبر</h3>
+            <p>تشخيص احترافي للأعطال واستبدال الكابلات التالفة لضمان عودة الإشارة.</p>
+        </div>
 
-  <div style="text-align: center;">
-    <a class="btn" href="https://wa.me/201012646236">
-      <i class="fab fa-whatsapp"></i> اطلب خدماتنا الآن
-    </a>
-  </div>
+        <div class="service-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>تركيب شبكات UTP</h3>
+            <p>تمديد وتنظيم كابلات الشبكات الداخلية للشركات والمنازل.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>تنظيم وتركيب Rack</h3>
+            <p>ترتيب راكات الشبكة لضمان تهوية جيدة وسهولة الصيانة.</p>
+        </div>
+    </div>
+
+    <div class="service-cta">
+        <a class="whatsapp-btn" href="https://wa.me/201012646236" target="_blank">
+            <i class="fab fa-whatsapp"></i> اطلب الخدمة الآن
+        </a>
+    </div>
+</section>
+
 
   <!-- ================= WORK TIME ================= -->
-  <section class="pricing">
-    <h2>مواعيد العمل</h2>
-    <div class="card">
-      الأحد - الخميس<br>
-      8:00 مساءً - 11:00 مساءً<br><br>
-      الجمعة والسبت<br>
-      طوال اليوم بالحجز المسبق
+  <section class="working-hours-section">
+    <h2 class="section-title"><i class="far fa-clock"></i> مواعيد العمل</h2>
+    
+    <div class="hours-grid">
+        <div class="hours-card">
+            <h3>أيام الأسبوع</h3>
+            <p class="time-range">الأحد - الخميس</p>
+            <span class="badge">8:00 مساءً - 11:00 مساءً</span>
+        </div>
+        
+        <div class="hours-card weekend">
+            <h3>عطلة نهاية الأسبوع</h3>
+            <p class="time-range">الجمعة والسبت</p>
+            <span class="badge">طوال اليوم بالحجز المسبق</span>
+        </div>
     </div>
-  </section>
+</section>
+
 
   <!-- ================= WHY US ================= -->
   <section>
