@@ -753,3 +753,16 @@ html {
     color: #0055aa !important;
 }
 
+/* تأمين قسم حلول الفايبر المنزلية من الخروج عن الشاشة */
+.ftth-solutions-section {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    padding: 60px 20px !important;
+    box-sizing: border-box !important; /* حساب المسافات الداخلية من ضمن العرض الأصلي */
+}
+
+.ftth-grid {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
