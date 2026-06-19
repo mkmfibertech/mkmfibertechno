@@ -6,113 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فيديوهات MKM FiberTechno</title>
 
-<link rel="stylesheet" href="global.css">
-<link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-       
-        .video-card iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 15px;
-    border: none;
-}
-    </style>
-
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-
-
 <body>
-  <div id="header-container"></div>
-<header class="inner-page-hero">
-    <h1>فيديوهات MKM FiberTechno</h1>
-    <p>شاهد أحدث الشروحات وأعمال الفايبر</p>
-</header>
 
+    <div id="header-container"></div>
 
+    <header class="inner-page-hero">
+        <h1>فيديوهات MKM FiberTechno</h1>
+        <p>شاهد أحدث الشروحات وأعمال الفايبر</p>
+    </header>
 
-  <section>
+    <section class="home-section-wrapper">
+        <h2>🎥 أحدث فيديوهات يوتيوب</h2>
+        
+        <div class="videos-gallery-layout">
 
-<h2>🎥 أحدث فيديوهات يوتيوب</h2>
+            <div class="video-responsive-card">
+                <iframe
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    src="https://www.youtube.com/embed/FKqV6WtKobQ"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
-<div class="video-grid">
+            <div class="video-responsive-card">
+                <iframe
+                    src="https://www.youtube.com/embed/hX6P1jYLVWE"
+                    title="شرح صيانة شبكات الفايبر"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe> 
+            </div>
 
-<div class="video-card">
+            <div class="video-responsive-card">
+                <iframe
+                    src="https://www.youtube.com/embed/A0v9XpfWrus"
+                    title="شرح تركيب ONU"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
-    <iframe
-loading="lazy"
-referrerpolicy="strict-origin-when-cross-origin"
-src="https://www.youtube.com/embed/FKqV6WtKobQ"
-allowfullscreen>
-</iframe>
+        </div>
+    </section>
 
-</div>
+    <section class="home-section-wrapper">
+        <h2>🎵 فيديوهات تيك توك</h2>
+        
+        <div class="home-grid-layout" style="max-width: 600px; margin: 0 auto;">
+            <div class="home-info-card" style="padding: 30px 20px;">
+                <h3 style="color: #003366; margin-bottom: 10px; font-weight: 700;">تابع أحدث فيديوهات الفايبر والصيانة</h3>
+                <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">شروحات سريعة ونصائح عملية في عالم الفايبر.</p>
+                <a class="slide-btn" href="https://www.tiktok.com/@mkm.fibertechno" target="_blank" style="background: #ff0050;">
+                    <i class="fab fa-tiktok"></i> زيارة حساب تيك توك
+                </a>
+            </div>
+        </div>
+    </section> 
 
-    <div class="video-card">
-
-    <iframe
-        src="https://www.youtube.com/embed/hX6P1jYLVWE"
-        title="عنوان الفيديو"
-        loading="lazy"
-        allowfullscreen>
-    </iframe> 
-
-</div>
-
-<div class="video-card">
-
-    <iframe
-        src="https://www.youtube.com/embed/A0v9XpfWrus"
-        title="عنوان الفيديو"
-        loading="lazy"
-        allowfullscreen>
-    </iframe>
-
-</div>
-    
-<h3>شرح تركيب ONU</h3>
-
-</div>
-
-
-
-     <section>
-
-<h2>🎵 فيديوهات تيك توك</h2>
-
-<div class="social-card">
-
-<h3>تابع أحدث فيديوهات الفايبر والصيانة</h3>
-
-<p>
-شروحات سريعة ونصائح عملية في عالم الفايبر.
-</p>
-
-<a class="btn"
-href="https://www.tiktok.com/@mkm.fibertechno"
-target="_blank">
-
-زيارة حساب تيك توك
-
-</a>
-    
-
-</div>
-
-</section> 
-       <a href="index.html" class="btn">
-🏠 العودة للرئيسية
-</a>
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="index.html" class="slide-btn" style="background: #003366;">
+            <i class="fas fa-home"></i> العودة للرئيسية
+        </a>
+    </div>
 
     <div id="footer-container"></div>
 
-<script src="js/layout.js"></script>
+    <script src="js/layout.js"></script>
     
 </body>
-
 </html>
