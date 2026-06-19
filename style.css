@@ -292,6 +292,12 @@ td strong, .price-text { color: #0055aa !important; font-weight: 800 !important;
 }
 .gallery-card:hover p, .gallery-card:hover h3, .gallery-picture-item-card:hover p { color: #0055aa !important; }
 
+.gallery-section { padding: 60px 20px; background: #ffffff; text-align: center; }
+
+/* العناوين الكلاسيكية */
+.section-title { font-size: 32px; color: #0f172a; margin-bottom: 10px; font-weight: 800; }
+.section-subtitle { color: #64748b; margin-bottom: 40px; font-size: 16px; }
+
 /* ==========================================================================
    E. VIDEOS PAGE SPECIFIC (صفحة الفيديوهات)
 ============================================================================ */
@@ -363,11 +369,6 @@ html { scroll-behavior: smooth !important; }
 }
 @keyframes lightSweep { 0% { left: -100%; } 30% { left: 150%; } 100% { left: 150%; } }
 @keyframes fiberGlowBtn { 0% { box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2); } 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); } }
-
-
-
-
-
 
 
 
