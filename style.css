@@ -582,3 +582,30 @@ html { scroll-behavior: smooth !important; }
     border-radius: 16px !important;
     padding: 25px 20px !important; /* تم قفل الأكواد المقطوعة وتنظيفها تماماً هنا */
 }
+
+
+   /* ده التنسيق الأساسي (اللي هيظهر على الموبايل) */
+.pricing-small .feature-box {
+    padding: 15px !important;
+}
+
+/* ده التنسيق بتاع الشاشات الكبيرة (الـ Desktop) */
+@media (min-width: 768px) {
+    .pricing-small {
+        display: flex; /* يخليهم جنب بعض في صف واحد */
+        flex-wrap: nowrap; /* يمنعهم ينزلوا تحت بعض */
+    }
+
+    .pricing-small .feature-box {
+        padding: 25px !important; /* نرجعهم حجمهم الكبير الطبيعي في الديسكتوب */
+    }
+
+    .pricing-small .feature-box h3 {
+        font-size: 18px !important; /* عنوان أكبر في الديسكتوب */
+    }
+
+    .pricing-small .feature-box p {
+        font-size: 14px !important; /* نص أوضح في الديسكتوب */
+    }
+}
+   
