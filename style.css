@@ -466,12 +466,10 @@ html { scroll-behavior: smooth !important; }
 .page-header-unified h1
 {
     color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-    color: #ffffff !important; /* لون النص أبيض */
     font-size: 32px !important;
     font-weight: 800 !important;
     margin-bottom: 20px !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important; /* ظل خفيف جداً يبرز الكلام */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
 }
 
 
