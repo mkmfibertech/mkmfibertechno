@@ -584,21 +584,50 @@ html { scroll-behavior: smooth !important; }
 }
 
 
-   /* ده التنسيق الأساسي (اللي هيظهر على الموبايل) */
-.pricing-small .feature-box {
-    padding: 15px !important;
+.pricing-small .features-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* ده التنسيق بتاع الشاشات الكبيرة (الـ Desktop) */
-@media (min-width: 768px) {
-    .pricing-small {
-        display: flex; /* يخليهم جنب بعض في صف واحد */
-        flex-wrap: nowrap; /* يمنعهم ينزلوا تحت بعض */
-    }
+/* 3. تنسيق الكروت (الكحلي والتركواز) */
+.pricing-small .feature-card {
+    flex: 1;
+    min-width: 280px;
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%) !important;
+    border: 1px solid #00a8cc !important;
+    border-radius: 16px !important;
+    padding: 25px !important;
+    text-align: center;
+    transition: all 0.3s ease;
+}
 
-    .pricing-small .feature-box {
-        padding: 25px !important; /* نرجعهم حجمهم الكبير الطبيعي في الديسكتوب */
+.pricing-small .feature-card i {
+    color: #00e5ff !important;
+    font-size: 32px !important;
+    margin-bottom: 15px !important;
+}
+
+.pricing-small .feature-card h3 {
+    color: #ffffff !important;
+    margin-bottom: 10px !important;
+    font-size: 18px !important;
+}
+
+.pricing-small .feature-card p {
+    color: #cbd5e1 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+/* 4. تنسيق الديسكتوب (تخلي الكروت جنب بعض) */
+@media (min-width: 768px) {
+    .pricing-small .features-row {
+        flex-wrap: nowrap;
     }
+}
 
     .pricing-small .feature-box h3 {
         font-size: 18px !important; /* عنوان أكبر في الديسكتوب */
