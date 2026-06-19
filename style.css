@@ -675,3 +675,71 @@ html {
     .inner-page-hero h1 { font-size: 24px !important; }
     .inner-page-hero p { font-size: 14px !important; }
 }
+
+
+
+/* ==========================================================================
+   معرض الأعمال - تكات كلاسيكية فاخرة ومروقة (Gallery Tricks)
+============================================================================ */
+/* ضبط شبكة الصور لتكون هندسية ومريحة للعين */
+.gallery-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
+    gap: 30px !important; /* مسافة فاخرة للتنفس البصري */
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+}
+
+/* كارت الصورة (البرواز الكلاسيكي) */
+.gallery-card {
+    background: #ffffff !important;
+    border-radius: 16px !important; /* زوايا دائرية شيك جداً */
+    overflow: hidden !important; /* لمنع خروج الصورة أثناء الزووم */
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.03) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-bottom: 4px solid #003366 !important; /* خط سفلي بكحلي الهوية */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* الحركة عند تمرير الماوس فوق الكارت */
+.gallery-card:hover {
+    transform: translateY(-6px) !important; /* رفعة خفيفة كلاسيك */
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08) !important;
+    border-bottom-color: #0055aa !important; /* الخط السفلي يضيء أزرق فايبر */
+}
+
+/* تأثير الزووم السينمائي على الصورة بداخل البرواز */
+.gallery-card img {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important; 
+    filter: brightness(0.94); /* أهدأ بنسبة بسيطة في الحالة العادية */
+}
+
+/* التكة: الصورة تنطق وتعمل زووم ناعم عند التحويم */
+.gallery-card:hover img {
+    transform: scale(1.06) !important;
+    filter: brightness(1) !important;
+}
+
+/* وصف وشرح المشروع أسفل الصورة */
+.gallery-card p {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important; /* أسود ملكي داكن */
+    padding: 18px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    background-color: #ffffff !important;
+    border-top: 1px solid #f1f5f9 !important;
+    transition: color 0.3s ease !important;
+}
+
+/* تلوين النص بنعومة عند الوقوف على الكارت */
+.gallery-card:hover p {
+    color: #0055aa !important;
+}
+
