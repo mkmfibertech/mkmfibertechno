@@ -4,18 +4,15 @@
 html, body {
     max-width: 100% !important;
     overflow-x: hidden !important; /* إخفاء أي مساحة تخرج عن العرض الطبيعي */
+   scroll-behavior: smooth !important;
 }
 
 /* ==========================================================================
    A. HOME PAGE SPECIFIC (الصفحة الرئيسية)
 ============================================================================ */
-.slider-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    height: 420px;
-    background: #000;
-}
+
+
+.slider-container { width: 100%; overflow: hidden; position: relative; height: 420px; background: #000; }
 .hero-slider { width: 100%; height: 100%; position: relative; }
 .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; z-index: 1; transition: opacity 0.8s ease-in-out; display: flex; align-items: center; justify-content: center; }
 .slide.active { opacity: 1; z-index: 2; }
@@ -26,8 +23,7 @@ html, body {
 .slide-btn { background: #0055aa; color: #fff; padding: 10px 25px; border-radius: 25px; font-weight: 600; text-decoration: none; }
 
 /* نموذج طلب الخدمة بالرئيسية */
-.service-order { padding: 40px 20px; background: #ffffff; max-width: 600px; margin: -30px auto 40px auto; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; z-index: 10; border: 1px solid #e2e8f0; }
-.service-order h2 { text-align: center; margin-bottom: 20px; color: #003366; font-size: 22px; font-weight: 700; }
+.service-order { padding: 40px 20px; background: #ffffff; max-width: 600px; margin: -30px auto 40px auto; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }.service-order h2 { text-align: center; margin-bottom: 20px; color: #003366; font-size: 22px; font-weight: 700; }
 .service-order form { display: flex; flex-direction: column; gap: 15px; }
 .service-order input, .service-order select, .service-order textarea { padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Cairo'; font-size: 14px; width: 100%; background-color: #f8fafc; }
 .service-order button { background: #25D366; color: white; border: none; padding: 14px; font-weight: bold; border-radius: 8px; font-size: 16px; cursor: pointer; font-family: 'Cairo'; }
@@ -66,9 +62,14 @@ html, body {
     border-radius: 30px !important;
     text-align: right;
 }
+.products-grid 
+{ display: grid !important; 
+ grid-template-columns: 
+    repeat(auto-fit, minmax(240px, 1fr)) !important;
+ gap: 25px !important; 
+}
 
-/* شبكة عرض المنتجات */
-.products-grid, .store-products-grid { 
+.store-products-grid { 
     display: grid !important; 
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important; 
     gap: 25px !important; 
@@ -585,18 +586,9 @@ html { scroll-behavior: smooth !important; }
 
 /* 4. تنسيق الديسكتوب (تخلي الكروت جنب بعض) */
 @media (min-width: 768px) {
-    .pricing-small .features-row {
-        flex-wrap: nowrap;
-    }
-
-
-    .pricing-small .feature-box h3 {
-        font-size: 18px !important; /* عنوان أكبر في الديسكتوب */
-    }
-
-    .pricing-small .feature-box p {
-        font-size: 14px !important; /* نص أوضح في الديسكتوب */
-    }
+    .pricing-small .features-row { flex-wrap: nowrap !important; }
+    .pricing-small .feature-box h3 { font-size: 18px !important; }
+    .pricing-small .feature-box p { font-size: 14px !important; }
 }
    
 /* كلاس موحد لكل عناوين الصفحات */
@@ -656,18 +648,18 @@ html { scroll-behavior: smooth !important; }
 
 /* ده خاص بالأقسام المميزة في الصفحة الرئيسية فقط */
 .featured-product-card {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    max-width: 800px;
-    margin: 20px auto;
+    display: flex !important;
+    align-items: center !important;
+    background: #fff !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    max-width: 800px !important;
+    margin: 20px auto !important;
 }
+.featured-product-card .product-image { flex: 2 !important; padding: 10px !important; }
+.featured-product-card .product-info { flex: 1 !important; padding: 20px !important; }
 
-.featured-product-card .product-image { flex: 2; padding: 10px; }
-.featured-product-card .product-info { flex: 1; padding: 20px; }
 
 
 /* الزرار الموحد - الأناقة والتوحيد */
