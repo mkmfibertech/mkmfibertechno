@@ -368,36 +368,72 @@ html { scroll-behavior: smooth !important; }
    H. INNER PAGES HERO - FIXED CLEAN (العناوين وحلول الفايبر النظيفة والمضمونة)
 ============================================================================ */
 .inner-page-hero {
-    background: transparent !important; 
-    padding: 25px 20px !important;
-    text-align: center !important;
-    box-shadow: none !important;
-    margin-bottom: 20px !important;
+/* ==========================================================================
+   INNER PAGES HERO - CLASSIC LUXURY (البانر الكبير الأصلي والنصوص المضيئة)
+============================================================================ */
+.inner-page-hero {
+    /* الخلفية الزرقاء الملكية الكبيرة الكاملة */
+    background: linear-gradient(180deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
+    padding: 60px 20px !important;
+    text-align: center !important; 
+    border-radius: 0 0 24px 24px !important; /* الانحناء السفلي الفخم */
+    margin-bottom: 40px !important;
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2) !important;
+    position: relative;
+    overflow: hidden;
     direction: rtl !important;
 }
+
+/* الخلفية الشبكية لخطوط الفايبر */
+.inner-page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 25px 25px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.inner-page-hero .container, .inner-page-hero * {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto !important;
+}
+
+/* العنوان الرئيسي: أبيض ناصع صريح عشان ينطق فوق الأزرق */
 .inner-page-hero h1 {
-    color: #ffffff !important; 
+    color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    font-size: 28px !important;
-    font-weight: 850 !important;
-    margin: 0 auto 10px auto !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    margin: 0 auto 15px auto !important;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px; 
 }
+
+/* الأيقونة: تركواز مضيء وفاتح */
 .inner-page-hero h1 i {
     color: #00e5ff !important;
-    filter: drop-shadow(0 0 6px rgba(0, 168, 204, 0.8)) !important;
+    -webkit-text-fill-color: #00e5ff !important;
+    filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.8)) !important;
 }
+
+/* الوصف الفرعي: تركواز مضيء وواضح جداً وقابل للقراءة */
 .inner-page-hero p {
     color: #00e5ff !important;
     -webkit-text-fill-color: #00e5ff !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
     font-weight: 600 !important;
-    line-height: 1.6 !important;
     margin: 0 auto !important;
-    max-width: 600px !important;
+    max-width: 650px !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* ==========================================================================
