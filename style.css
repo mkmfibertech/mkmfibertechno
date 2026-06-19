@@ -607,71 +607,53 @@ html {
 }
 
 /* ==========================================================================
-   INNER PAGES HERO - CLASSIC LUXURY (تنسيق عناوين الصفحات كلاسيك فاخر)
+   INNER PAGES HERO - SMART CLASSIC (تنسيق العناوين الهادئ والموزون بالملي)
 ============================================================================ */
+/* الحاوية الكبيرة: رجعت لحجمها الطبيعي وبدون أي ألوان تفرش الشاشة وتغطي على اللوجو */
 .inner-page-hero {
-    /* الميكس الساحر: تدرج لوني كلاسيكي يبدأ من الكحلي الملكي العتيق وينتهي بالتركواز المضيء */
-    background: linear-gradient(180deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
-    padding: 60px 20px !important;
-    text-align: center !important; /* توسيع وتوسيط العناصر في المنتصف تماماً */
-    border-radius: 0 0 24px 24px !important; /* انحناء سفلي ناعم يشبه تكة الأزرار */
-    margin-bottom: 40px !important;
-    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2) !important;
+    background: transparent !important; /* إلغاء الخلفية الزرقاء الضخمة تماماً */
+    padding: 25px 20px !important; /* مساحة رأسية صغيرة ومحندقة متناسقة مع القائمة */
+    text-align: center !important;
+    box-shadow: none !important;
+    margin-bottom: 20px !important;
     position: relative;
-    overflow: hidden;
     direction: rtl !important;
 }
 
-/* التكة الرقمية: خلفية شبكية خفيفة جداً ومستقرة توحي بخيوط الفايبر الضوئي */
-.inner-page-hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 25px 25px;
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* ضبط العناصر الداخلية لتظهر فوق الشبكة بنقاء */
-.inner-page-hero .container, .inner-page-hero * {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto !important;
-}
-
-/* التكة الكبرى: العنوان الرئيسي في السنتر */
+/* التكة الذكية: التدرج العكسي داخل حروف النص نفسه للعنوان الرئيسي فقط */
 .inner-page-hero h1 {
-    color: #ffffff !important;
-    font-size: 32px !important;
+    font-size: 28px !important; /* حجم هندسي شيك في نفس مستوى اللوجو */
     font-weight: 800 !important;
-    margin: 0 auto 15px auto !important;
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
+    margin: 0 auto 10px auto !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* مسافة هندسية بين الأيقونة والكلام */
+    gap: 10px;
+    
+    /* سحر تلوين الحروف بالتدرج العكسي */
+    background: linear-gradient(0deg, #0f172a 0%, #0055aa 50%, #00a8cc 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 }
 
-/* إضاءة نيون للأيقونة بداخل العنوان */
+/* الأيقونة بجانب العنوان تأخذ اللون التركواز المضيء صريح */
 .inner-page-hero h1 i {
-    color: #00a8cc !important; /* تركواز مضيء */
-    filter: drop-shadow(0 0 10px rgba(0, 168, 204, 0.8)) !important;
-    animation: fiberPulse 3s infinite ease-in-out; /* نبض هادئ كلاسيك */
+    color: #00a8cc !important;
+    -webkit-text-fill-color: initial !important; /* منع اختفاء الأيقونة بسبب كليب النص */
+    filter: drop-shadow(0 0 6px rgba(0, 168, 204, 0.6)) !important;
 }
 
-/* الوصف الفرعي تحت العنوان */
+/* النص الفرعي اللي تحته: تكست صافي مريح باللون التركواز الهدية */
 .inner-page-hero p {
-    color: #e2e8f0 !important; /* أبيض ثلجي مريح للعين */
-    font-size: 16px !important;
-    line-height: 1.7 !important;
+    color: #00a8cc !important; /* تركواز رايق ونظيف وثابت */
+    font-size: 15px !important;
     font-weight: 600 !important;
+    line-height: 1.6 !important;
     margin: 0 auto !important;
-    max-width: 650px !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    max-width: 600px !important;
+    text-shadow: none !important; /* حذف أي ظلال قديمة */
 }
+
 
 /* حركة النبض الخاصة بالأيقونات */
 @keyframes fiberPulse {
