@@ -595,3 +595,83 @@ html {
     }
     .ftth-solutions-section h2 { font-size: 22px !important; }
 }
+
+/* ==========================================================================
+   INNER PAGES HERO - CLASSIC LUXURY (تنسيق عناوين الصفحات كلاسيك فاخر)
+============================================================================ */
+.inner-page-hero {
+    /* الميكس الساحر: تدرج لوني كلاسيكي يبدأ من الكحلي الملكي العتيق وينتهي بالتركواز المضيء */
+    background: linear-gradient(180deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
+    padding: 60px 20px !important;
+    text-align: center !important; /* توسيع وتوسيط العناصر في المنتصف تماماً */
+    border-radius: 0 0 24px 24px !important; /* انحناء سفلي ناعم يشبه تكة الأزرار */
+    margin-bottom: 40px !important;
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2) !important;
+    position: relative;
+    overflow: hidden;
+    direction: rtl !important;
+}
+
+/* التكة الرقمية: خلفية شبكية خفيفة جداً ومستقرة توحي بخيوط الفايبر الضوئي */
+.inner-page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 25px 25px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ضبط العناصر الداخلية لتظهر فوق الشبكة بنقاء */
+.inner-page-hero .container, .inner-page-hero * {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto !important;
+}
+
+/* التكة الكبرى: العنوان الرئيسي في السنتر */
+.inner-page-hero h1 {
+    color: #ffffff !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    margin: 0 auto 15px auto !important;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* مسافة هندسية بين الأيقونة والكلام */
+}
+
+/* إضاءة نيون للأيقونة بداخل العنوان */
+.inner-page-hero h1 i {
+    color: #00a8cc !important; /* تركواز مضيء */
+    filter: drop-shadow(0 0 10px rgba(0, 168, 204, 0.8)) !important;
+    animation: fiberPulse 3s infinite ease-in-out; /* نبض هادئ كلاسيك */
+}
+
+/* الوصف الفرعي تحت العنوان */
+.inner-page-hero p {
+    color: #e2e8f0 !important; /* أبيض ثلجي مريح للعين */
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    font-weight: 600 !important;
+    margin: 0 auto !important;
+    max-width: 650px !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* حركة النبض الخاصة بالأيقونات */
+@keyframes fiberPulse {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(0, 168, 204, 0.6)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 14px rgba(0, 168, 204, 1)); transform: scale(1.04); }
+}
+
+/* متجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .inner-page-hero { padding: 45px 15px !important; border-radius: 0 0 16px 16px !important; }
+    .inner-page-hero h1 { font-size: 24px !important; }
+    .inner-page-hero p { font-size: 14px !important; }
+}
