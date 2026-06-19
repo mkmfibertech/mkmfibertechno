@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MKM Fiber Store</title>
+    <title>متجر MKM Fiber Store - الأدوات والمعدات</title>
+    
     <link rel="stylesheet" href="global.css">
-<link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
 	
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 	
 <body class="products-body">
+    
     <div id="header-container"></div>
 	
-    <div class="products-container">
+    <div class="products-container" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
 
-       <div class="category-header-btn">
-    <span>👤 قسم العملاء والمستخدمين</span>
-</div>
+        <div class="category-header-btn" style="margin: 30px 0 20px 0;">
+            <span><i class="fas fa-user-circle"></i> قسم العملاء والمستخدمين المنزليين</span>
+        </div>
 
         <div class="products-grid">
             <div class="products-card">
@@ -58,87 +62,86 @@
 
             <div class="products-card">
                 <img src="images/products/coupler.jpg" alt="Coupler">
-                <h4>Coupler</h4>
+                <h4>Coupler SC/APC</h4>
                 <p class="products-price">50 EGP</p>
-                <button class="products-button" onclick="addToCart('Coupler', 50)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('Coupler SC/APC', 50)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/termination-box2coupler.jpg" alt="Termination Box">
-                <h4>Termination Box</h4>
+                <h4>Termination Box (روزتة)</h4>
                 <p class="products-price">165 EGP</p>
                 <button class="products-button" onclick="addToCart('Termination Box', 165)">أضف للسلة</button>
             </div>
         </div>
 
-       <!-- قسم الفنيين والشركات -->
-<div class="category-header-btn technicians-btn">
-    <span>🧑‍🔧 قسم المهندسين، الفنيين والشركات</span>
-</div>
+        <div class="category-header-btn technicians-btn" style="margin: 50px 0 20px 0;">
+            <span><i class="fas fa-tools"></i> قسم المهندسين، الفنيين والشركات</span>
+        </div>
 
         <div class="products-grid">
             <div class="products-card">
                 <img src="images/products/fastcon-white-scapc.jpg" alt="10 Fast Connector">
-                <h4>10 Fast Connector</h4>
+                <h4>10 Fast Connector SC/APC</h4>
                 <p class="products-price">
-                    <span class="products-old-price">490 EGP</span><br>
-                    <span class="products-new-price">385 EGP</span>
+                    <span class="products-old-price" style="text-decoration: line-through; color: #94a3b8; font-size: 13px;">490 EGP</span><br>
+                    <span class="products-new-price" style="color: #ff0050; font-weight: 800;">385 EGP</span>
                 </p>
-                <button class="products-button" onclick="addToCart('Fast Connector SC/APC', 385)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('10 Fast Connector SC/APC', 385)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/cleaver-fc-6s.jpg" alt="Cleaver FC-6S">
-                <h4>Cleaver FC-6S</h4>
+                <h4>Cleaver FC-6S (ساطور فايبر)</h4>
                 <p class="products-price">950 EGP</p>
-                <button class="products-button" onclick="addToCart('Cleaver FC-6S', 1500)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('Cleaver FC-6S', 950)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/strip-green.jpg" alt="Stripper">
-                <h4>Stripper</h4>
+                <h4>Stripper Green (قشارة ألياف)</h4>
                 <p class="products-price">450 EGP</p>
-                <button class="products-button" onclick="addToCart('Stripper Green', 250)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('Stripper Green', 450)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/rj-strip.jpg" alt="RJ Stripper">
                 <h4>RJ Stripper</h4>
                 <p class="products-price">350 EGP</p>
-                <button class="products-button" onclick="addToCart('RJ Stripper', 180)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('RJ Stripper', 350)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/kohol-bottle.jpeg" alt="Kohol Bottle">
-                <h4>cohol Bottle</h4>
+                <h4>Alcohol Bottle (زجاجة كحول)</h4>
                 <p class="products-price">90 EGP</p>
-                <button class="products-button" onclick="addToCart('cohol Bottle', 90)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('Alcohol Bottle', 90)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/fiberheatshrink6cm.jpg" alt="Heatshrink 6cm">
-                <h4>Heatshrink 6cm</h4>
+                <h4>Heatshrink 6cm (سليف لحام)</h4>
                 <p class="products-price">299 EGP</p>
-                <button class="products-button" onclick="addToCart('Heatshrink 6cm', 40)">أضف للسلة</button>
+                <button class="products-button" onclick="addToCart('Heatshrink 6cm', 299)">أضف للسلة</button>
             </div>
 
             <div class="products-card">
                 <img src="images/products/tools-kit-6tools.jpg" alt="Tools Kit">
-                <h4>Tools Kit 6 Tools</h4>
+                <h4>FTTH Tools Kit 6 Tools</h4>
                 <p class="products-price">3500 EGP</p>
                 <button class="products-button" onclick="addToCart('Tools Kit 6 Tools', 3500)">أضف للسلة</button>
             </div>
 
-			<div class="products-card">
-                <img src="images/products/pigtailscapccolored.jpg" alt="bigtail">
-                <h4>bigtail elwesal SC APC</h4>
+            <div class="products-card">
+                <img src="images/products/pigtailscapccolored.jpg" alt="Pigtail">
+                <h4>Pigtail SC/APC El-Wesal</h4>
                 <p class="products-price">350 EGP</p>
-                <button class="products-button" onclick="addToCart('pigtail sc/apc elwesal', 3500)">أضف للسلة</button>
-			</div>
+                <button class="products-button" onclick="addToCart('Pigtail SC/APC El-Wesal', 350)">أضف للسلة</button>
+            </div>
         </div>
 
         <button class="cart-badge-btn" onclick="toggleCart()">
-            🛒 السلة <span id="cart-count">0</span>
+            <i class="fas fa-shopping-cart"></i> السلة <span id="cart-count">0</span>
         </button>
 
         <div class="products-cart-box" id="sidebar-cart">
@@ -146,7 +149,7 @@
             <div class="products-cart-title">🛒 سلة المشتريات</div>
             <div id="cart">السلة فارغة حالياً.</div>
             <button class="products-button products-send-btn" onclick="sendWhatsApp()">
-                📲 إرسال الطلب على واتساب
+                <i class="fab fa-whatsapp"></i> إرسال الطلب على واتساب
             </button>
         </div>
 
@@ -157,7 +160,6 @@
     <script>
     let cart = [];
 
-    // دالة فتح وإغلاق السلة الجانبية بسلاسة
     function toggleCart() {
         const sidebar = document.getElementById("sidebar-cart");
         sidebar.classList.toggle("active");
@@ -177,7 +179,7 @@
         }
         renderCart();
 
-        // حركة ذكية: فتح السلة الجانبية فوراً عند إضافة منتج لتنبيه المستخدم
+        // التكة: فتح السلة تلقائياً لإشعار العميل بالإضافة
         const sidebar = document.getElementById("sidebar-cart");
         if(!sidebar.classList.contains("active")) {
             sidebar.classList.add("active");
@@ -190,12 +192,11 @@
         let total = 0;
         let totalQty = 0;
 
-        // تحديث عداد القطع في الأيقونة العائمة
         cart.forEach(i => totalQty += i.qty);
         countBadge.innerText = totalQty;
 
         if (cart.length === 0) {
-            box.innerHTML = "السلة فارغة حالياً.";
+            box.innerHTML = "<div style='color: #64748b; padding: 20px 0;'>السلة فارغة حالياً.</div>";
             return;
         }
 
@@ -204,15 +205,18 @@
         cart.forEach(i => {
             total += i.productsPrice * i.qty;
             box.innerHTML += `
-            <div>
-                🔹 ${i.name} × ${i.qty} = ${i.productsPrice * i.qty} EGP
+            <div style="padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 13.5px; color: #1e293b; font-weight: 600;">
+                🔹 ${i.name}<br>
+                <span style="color: #0055aa;">${i.qty} قطع</span> × ${i.productsPrice} = <strong>${i.productsPrice * i.qty} EGP</strong>
             </div>
             `;
         });
 
         box.innerHTML += `
-            <hr style="border: 0; border-top: 1px solid #ddd; margin: 10px 0;">
-            <strong>الإجمالي: ${total} EGP</strong>
+            <div style="margin-top: 20px; padding: 12px; background: #f8fafc; border-radius: 8px; text-align: left;">
+                <span style="font-size: 14px; color: #475569;">الإجمالي الفعلي:</span><br>
+                <strong style="font-size: 18px; color: #003366;">${total} EGP</strong>
+            </div>
         `;
     }
 
@@ -224,14 +228,14 @@
 
         let phone = "201012646236";
         let total = 0;
-        let msg = "طلب جديد من MKM Fiber Techno:%0A%0A";
+        let msg = "🛒 *طلب شراء جديد من متجر MKM Fiber Store*:%0A%0A";
         
         cart.forEach(i => {
             total += i.productsPrice * i.qty;
-            msg += `• ${i.name} × ${i.qty} = ${i.productsPrice * i.qty} EGP%0A`;
+            msg += `• *${i.name}*%0A   العدد: ${i.qty} × السعر: ${i.productsPrice} = ${i.productsPrice * i.qty} EGP%0A`;
         });
 
-        msg += `%0Aالإجمالي: ${total} EGP`;
+        msg += `%0A------------------------%0A💰 *الإجمالي الكلي فودافون كاش / نقداً:* ${total} EGP`;
 
         window.open(
           `https://wa.me/${phone}?text=${msg}`,
