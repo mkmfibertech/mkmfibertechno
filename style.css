@@ -771,3 +771,10 @@ html {
     background: linear-gradient(0deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
 }
 
+.category-header-btn {
+    background: linear-gradient(0deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
+    border: none !important; /* حذف أي فواصل قديمة */
+    color: #ffffff !important; /* تأكيد أن النص يظهر بالأبيض الناصع الفخم */
+}
+
+
