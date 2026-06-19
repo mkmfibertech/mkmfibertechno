@@ -295,8 +295,6 @@ td strong, .price-text { color: #0055aa !important; font-weight: 800 !important;
 
 .gallery-section { padding: 60px 20px; background: #ffffff; text-align: center; }
 
-/* العناوين الكلاسيكية */
-.section-title { font-size: 32px; color: #0f172a; margin-bottom: 10px; font-weight: 800; }
 .section-subtitle { color: #64748b; margin-bottom: 40px; font-size: 16px; }
 
 /* ==========================================================================
