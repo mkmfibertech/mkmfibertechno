@@ -30,6 +30,10 @@
 body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
     font-family: var(--main-font) !important;
 }
+/* 2. هذا هو السر: إجبار الأيقونات على تجاهل الخط الموحد واستخدام خط الأيقونات */
+i, .fas, .fab, .fa, .fa-solid, .fa-brands {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+}
 
 /* ==========================================================================
    تنسيق موحد للهيدر والفوتر (يتحكم في كل الموقع من مكان واحد)
