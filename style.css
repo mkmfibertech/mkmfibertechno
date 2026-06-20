@@ -958,11 +958,4 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     border-top: 1px solid #f1f5f9;
     padding-top: 15px;
 }
-#header-container {
-    width: 100%;           /* يأخذ عرض الحاوية الأب بالكامل */
-    max-width: 100vw;      /* يمنع أي عنصر من تخطي عرض الشاشة */
-    padding: 0 10px;       /* مسافة أمان صغيرة يمين ويسار */
-    margin: 0 auto;        /* تمركز في النص */
-    box-sizing: border-box; /* أهم سطر: بيخلي الـ padding محسوب من ضمن الـ width مش بيكبره */
-    overflow-x: hidden;    /* قص أي شيء يخرج عن حدوده */
-}
+
