@@ -1,150 +1,57 @@
-/* ==========================================================================
-   ULTRA-MODERN ULTRA-COLORFUL NAVIGATION (النسخة النهائية والمعدلة)
-============================================================================ */
-.main-header {
-    background-color: #0b132b !important;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    padding: 20px 0; /* تم إزالة الـ padding الجانبي لضمان عدم التمدد */
+/* الحاوية الرئيسية للهيدر */
+.new-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background: #0b132b;
+    border-bottom: 2px solid #38bdf8;
     position: sticky;
     top: 0;
-    z-index: 9999;
-    border-bottom: 2px solid #38bdf8;
-    width: 100%;
-    overflow-x: hidden; /* خط الدفاع الأول */
+    z-index: 1000;
 }
 
-.header-top-container {
-    width: 100%;
+/* اللوجو */
+.logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* الكبسولة العصرية للروابط */
+.new-nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 10px; /* هام جداً: مسافة أمان من الجوانب */
-}
-
-/* --- اللوجو والعنوان --- */
-.logo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.logo-title {
-    color: #38bdf8; /* لون سماوي هادي (أشيك من الأبيض) */
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    opacity: 0.9;
-}
-.logo-container img.logo {
-    height: 70px;
-    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
-}
-img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block;
-}
-
-
-
-/* --- القائمة (الكبسولة) --- */
-.main-nav {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 5px 15px;
+    border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
-    
-    /* جعل العرض مرناً جداً للموبايل */
-    width: 95%; 
-    max-width: 500px;
-    margin: 15px auto;
-    padding: 8px;
-    box-sizing: border-box;
-    flex-wrap: wrap; 
 }
-.main-nav a {
-    color: #e2e8f0 !important;
-    font-weight: 600;
-    font-size: 14px !important; /* حجم أوضح */
-    text-decoration: none !important; /* إلغاء أي خطوط تحتية */
+
+.new-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 30px;
     transition: 0.3s;
-    position: relative; /* ضروري عشان الخط الليزر يترسم بالنسبة للرابط */
-    padding: 5px 10px;
-   white-space: nowrap; /* منع الكلمة من الانقسام */
-   
+    white-space: nowrap;
 }
 
-/* --- خطوط الليزر بين الكلمات --- */
-.main-nav a:not(:last-child)::after {
-    content: "";
-    display: block; /* تغيير لـ block للتحكم الأدق */
-    position: absolute;
-    right: -12px; /* المسافة من يمين الكلمة */
-    top: 50%;
-    transform: translateY(-50%); /* لضبط الخط في المنتصف تماماً */
-    height: 60%;
-    width: 2px;
-    background: linear-gradient(to bottom, transparent, #00a8cc, transparent);
-    box-shadow: 0 0 8px #00a8cc;
-}
-.main-nav a::after {
-    display: none; 
+.new-nav a:hover {
+    background: #38bdf8;
+    color: #0b132b;
 }
 
-/* --- التأثيرات (Hover & Active) --- */
-.main-nav a:hover {
-    color: #38bdf8 !important;
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
-}
-
-/* حذفنا الـ underline اللي كان بيطلع، وبقى التركيز على اللون بس */
-.main-nav a.active {
-    color: #38bdf8 !important;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-}
-/* --- الـ Responsive --- */
-@media (max-width: 768px) {
-    .header-top-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0; /* اجعل الـ padding الجانبي صفراً هنا */
-        box-sizing: border-box;
-        overflow-x: hidden; /* إضافة هذه لضمان عدم الخروج */
+/* التوافق التام مع الموبايل */
+@media (max-width: 480px) {
+    .new-nav {
+        gap: 5px;
+        padding: 5px 10px;
     }
-
-    .main-nav {
-        width: 95%;      /* زيادة النسبة قليلاً لتستغل المساحة بذكاء */
-        max-width: 400px; /* تحديد سقف ثابت */
-        padding: 8px;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: center;
-        box-sizing: border-box;
-        gap: 8px;        /* تقليل الفراغات بين الروابط لتناسب الشاشة */
+    .new-nav a {
+        font-size: 12px;
+        padding: 6px 10px;
     }
-
-    .main-nav a {
-        font-size: 12px !important; /* تصغير طفيف جداً لضمان عدم الانكسار */
-        padding: 4px 6px;
-        white-space: nowrap; /* إجبار الرابط ألا ينقسم لسطرين */
-    }
-}
-
-header {
-    width: 100%;
-    overflow-x: hidden; /* يمنع ظهور السكرول يميناً */
-    display: flex;
-    justify-content: center;
 }
