@@ -19,22 +19,18 @@
 
 /* ==================
 
-html, body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
-    direction: rtl;
-   width: 100% !important;
-   overflow-x: hidden !important; 
-   position: relative;
-   margin: 0;
-   padding: 0;
-  
+/* 1. تعريف المتغير (عشان لو حبيت تغير الخط مستقبلاً، تغيره من مكان واحد) */
+
+
+/* 2. إجبار كل العناصر على الالتزام بالخط (السر هنا في !important) */
+* {
+    font-family: var(--main-font) !important;
 }
 
-=====*/
-
+/* 3. ضمان توحيد العناوين والنصوص */
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
+    font-family: var(--main-font) !important;
+}
 
 /* ==========================================================================
    تنسيق موحد للهيدر والفوتر (يتحكم في كل الموقع من مكان واحد)
@@ -44,6 +40,7 @@ html, body {
 :root {
     --dark-blue: #0b132b;    /* الكحلي */
     --turquoise: #00a8cc;    /* التركواز */
+   --main-font: 'Cairo', sans-serif; /* غير 'Cairo' لاسم الخط اللي إنت عايزه */
 }
 .main-header, footer {
     background: var(--primary-gradient) !important;
