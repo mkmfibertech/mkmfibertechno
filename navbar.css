@@ -113,23 +113,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 5px; /* تقليل الـ padding عشان الموبايل */
-        box-sizing: border-box; /* بيخلي الـ padding جوه الحجم مش برا */
+        padding: 10px 0; /* اجعل الـ padding الجانبي صفراً هنا */
+        box-sizing: border-box;
+        overflow-x: hidden; /* إضافة هذه لضمان عدم الخروج */
     }
 
     .main-nav {
-        width: 90%; /* حجم الناف بار مايزيدش عن 90% من عرض الموبايل */
-        padding: 10px;
+        width: 95%;      /* زيادة النسبة قليلاً لتستغل المساحة بذكاء */
+        max-width: 400px; /* تحديد سقف ثابت */
+        padding: 8px;
         margin: 0 auto;
         display: flex;
-        flex-wrap: wrap; /* يخلي الروابط تنزل تحت بعض بدل ما تمدد لبره */
+        flex-wrap: wrap; 
         justify-content: center;
         box-sizing: border-box;
+        gap: 8px;        /* تقليل الفراغات بين الروابط لتناسب الشاشة */
     }
 
     .main-nav a {
-        font-size: 13px !important; /* تصغير الخط شوية عشان يكفي */
-        padding: 5px 8px;
+        font-size: 12px !important; /* تصغير طفيف جداً لضمان عدم الانكسار */
+        padding: 4px 6px;
+        white-space: nowrap; /* إجبار الرابط ألا ينقسم لسطرين */
     }
 }
 
