@@ -3,7 +3,7 @@
 ============================================================================ */
 .main-header {
     /* تدرج لوني هادي جداً وفخم (أزرق غامق يتلاشى للأزرق السماوي الهادي) */
-    background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%) !important;
+   background-color: #0b132b !important; /* اللون الكحلي اللي كان في الفوتر */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -11,7 +11,8 @@
     position: sticky;
     top: 0;
     z-index: 9999;
-    border-bottom: 2px solid #38bdf8; /* خط رفيع جداً بلون سماوي للإضاءة */
+ border-bottom: 2px solid #38bdf8;     /* لمسة سماوية للتمييز */
+   width: 100%;
 }
 
 .header-top-container {
