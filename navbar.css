@@ -44,48 +44,55 @@
     filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
 }
 
+
+
 /* --- القائمة (الكبسولة) --- */
 .main-nav {
-    background: rgba(255, 255, 255, 0.05); /* خلفية شبه شفافة */
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 6px 20px;
+    padding: 10px 25px; /* زودنا الـ padding شوية عشان المنيو تكبر */
     border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .main-nav a {
-    color: #e2e8f0 !important; /* لون رمادي فاتح فخم */
+    color: #e2e8f0 !important;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px !important; /* حجم أوضح */
+    text-decoration: none !important; /* إلغاء أي خطوط تحتية */
+    transition: 0.3s;
+    position: relative; /* ضروري عشان الخط الليزر يترسم بالنسبة للرابط */
+    padding: 5px 15px;
 }
-/* الخط الفاصل بين الأزرار */
+
+/* --- خطوط الليزر بين الكلمات --- */
 .main-nav a:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: 0;
-    top: 30%;
-    height: 40%;
-    width: 1px;
-    background: rgba(255,255,255,0.2);
+    right: -10px; /* المسافة بين الخط والكلمة */
+    top: 20%;
+    height: 60%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #00a8cc, transparent);
+    box-shadow: 0 0 8px #00a8cc; /* تأثير الليزر المتوهج */
 }
 
 /* --- التأثيرات (Hover & Active) --- */
 .main-nav a:hover {
-    color: #38bdf8 !important; /* بيظهر لون سماوي عند التحويم */
+    color: #38bdf8 !important;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
 }
 
-.main-nav a::before {
-    background: #38bdf8;
-    height: 2px;
-}
-
-.main-nav a:hover::before { width: 50%; }
-
+/* حذفنا الـ underline اللي كان بيطلع، وبقى التركيز على اللون بس */
 .main-nav a.active {
     color: #38bdf8 !important;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
 }
-
 /* --- الـ Responsive --- */
 @media (max-width: 768px) {
     .logo-container img.logo { height: 60px; }
