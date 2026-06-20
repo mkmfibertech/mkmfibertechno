@@ -732,3 +732,9 @@ html { scroll-behavior: smooth !important; }
     margin: 0 auto;
     text-align: center;
 }
+.booking-steps-section{
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto; text-align: center;
+
+}
