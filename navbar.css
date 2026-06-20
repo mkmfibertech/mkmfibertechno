@@ -2,13 +2,16 @@
    ULTRA-MODERN ULTRA-COLORFUL NAVIGATION (النسخة النهائية والمعدلة)
 ============================================================================ */
 .main-header {
-    background: #00a8cc; /* الخلفية التركواز */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    padding: 20px 20px;
+    /* تدرج لوني هادي جداً وفخم (أزرق غامق يتلاشى للأزرق السماوي الهادي) */
+    background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 9999;
-    width: 100%;
+    border-bottom: 2px solid #38bdf8; /* خط رفيع جداً بلون سماوي للإضاءة */
 }
 
 .header-top-container {
@@ -27,46 +30,32 @@
     margin-bottom: 10px;
 }
 .logo-title {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 5px;
-    letter-spacing: 1.5px;
+    color: #38bdf8; /* لون سماوي هادي (أشيك من الأبيض) */
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 8px;
     opacity: 0.9;
 }
 .logo-container img.logo {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease;
+    height: 70px;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
 }
 
 /* --- القائمة (الكبسولة) --- */
 .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    background: #003366;
-    padding: 6px 15px;
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
-    max-width: fit-content;
+    background: rgba(255, 255, 255, 0.05); /* خلفية شبه شفافة */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 20px;
+    border-radius: 40px;
 }
 
 .main-nav a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #e2e8f0 !important; /* لون رمادي فاتح فخم */
+    font-weight: 600;
     font-size: 15px;
-    font-weight: 700;
-    padding: 8px 16px;
-    position: relative; /* ضروري جداً عشان حركات الخطوط */
-    transition: all 0.3s ease;
-    white-space: nowrap;
 }
-
 /* الخط الفاصل بين الأزرار */
 .main-nav a:not(:last-child)::after {
     content: "";
@@ -80,20 +69,12 @@
 
 /* --- التأثيرات (Hover & Active) --- */
 .main-nav a:hover {
-    color: #38bdf8 !important;
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+    color: #38bdf8 !important; /* بيظهر لون سماوي عند التحويم */
 }
 
 .main-nav a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
     background: #38bdf8;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    height: 2px;
 }
 
 .main-nav a:hover::before { width: 50%; }
