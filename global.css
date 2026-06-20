@@ -19,19 +19,31 @@ html, body {
     width: 100%;
     overflow-x: hidden; /* ينهي مشكلة السكرول الجانبي */
 }
+/* ==========================================================================
+   تنسيق موحد للهيدر والفوتر (يتحكم في كل الموقع من مكان واحد)
+============================================================================ */
+
+/* تعريف الألوان كمتغيرات (عشان تغيرها مرة واحدة بس) */
+:root {
+    --primary-gradient: linear-gradient(180deg, #0b132b 0%, #1c2541 100%);
+    --accent-color: #38bdf8;
+}
+.main-header, footer {
+    background: var(--primary-gradient) !important;
+    color: #ffffff !important;
+    width: 100% !important;
+    border-bottom: 2px solid var(--accent-color); /* للهيدر */
+}
 
 /* ==========================================================================
    الفوتر النهائي: نظام الليزر والسنتر
 ============================================================================ */
 footer {
-    background-color: #0b132b !important;
-    color: #ffffff !important;
+    border-top: 4px solid var(--accent-color) !important;
+    border-bottom: none !important;
     padding: 50px 20px 20px 20px !important;
-    margin-top: 50px !important;
     text-align: center !important;
-    direction: rtl !important;
 }
-
 /* الحاوية الأساسية للفوتر */
 .footer-container {
     max-width: 900px;
