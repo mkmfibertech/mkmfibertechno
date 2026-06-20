@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="header-container"></div>
+    <div id="header-placeholder"></div>
 
         <header class="page-header-unified" style="background: linear-gradient(135deg, #001a33 0%, #003366 100%); padding: 80px 20px; text-align: center; color: #fff; border-bottom: 5px solid #00a8cc; margin-bottom: 40px;">
     <div class="container">
@@ -92,6 +92,14 @@
     <div id="footer-container"></div>
 
     <script src="js/layout.js"></script>
+
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
 </body>
 
 </html>
