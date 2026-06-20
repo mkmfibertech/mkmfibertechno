@@ -191,7 +191,7 @@ footer {
 /* 4. الفوتر (كحلي فوق - تركواز تحت) */
 #page-footer {
     background: linear-gradient(180deg, var(--dark-blue) 0%, var(--turquoise) 100%) !important;
-    padding: 40px 20px;
+    padding: 10px 10px;
     color: white;
 }
 
