@@ -5,8 +5,16 @@ html, body {
     max-width: 100% !important;
     overflow-x: hidden !important; /* إخفاء أي مساحة تخرج عن العرض الطبيعي */
    scroll-behavior: smooth !important;
+   margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
+/* التأكد من أن كل العناصر داخل الموقع محكومة بالعرض */
+*, *:before, *:after {
+    box-sizing: border-box; 
+    max-width: 100vw; /* أي عنصر ميتعداش عرض الشاشة */
+}
 /* ==========================================================================
    A. HOME PAGE SPECIFIC (الصفحة الرئيسية)
 ============================================================================ */
