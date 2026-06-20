@@ -1,10 +1,9 @@
-/* الحاوية الرئيسية للهيدر */
 .new-header {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
     background: #0b132b;
     border-bottom: 2px solid #38bdf8;
     position: sticky;
@@ -12,28 +11,27 @@
     z-index: 1000;
 }
 
-/* اللوجو */
 .logo {
-    height: 60px;
-    margin-bottom: 15px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
-/* الكبسولة العصرية للروابط */
 .new-nav {
     display: flex;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    gap: 10px;
+    /* ضبط المسافات لـ 5 عناصر */
+    gap: 5px; 
 }
 
 .new-nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    padding: 8px 15px;
+    font-size: 13px; /* حجم مناسب لـ 5 كلمات */
+    padding: 8px 12px;
     border-radius: 30px;
     transition: 0.3s;
     white-space: nowrap;
@@ -44,14 +42,14 @@
     color: #0b132b;
 }
 
-/* التوافق التام مع الموبايل */
+/* التوافق التام مع الموبايل (المساحة البيضاء ممنوعة) */
 @media (max-width: 480px) {
     .new-nav {
-        gap: 5px;
-        padding: 5px 10px;
+        gap: 2px; /* تقليل المسافة جداً للموبايل */
+        padding: 4px 5px;
     }
     .new-nav a {
-        font-size: 12px;
-        padding: 6px 10px;
+        font-size: 10px; /* تصغير الخط قليلاً ليضمن عدم الانكسار */
+        padding: 5px 6px;
     }
 }
