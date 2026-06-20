@@ -72,13 +72,15 @@
 /* --- خطوط الليزر بين الكلمات --- */
 .main-nav a:not(:last-child)::after {
     content: "";
+    display: block; /* تغيير لـ block للتحكم الأدق */
     position: absolute;
-    right: -10px; /* المسافة بين الخط والكلمة */
-    top: 20%;
+    right: -12px; /* المسافة من يمين الكلمة */
+    top: 50%;
+    transform: translateY(-50%); /* لضبط الخط في المنتصف تماماً */
     height: 60%;
     width: 2px;
     background: linear-gradient(to bottom, transparent, #00a8cc, transparent);
-    box-shadow: 0 0 8px #00a8cc; /* تأثير الليزر المتوهج */
+    box-shadow: 0 0 8px #00a8cc;
 }
 .main-nav a::after {
     display: none; 
