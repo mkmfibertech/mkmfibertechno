@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
    max-width: 100vw !important; /* عرض العنصر لا يتجاوز عرض الشاشة */
+   font-family: var(--main-font) !important;
 
 }
 
@@ -23,9 +24,7 @@
 
 
 /* 2. إجبار كل العناصر على الالتزام بالخط (السر هنا في !important) */
-* {
-    font-family: var(--main-font) !important;
-}
+
 
 /* 3. ضمان توحيد العناوين والنصوص */
 body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
