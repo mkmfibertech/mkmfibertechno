@@ -120,9 +120,7 @@ footer {
     text-align: center;
 }
 
-#page-header {
-    background: linear-gradient(180deg, var(--turquoise) 0%, var(--dark-blue) 100%) !important;
-}
+
 
 /* 4. الفوتر (كحلي فوق - تركواز تحت) */
 #page-footer {
