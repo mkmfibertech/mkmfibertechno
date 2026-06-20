@@ -700,3 +700,16 @@ html { scroll-behavior: smooth !important; }
     color: #cbd5e1;
     line-height: 1.5;
 }
+.steps-container {
+    display: flex;
+    flex-wrap: wrap; /* ده اللي هيخلي العناصر تنزل تحت بعض بدل ما تعرض الصفحة */
+    justify-content: center; /* بيخلي الخطوات في النص */
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
