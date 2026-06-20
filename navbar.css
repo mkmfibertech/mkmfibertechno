@@ -50,23 +50,29 @@
 .main-nav {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px 25px; /* زودنا الـ padding شوية عشان المنيو تكبر */
+    padding: 10px ; /* زودنا الـ padding شوية عشان المنيو تكبر */
     border-radius: 40px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     width: fit-content;
-    margin: 0 auto;
+    margin: 10px auto;
+ justify-content: center; /* تمركز الروابط */
+   flex-wrap: wrap;
+   width: 95%; /* أخذ مساحة كاملة تقريباً */
+   max-width: 400px; /* لا تتركها تزيد عن حجم معين */
 }
 
 .main-nav a {
     color: #e2e8f0 !important;
     font-weight: 600;
-    font-size: 16px !important; /* حجم أوضح */
+    font-size: 14px !important; /* حجم أوضح */
     text-decoration: none !important; /* إلغاء أي خطوط تحتية */
     transition: 0.3s;
     position: relative; /* ضروري عشان الخط الليزر يترسم بالنسبة للرابط */
-    padding: 5px 15px;
+    padding: 5px 10px;
+   white-space: nowrap; /* منع الكلمة من الانقسام */
+   
 }
 
 /* --- خطوط الليزر بين الكلمات --- */
@@ -99,8 +105,12 @@
     border-radius: 20px;
 }
 /* --- الـ Responsive --- */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .logo-container img.logo { height: 60px; }
     .main-nav { padding: 4px 10px; }
-    .main-nav a { font-size: 13px; padding: 6px 10px; }
+    .main-nav a { font-size: 13px; padding: 6px 10px; 
+                .main-nav a::after {
+        display: none !important;
+
+                }
 }
