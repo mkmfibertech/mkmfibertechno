@@ -725,3 +725,10 @@ html { scroll-behavior: smooth !important; }
     padding: 20px;
     box-sizing: border-box;
 }
+
+.working-hours-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
