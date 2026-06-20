@@ -1,4 +1,8 @@
 
+* {
+    box-sizing: border-box !important;
+}
+
 
 /* التأكد من أن كل العناصر داخل الموقع محكومة بالعرض */
 *, *:before, *:after {
