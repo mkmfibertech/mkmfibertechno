@@ -128,21 +128,20 @@ footer {
 }
 /* الحاوية الأساسية للفوتر */
 .footer-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* العناصر تترتب عمودياً لتجنب التكربس */
+    justify-content: space-between; /* توزيع المساحة بين اليمين واليسار */
     align-items: center;
-    gap: 25px;
+    gap: 40px;
+    padding: 20px;
 }
 
 /* 1. الخطوط الليزر (هنضيفها في الـ HTML) */
 .laser-line {
-    width: 80%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.2);
-    margin: 10px auto;
+  width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #00a8cc, transparent);
 }
 
 /* 2. الأزرار (مقاس موحد) */
@@ -183,6 +182,11 @@ footer {
     font-size: 12px;
     opacity: 0.6;
 }
+/* كل قسم يأخذ نصف المساحة تقريباً */
+.footer-left, .footer-right {
+    flex: 1;
+    text-align: center;
+}
 
 #page-header {
     background: linear-gradient(180deg, var(--turquoise) 0%, var(--dark-blue) 100%) !important;
@@ -193,4 +197,14 @@ footer {
     background: linear-gradient(180deg, var(--dark-blue) 0%, var(--turquoise) 100%) !important;
     padding: 40px 20px;
     color: white;
+}
+
+/* للموبايل: نجعلهم فوق بعض */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .laser-line {
+        display: none; /* إخفاء الخط في الموبايل */
+    }
 }
