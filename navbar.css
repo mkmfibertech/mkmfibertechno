@@ -51,7 +51,6 @@ width: 100%;
 /* --- القائمة (الكبسولة) --- */
 .main-nav {
     background: rgba(255, 255, 255, 0.05);
-   background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     display: flex;
@@ -65,7 +64,7 @@ width: 100%;
     margin: 15px auto;
     padding: 8px;
     box-sizing: border-box;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 .main-nav a {
     color: #e2e8f0 !important;
