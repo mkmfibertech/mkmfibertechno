@@ -44,6 +44,11 @@
     height: 70px;
     filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
 }
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
 
 
 
