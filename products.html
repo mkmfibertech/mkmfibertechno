@@ -17,7 +17,7 @@
 	
 <body class="products-body">
     
-    <div id="header-container"></div>
+<div id="header-placeholder"></div>
 	
     <div class="products-container" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
 
@@ -249,5 +249,12 @@
     </script>
 
     <script src="js/layout.js"></script>
+		<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
 </body>
 </html>
