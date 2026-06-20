@@ -1,8 +1,14 @@
-* {
-    box-sizing: border-box; /* أهم خاصية لمنع الخط الجانبي */
+
+
+/* التأكد من أن كل العناصر داخل الموقع محكومة بالعرض */
+*, *:before, *:after {
+    box-sizing: border-box; 
+    max-width: 100vw; /* أي عنصر ميتعداش عرض الشاشة */
     margin: 0;
     padding: 0;
 }
+
+
 
 html, body {
     font-family: 'Cairo', sans-serif;
