@@ -80,6 +80,9 @@
     background: linear-gradient(to bottom, transparent, #00a8cc, transparent);
     box-shadow: 0 0 8px #00a8cc; /* تأثير الليزر المتوهج */
 }
+.main-nav a::after {
+    display: none; 
+}
 
 /* --- التأثيرات (Hover & Active) --- */
 .main-nav a:hover {
