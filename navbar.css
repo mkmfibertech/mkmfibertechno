@@ -56,11 +56,13 @@
     align-items: center;
     gap: 10px;
     width: fit-content;
-    margin: 10px auto;
+    margin: 0 auto;
  justify-content: center; /* تمركز الروابط */
    flex-wrap: wrap;
-   width: 95%; /* أخذ مساحة كاملة تقريباً */
+   width: 90%; /* أخذ مساحة كاملة تقريباً */
    max-width: 400px; /* لا تتركها تزيد عن حجم معين */
+   padding: 10px;
+   box-sizing: border-box;
 }
 
 .main-nav a {
