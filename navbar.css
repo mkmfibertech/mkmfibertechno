@@ -2,8 +2,7 @@
    ULTRA-MODERN ULTRA-COLORFUL NAVIGATION (النسخة النهائية والمعدلة)
 ============================================================================ */
 .main-header {
-    /* تدرج لوني هادي جداً وفخم (أزرق غامق يتلاشى للأزرق السماوي الهادي) */
-  background-color: #0b132b !important;
+    background-color: #0b132b !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
