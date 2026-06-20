@@ -3,6 +3,7 @@
    box-sizing: border-box !important;
     margin: 0;
     padding: 0;
+   max-width: 100vw !important; /* عرض العنصر لا يتجاوز عرض الشاشة */
 
 }
 
@@ -23,8 +24,13 @@ html, body {
     color: #1e293b;
     line-height: 1.6;
     direction: rtl;
-    width: 100%;
-    overflow-x: hidden; /* ينهي مشكلة السكرول الجانبي */
+   width: 100% !important;
+   overflow-x: hidden !important; /* ده بيمنع أي حاجة تخرج بره عرض الشاشة */
+   position: relative;
+}
+body {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 /* ==========================================================================
    تنسيق موحد للهيدر والفوتر (يتحكم في كل الموقع من مكان واحد)
