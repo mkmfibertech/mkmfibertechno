@@ -744,3 +744,8 @@ html { scroll-behavior: smooth !important; }
 
 style="margin-bottom: 40px;
     }
+
+.step-number{
+
+width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 15px auto;
+    }
