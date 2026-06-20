@@ -15,10 +15,9 @@
 
 <body>
 
-    <div id="header-container"></div>
+    <div id="header-placeholder"></div>
 
     
-
 <section class="home-section-wrapper">
     <!-- هنشيل الـ h2 القديم ونحط الـ Header الجديد مكانه -->
     <header class="page-header-unified" style="margin-bottom: 30px;">
@@ -63,6 +62,12 @@
     <div id="footer-container"></div>
 
     <script src="js/layout.js"></script>
-    
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
 </body>
 </html>
