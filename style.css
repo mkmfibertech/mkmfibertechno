@@ -44,17 +44,7 @@
     position: relative; 
 }
 
-/* عناوين التصنيفات */
-.category-header-btn, .store-filter-title-box { 
-    background: transparent !important;
-    border: 1px solid #00a8cc !important;
-    color: #00a8cc !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    padding: 10px 20px !important;
-    border-radius: 30px !important;
-    text-align: right;
-}
+
 .products-grid 
 { display: grid !important; 
  grid-template-columns: 
@@ -451,8 +441,7 @@ html { scroll-behavior: smooth !important; }
 
 /* ضبط العناصر لتبتعد عن الكحلي العميق وتأخذ الألوان المضيئة الصريحة */
 .ftth-solutions-section h2,
-.inner-page-hero h1,
-.page-header-unified h1
+.inner-page-hero h1
 {
     color: #ffffff !important;
     font-size: 32px !important;
@@ -569,39 +558,14 @@ html { scroll-behavior: smooth !important; }
     .pricing-small .feature-box p { font-size: 14px !important; }
 }
    
+
 /* كلاس موحد لكل عناوين الصفحات */
-.page-header-unified {
-    background: linear-gradient(180deg, #0f172a 0%, #003366 40%, #0055aa 75%, #00a8cc 100%) !important;
-    padding: 60px 20px !important;
-    text-align: center !important;
-    border-radius: 0 0 24px 24px !important;
-    margin-bottom: 40px !important;
-    position: relative;
-    overflow: hidden;
-    color: #ffffff !important;
-}
 
-/* الخلفية الشبكية (الحبشتكنات اللي بتدي فخامة) */
-.page-header-unified::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-    background-size: 25px 25px;
-    z-index: 1;
-    pointer-events: none;
-}
 
-/* العنوان الرئيسي جوه الكلاس الموحد */
-.page-header-unified h1 {
-    position: relative;
-    z-index: 2;
-    color: #ffffff !important;
-    font-size: 28px !important;
-    font-weight: 800 !important;
-    margin: 0 !important;
-}
+
+
+
+
 .payment-grid {
     display: flex;
     justify-content: center;
