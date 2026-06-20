@@ -1,16 +1,4 @@
-.steps-container {
-    display: flex;
-    flex-wrap: wrap; /* ده اللي هيخلي العناصر تنزل تحت بعض بدل ما تعرض الصفحة */
-    justify-content: center; /* بيخلي الخطوات في النص */
-    align-items: flex-start;
-    gap: 20px;
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
+
 /* ==========================================================================
    A. HOME PAGE SPECIFIC (الصفحة الرئيسية)
 ============================================================================ */
@@ -727,12 +715,7 @@ html { scroll-behavior: smooth !important; }
 }
 
 
-.booking-steps-section{
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto; text-align: center;
 
-}
 
 .section-title 
 {
@@ -884,4 +867,43 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     padding: 20px;
     border-radius: 12px;
     border-right: 4px solid #00a8cc;
+}
+
+.booking-steps-section {
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* السطر ده هو سر تجنب السكرول الجانبي */
+    margin-top: 40px;
+}
+
+.step-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    flex: 1;
+    min-width: 250px; /* الكارت مش هيقل عن العرض ده */
+    max-width: 350px; /* الكارت مش هيزيد عن العرض ده */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #00a8cc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    font-size: 20px;
 }
