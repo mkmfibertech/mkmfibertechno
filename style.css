@@ -557,26 +557,27 @@ html { scroll-behavior: smooth !important; }
    INNER PAGES HERO - CLASSIC LUXURY (البانر الكبير الأصلي والنصوص المضيئة)
 ============================================================================ */
 .inner-page-hero {
-    /* الخلفية الزرقاء الملكية الكبيرة الكاملة */
-    background: linear-gradient(180deg, #0f172a 0%, #003366 50%, #0077aa 85%, #00a8cc 100%) !important;
-    padding: 60px 20px !important;
+    /* تدرج لوني عميق وفخم (كحلي خالص إلى كحلي أغمق) */
+    background: linear-gradient(180deg, var(--navy) 0%, #050a1a 100%) !important;
+    padding: 80px 20px !important; /* زيادة الحشو قليلاً ليعطي هيبة أكبر */
     text-align: center !important; 
-    border-radius: 0 0 24px 24px !important; /* الانحناء السفلي الفخم */
+    border-radius: 0 0 40px 40px !important; /* انحناء أعمق يعطي لمسة عصرية */
     margin-bottom: 40px !important;
-    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
     position: relative;
     overflow: hidden;
     direction: rtl !important;
 }
 
-/* الخلفية الشبكية لخطوط الفايبر */
+/* الخلفية الشبكية (تم تظبيطها لتناسب لوننا) */
 .inner-page-hero::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 25px 25px;
+    /* خطوط الشبكة الآن بلمسة ذهبية خفيفة جداً */
+    background-image: linear-gradient(rgba(197, 160, 89, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(197, 160, 89, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
     z-index: 1;
     pointer-events: none;
 }
@@ -586,8 +587,8 @@ html { scroll-behavior: smooth !important; }
     z-index: 2;
     max-width: 800px;
     margin: 0 auto !important;
+    color: var(--offwhite); /* النص الموحد */
 }
-
 
 
 /* الأيقونة: تركواز مضيء وفاتح */
@@ -595,16 +596,15 @@ html { scroll-behavior: smooth !important; }
 
 /* الوصف الفرعي: تركواز مضيء وواضح جداً وقابل للقراءة */
 .inner-page-hero p {
-    color: #00e5ff !important;
-    -webkit-text-fill-color: #00e5ff !important;
+    color: var(--aqua) !important;       /* لون أكوا متناسق */
+    -webkit-text-fill-color: var(--aqua) !important;
     font-size: 16px !important;
     line-height: 1.7 !important;
-    font-weight: 600 !important;
-    margin: 0 auto !important;
+    font-weight: 500 !important;         /* وزنه أخف قليلاً ليكون مريحاً للعين */
+    margin: 15px auto 0 !important;      /* إضافة مسافة بسيطة عن العنوان */
     max-width: 650px !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
 }
-
 /* ==========================================================================
    G. FTTH HOME SOLUTIONS SECTION (قسم حلول الفايبر المنزلية الاحترافي)
 ============================================================================ */
