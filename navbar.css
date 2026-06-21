@@ -5,7 +5,7 @@
     align-items: center;
     padding:25px 5%;
     background: #0b132b;
-    border-bottom: 4px solid #c5a059; /* الذهبي */
+  border-bottom: 4px solid #c5a059; /* الذهبي */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,20 +27,27 @@
     /* ضبط المسافات لـ 5 عناصر */
     gap: 5px; 
 }
-
-.new-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px; /* حجم مناسب لـ 5 كلمات */
-    padding: 8px 12px;
-    border-radius: 30px;
-    transition: 0.3s;
-    white-space: nowrap;
+/* تنسيق العنوان اللي جوه الـ new-header */
+.new-header .site-title { 
+    color: #c5a059; 
+    font-family: 'Georgia', serif; 
+    font-size: 32px; 
+    letter-spacing: 2px; 
+    margin-bottom: 15px;
 }
 
-.new-nav a:hover {
+.new-header .new-nav a {
     background: #38bdf8;
-    color: #0b132b;
+    color: #f8f9fa; /* الأوف وايت */
+    text-decoration: none;
+    transition: 0.3s;
+     font-size: 13px; /* حجم مناسب لـ 5 كلمات */
+    padding: 8px 12px;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+.new-header .new-nav a:hover { 
+    color: #38bdf8; /* الأكوا عند الوقوف بالماوس */
 }
 
 /* التوافق التام مع الموبايل (المساحة البيضاء ممنوعة) */
