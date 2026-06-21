@@ -1,12 +1,33 @@
-html, body { overflow-x: hidden !important; width: 100% !important; }
-body {
-    background: linear-gradient(180deg, #0b132b 0%, #16213e 100%);
-    color: var(--offwhite);
-    font-family: 'Segoe UI', sans-serif;
-    overflow-x: hidden !important;
-    width: 100% !important;
+html, body {
     margin: 0 !important;
     padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important; /* منع السكرول الجانبي نهائياً */
+    background: #0b132b !important; /* خلفية ثابتة أولاً */
+    background-image: linear-gradient(180deg, #0b132b 0%, #16213e 100%) !important;
+    background-attachment: fixed !important; /* تثبيت الخلفية */
+}
+
+/* 2. تصحيح الحاويات التي تسبب المشكلة (إجبارها على العرض الكامل) */
+.footer-container, 
+.steps-container, 
+.products-section, 
+.featured-wrapper {
+    width: 100% !important;
+    max-width: 100vw !important; /* لا تتجاوز عرض الشاشة أبداً */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: 0 auto !important;
+}
+
+/* 3. إجبار العناصر المسببة للمشكلة على التجاوب */
+.footer-left, 
+.footer-right, 
+.featured-column, 
+.step-card {
+    width: 100% !important; /* في الموبايل يأخذ العرض كامل */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 * {
     color: var(--offwhite) !important; /* كل النصوص أوف وايت */
