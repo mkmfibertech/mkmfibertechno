@@ -45,6 +45,9 @@
     padding: 8px 12px;
     border-radius: 30px;
     white-space: nowrap;
+    /* ... الكود بتاعك ... */
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
 }
 .new-header .new-nav a:hover { 
     color: #38bdf8; /* الأكوا عند الوقوف بالماوس */
