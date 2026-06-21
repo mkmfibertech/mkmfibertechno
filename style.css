@@ -958,4 +958,11 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     border-top: 1px solid #f1f5f9;
     padding-top: 15px;
 }
-
+.page-header-unified{
+background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+padding: 25px 20px;
+text-align:
+center; color: #fff; 
+border-bottom: 5px solid #00a8cc;
+margin-bottom: 10px;
+}
