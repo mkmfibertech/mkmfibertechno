@@ -1,4 +1,9 @@
 html, body { overflow-x: hidden !important; width: 100% !important; }
+body {
+    background-color: var(--navy);
+    color: var(--offwhite);
+    font-family: 'Segoe UI', sans-serif;
+}
 /* ==========================================================================
    A. HOME PAGE SPECIFIC (الصفحة الرئيسية)
 ============================================================================ */
