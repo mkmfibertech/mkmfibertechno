@@ -1,6 +1,6 @@
 html, body { overflow-x: hidden !important; width: 100% !important; }
 body {
-    background-color: var(--navy);
+    background: linear-gradient(180deg, #0b132b 0%, #16213e 100%);
     color: var(--offwhite);
     font-family: 'Segoe UI', sans-serif;
 }
