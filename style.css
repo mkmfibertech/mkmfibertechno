@@ -802,25 +802,49 @@ html { scroll-behavior: smooth !important; }
 .payment-item i {
     color: var(--aqua); /* الأيقونة أكوا عشان تنور */
 }
+/* الحاوية الكبيرة اللي بتجمع العمودين */
+.featured-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 40px !important;
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+}
 
 /* 2. الكارت المميز: تحويل من الأبيض للـ "لوحة الفخمة" */
 .featured-product-card {
+   background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--gold) !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
     display: flex !important;
     align-items: center !important;
-    background: rgba(255, 255, 255, 0.03) !important; /* خلفية زجاجية */
-    border: 1px solid var(--gold) !important; /* إطار ذهبي */
-    border-radius: 15px !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; /* ظل أعمق عشان يبرز */
-    max-width: 800px !important;
-    margin: 20px auto !important;
+    gap: 20px !important;
+    transition: 0.4s ease !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+
+}
+.featured-product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--aqua) !important;
 }
 
 .featured-product-card .product-image { 
     flex: 2 !important; 
     padding: 10px !important; 
 }
+.product-image img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    border: 2px solid var(--gold) !important;
+}
 
+/* تنسيق النصوص */
+.product-info h3 { color: var(--gold) !important; margin-bottom: 10px; }
+.product-info p { color: var(--offwhite) !important; font-size: 14px; margin-bottom: 15px; }
 .featured-product-card .product-info { 
     flex: 1 !important; 
     padding: 20px !important; 
@@ -831,20 +855,13 @@ html { scroll-behavior: smooth !important; }
 
 /* الزرار الموحد - الأناقة والتوحيد */
 .btn-unified {
-    background: var(--gold) !important; /* خليناه ذهبي فخم */
-    color: var(--navy) !important;      /* النص كحلي عشان يظهر بوضوح */
-    padding: 12px 28px !important;
-    border-radius: 8px !important;
-    font-weight: 700 !important;
-    font-size: 15px !important;
-    border: none !important;
-    cursor: pointer !important;
+   display: inline-block;
+    padding: 8px 20px !important;
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+    border-radius: 6px !important;
     text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3) !important; /* ظل دهبي خفيف */
+    font-weight: 700 !important;
 }
 
 /* تأثير الـ Hover */
