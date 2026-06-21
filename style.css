@@ -966,3 +966,10 @@ center; color: #fff;
 border-bottom: 5px solid #00a8cc;
 margin-bottom: 10px;
 }
+:root {
+        --navy: #0b132b;    /* كحلي غامق وفخم */
+        --aqua: #38bdf8;    /* أكوا مضيء للزرار والتمييز */
+        --gold: #c5a059;    /* ذهبي كلاسيكي */
+        --offwhite: #f8f9fa;/* أوف وايت مريح للعين */
+    }
+
