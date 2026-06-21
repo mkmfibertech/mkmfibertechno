@@ -987,14 +987,16 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     width: 100%;
 }
 
-.why-us-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 15px;
-    border: 1px solid #e2e8f0;
+.why-us-card { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+    background: rgba(255, 255, 255, 0.03) !important; /* خلفية زجاجية */
+    border-radius: 15px !important; 
+    border: 1px solid var(--gold) !important; /* إطار ذهبي */
+    color: var(--offwhite) !important; /* نص أوف وايت */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important; /* ظل لعمق إضافي */
 }
 
 .icon-box {
@@ -1025,15 +1027,16 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     margin-top: 25px;
 }
 
-.hours-card {
-    background: #ffffff;
-    padding: 20px 30px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    flex: 1;
-    min-width: 250px; /* بيخلي الكارد ميعرضش عن كدة */
+.hours-card { 
+    background: rgba(255, 255, 255, 0.03) !important; /* خلفية زجاجية */
+    padding: 20px 30px !important; 
+    border-radius: 12px !important; 
+    border: 1px solid var(--gold) !important; /* إطار ذهبي */
+    flex: 1; 
+    min-width: 250px; 
+    color: var(--offwhite) !important; /* نص أوف وايت */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important; /* ظل خفيف للعمق */
 }
-
 .label {
     font-weight: 700;
     color: #0f172a;
@@ -1060,28 +1063,35 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     margin-top: 30px;
 }
 
-.policy-item {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    text-align: center;
-    transition: 0.3s;
+.policy-item { 
+    background: rgba(255, 255, 255, 0.03) !important; 
+    padding: 25px !important; 
+    border-radius: 12px !important; 
+    border: 1px solid var(--gold) !important; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; 
+    text-align: center !important; 
+    transition: 0.3s !important; 
 }
 
-/* عشان نضمن الأيقونة شكلها حلو */
-.policy-item i {
-    font-size: 32px;
-    color: #00a8cc;
-    margin-bottom: 15px;
-    display: block;
+/* تعقيم الأيقونة لتتماشى مع الهوية */
+.policy-item i { 
+    font-size: 32px !important; 
+    color: var(--aqua) !important; /* لون أكوا جذاب */
+    margin-bottom: 15px !important; 
+    display: block !important; 
 }
 
-.policy-item p {
-    color: #334155;
-    font-weight: 600;
-    margin: 0;
+/* تعقيم النص */
+.policy-item p { 
+    color: var(--offwhite) !important; 
+    font-weight: 500 !important; 
+    margin: 0 !important; 
+}
+
+/* إضافة تأثير هوفر لزيادة التفاعل */
+.policy-item:hover {
+    border-color: var(--aqua) !important;
+    transform: translateY(-5px);
 }
 
 .media-reviews-section {
