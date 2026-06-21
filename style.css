@@ -4,6 +4,16 @@ body {
     color: var(--offwhite);
     font-family: 'Segoe UI', sans-serif;
 }
+* {
+    color: var(--offwhite) !important; /* كل النصوص أوف وايت */
+    border-color: var(--gold) !important; /* أي حدود تبقى ذهبي */
+}
+a {
+    color: var(--offwhite) !important;
+}
+div {
+    background-color: transparent; /* بنخليها شفافة عشان تاخد لون الـ navy */
+}
 /* ==========================================================================
    A. HOME PAGE SPECIFIC (الصفحة الرئيسية)
 ============================================================================ */
