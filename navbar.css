@@ -10,17 +10,18 @@
     flex-direction: column;
     align-items: center;
     padding: 25px 5%;
-    background: #0b132b; /* كحلي */
-    border-bottom: 4px solid #c5a059; /* ذهبي فخم */
+   background: var(--navy);
+  border-bottom: 4px solid var(--gold);
     position: sticky;
     top: 0;
     z-index: 1000;
     text-align: center;
 }
 
+
 /* العنوان (بديل اللوجو) */
 .site-title { 
-    color: #c5a059; 
+    color:  var(--gold); 
     font-family: 'Georgia', serif; 
     font-size: 28px; 
     letter-spacing: 2px; 
@@ -41,7 +42,7 @@
 
 /* الروابط (نظيفة وبدون خلفيات زرقاء فاقعة) */
 .new-nav a {
-    color: #ffffff;
+    color:var(--offwhite); /* نص المنيو أوف وايت */
     text-decoration: none;
     font-size: 14px;
     padding: 8px 12px;
@@ -52,8 +53,11 @@
 
 /* تأثير الـ Hover بالأكوا الهادي */
 .new-nav a:hover { 
-    color: #38bdf8;
+  color: var(--aqua); /* الهوفر أكوا */
     background: rgba(56, 189, 248, 0.1); /* لمسة أكوا خفيفة جداً */
+}
+.social-icons a { 
+    color: var(--aqua); /* الأيقونات أكوا */
 }
 
 /* التوافق مع الموبايل */
