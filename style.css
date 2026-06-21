@@ -1107,44 +1107,62 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     gap: 30px;
 }
 
-.media-box, .reviews-box {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.03);
+.media-box, .reviews-box { 
+    background: rgba(255, 255, 255, 0.03) !important; 
+    padding: 30px !important; 
+    border-radius: 16px !important; 
+    border: 1px solid var(--gold) !important; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important; 
+    color: var(--offwhite) !important; /* لضمان أن أي نص داخلهم يظهر بوضوح */
 }
 
-.review-card {
-    background: #f8fafc;
-    padding: 20px;
-    border-radius: 12px;
-    border-right: 4px solid #00a8cc;
+/* 1. كارت التقييم (Review Card) */
+.review-card { 
+    background: rgba(255, 255, 255, 0.03) !important; 
+    padding: 20px !important; 
+    border-radius: 12px !important; 
+    border-right: 4px solid var(--gold) !important; /* لمسة ذهبية على الجنب */
+    border-left: 1px solid var(--gold) !important; /* إطار ذهبي رقيق للزوايا */
+    border-top: 1px solid var(--gold) !important;
+    border-bottom: 1px solid var(--gold) !important;
+    color: var(--offwhite) !important;
 }
 
-.booking-steps-section {
-    padding: 60px 20px;
-    text-align: center;
-    width: 100%;
+/* 2. قسم خطوات الحجز */
+.booking-steps-section { 
+    padding: 60px 20px !important; 
+    text-align: center !important; 
+    width: 100% !important; 
+    color: var(--offwhite) !important;
 }
 
-.steps-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* السطر ده هو سر تجنب السكرول الجانبي */
-    margin-top: 40px;
+/* 3. حاوية الخطوات */
+.steps-container { 
+    display: flex !important; 
+    justify-content: center !important; 
+    gap: 20px !important; 
+    flex-wrap: wrap !important; 
+    margin-top: 40px !important; 
 }
 
-.step-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #e2e8f0;
-    flex: 1;
-    min-width: 250px; /* الكارت مش هيقل عن العرض ده */
-    max-width: 350px; /* الكارت مش هيزيد عن العرض ده */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+/* 4. كارت الخطوة (Step Card) */
+.step-card { 
+    background: rgba(255, 255, 255, 0.03) !important; 
+    padding: 30px !important; 
+    border-radius: 15px !important; 
+    border: 1px solid var(--gold) !important; 
+    flex: 1 !important; 
+    min-width: 250px !important; 
+    max-width: 350px !important; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; 
+    color: var(--offwhite) !important;
+    transition: 0.3s ease;
+}
+
+/* إضافة لمسة تفاعلية عند الوقوف بالماوس */
+.step-card:hover {
+    border-color: var(--aqua) !important;
+    transform: translateY(-5px);
 }
 
 /* 1. ترقيم الخطوات: دائرة ذهبية بقلب كحلي (شياكة) */
