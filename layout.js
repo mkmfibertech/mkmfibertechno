@@ -1,27 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    // دالة التحميل
     function loadComponent(url, elementId) {
-        // بنستنى الصفحة تحمل، وبعدين ندور على العنصر
         const container = document.getElementById(elementId);
         
-        // لو ملقاش العنصر، هيخرج من غير ما يدي أي خطأ (TypeError)
-        if (!container) {
-            console.log("العنصر " + elementId + " غير موجود في هذه الصفحة، سأتجاهل التحميل.");
-            return; 
-        }
+        // شرط الأمان: لو العنصر مش موجود في الصفحة، الكود هيقف بهدوء من غير أخطاء
+        if (!container) return; 
 
         fetch(url)
             .then(response => {
-                if (!response.ok) throw new Error("فشل تحميل الملف");
+                if (!response.ok) return;
                 return response.text();
             })
             .then(data => {
                 container.innerHTML = data;
             })
-            .catch(error => console.error(error));
+            .catch(err => console.error("Error loading:", err));
     }
 
-    // هنا بتنده على الوظيفة
-    loadComponent("header.html", "header-container");
+    // هنا ربطنا الـ ID بتاعك في الـ HTML بالـ JS
+    loadComponent("header.html", "header-placeholder"); 
     loadComponent("footer.html", "footer-container");
 });
