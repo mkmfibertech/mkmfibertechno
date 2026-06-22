@@ -806,27 +806,30 @@ html { scroll-behavior: smooth !important; }
 
 
 .payment-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important; /* دي الأهم: عشان العناصر تنزل سطر لو مفيش مساحة */
+    gap: 15px !important;
+    margin-top: 20px !important;
+    padding: 0 10px !important; /* حماية من اللمس في الحواف */
 }
 
-/* 1. عناصر الدفع: بقت كبسولة شفافة تليق بستايل المنيو */
 .payment-item {
-    background: rgba(255, 255, 255, 0.05); /* شفافية خفيفة على الكحلي */
-    padding: 15px 25px;
-    border-radius: 50px;
-    border: 1px solid var(--gold); /* إطار ذهبي فخم */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    color: var(--offwhite); /* النص أوف وايت */
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 12px 20px !important;
+    border-radius: 50px !important;
+    border: 1px solid var(--gold) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-weight: 600 !important;
+    color: var(--offwhite) !important;
+    white-space: nowrap; /* عشان النص ميكسرش جوه الكبسولة */
 }
 
 .payment-item i {
-    color: var(--aqua); /* الأيقونة أكوا عشان تنور */
+    color: var(--aqua) !important;
+    font-size: 1.2rem !important;
 }
 /* الحاوية الكبيرة اللي بتجمع العمودين */
 .featured-wrapper {
