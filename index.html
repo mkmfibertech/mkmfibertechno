@@ -449,63 +449,30 @@
   <!-- ================= FOOTER & BACK TO TOP ================= -->
   <div id="footer-container"></div>
   
-  <a href="#" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+ 
 
-  <!-- ================= SCRIPTS ================= -->
-  <script src="app.js"></script>
-  <script src="js/layout.js"></script>
+<script src="app.js"></script>
+<script src="js/layout.js"></script>
 
-  <!-- Slider Script -->
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-      slides.forEach(slide => {
-        slide.classList.remove('active');
-      });
-      slides[index].classList.add('active');
-    }
-
-    setInterval(() => {
-      currentSlide++;
-      if (currentSlide >= slides.length) {
-        currentSlide = 0;
-      }
-      showSlide(currentSlide);
-    }, 5000);
-  </script>
-
-  <!-- WhatsApp Form Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("serviceForm");
-      if (!form) return;
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const service = document.getElementById("service").value;
-        const address = document.getElementById("address").value.trim();
-        const details = document.getElementById("details").value.trim();
-
-        const message = `طلب خدمة جديد\n\n👤 الاسم: ${name}\n\n📞 رقم الهاتف: ${phone}\n\n🛠️ الخدمة المطلوبة: ${service}\n\n📍 العنوان: ${address}\n\n📝 التفاصيل:\n${details}`;
-        const url = `https://wa.me/201012646236?text=${encodeURIComponent(message)}`;
-
-        window.open(url, "_blank");
-      });
-    });
-  </script>
 <script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("serviceForm");
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const service = document.getElementById("service").value;
+                const address = document.getElementById("address").value.trim();
+                const details = document.getElementById("details").value.trim();
+
+                const message = `طلب خدمة جديد\n\n👤 الاسم: ${name}\n\n📞 رقم الهاتف: ${phone}\n\n🛠️ الخدمة المطلوبة: ${service}\n\n📍 العنوان: ${address}\n\n📝 التفاصيل:\n${details}`;
+                const url = `https://wa.me/201012646236?text=${encodeURIComponent(message)}`;
+                
+                window.open(url, "_blank");
+            });
+        }
+    });
 </script>
 </body>
 </html>
