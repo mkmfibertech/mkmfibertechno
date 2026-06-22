@@ -815,18 +815,19 @@ html { scroll-behavior: smooth !important; }
     border-color: var(--aqua) !important;
 }
 
-.featured-product-card .product-image { 
-    width: 100% !important; /* الصورة تاخد عرض الكارت */
-    padding: 0 !important; 
-}
-
+/* 1. الكود الخاص بصور المنتجات داخل الكروت (عرض كامل) */
 .featured-product-card .product-image img {
     width: 100% !important;
-    height: 200px !important; /* ارتفاع ثابت عشان الشكل يبقى موحد */
+    height: 200px !important; 
     object-fit: cover !important;
     border-radius: 12px !important;
+    border: none !important; /* شلنا البوردر عشان ما يسببش لخبطة في العرض */
+    display: block !important;
 }
-.product-image img {
+
+/* 2. الكود الخاص بأي صورة منتج "صغيرة" في مكان تاني (خارج الكروت) */
+/* بنستخدم كلاس فريد عشان ما يتدخلش مع الكروت */
+.product-icon-small {
     width: 120px !important;
     height: 120px !important;
     object-fit: cover !important;
