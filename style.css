@@ -7,6 +7,9 @@ html, body {
     background-image: linear-gradient(180deg, #0b132b 0%, #16213e 100%) !important;
     background-attachment: fixed !important; /* تثبيت الخلفية */
 }
+* {
+    outline: 1px solid red !important;
+}
 
 /* 2. تصحيح الحاويات التي تسبب المشكلة (إجبارها على العرض الكامل) */
 .footer-container, 
