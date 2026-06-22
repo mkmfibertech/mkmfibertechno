@@ -1,24 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
+// بدلاً من الانتظار فقط، هنستخدم setTimeout عشان نضمن إن الصفحة اترسمت تماماً
+window.addEventListener("load", () => {
     
-    // دالة التحميل
     function loadComponent(url, elementId) {
         const container = document.getElementById(elementId);
-        
-        // شرط الأمان: لو العنصر مش موجود في الصفحة، الكود هيقف بهدوء من غير أخطاء
         if (!container) return; 
 
         fetch(url)
-            .then(response => {
-                if (!response.ok) return;
-                return response.text();
-            })
+            .then(response => response.text())
             .then(data => {
                 container.innerHTML = data;
             })
-            .catch(err => console.error("Error loading:", err));
+            .catch(err => console.log(""));
     }
 
-    // هنا ربطنا الـ ID بتاعك في الـ HTML بالـ JS
-    loadComponent("header.html", "header-placeholder"); 
-    loadComponent("footer.html", "footer-container");
+    // تأخير تحميل المكونات أجزاء من الثانية عشان نضمن إن الـ DOM جاهز
+    setTimeout(() => {
+        loadComponent("header.html", "header-placeholder");
+        loadComponent("footer.html", "footer-container");
+    }, 100); 
 });
