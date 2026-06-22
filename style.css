@@ -9,7 +9,13 @@ html, body {
     box-sizing: border-box !important;
     max-width: 100% !important;
 }
-
+/* بدل ما تعتمد على مسار نسبي، خلي الخط ده يظهر في كل حاجة */
+#header-container, #footer-container {
+    border-left: 3px solid #your-color-code; /* جرب اللون اللي إنت عايزه */
+    padding-left: 15px;
+    display: block !important; /* عشان نضمن إنه مش بيختفي */
+}
+  
 /* 2. تصحيح الحاويات التي تسبب المشكلة (إجبارها على العرض الكامل) */
 .footer-container, 
 .steps-container, 
