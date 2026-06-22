@@ -959,34 +959,43 @@ html { scroll-behavior: smooth !important; }
 
 /* المربعات الأربعة (الخدمات) */
 .laser-card {
-    background: var(--navy); /* خلفية المربع كحلي سادة */
-    padding: 40px;
-    text-align: center;
-    transition: 0.3s;
+    background: var(--navy) !important;
+    padding: 40px !important;
+    text-align: center !important;
+    transition: 0.3s ease !important;
+    
+    /* حماية من الخروج عن الحدود */
+    width: 100% !important;
+    min-width: 0 !important; /* دي بتمنع الكارت إنه يزق الحاويات بتاعته */
+    border-radius: 15px !important; /* ضفتها عشان الشكل يبان مودرن */
+    border: 1px solid rgba(197, 160, 89, 0.1) !important; /* إطار خفيف جداً يدي فخامة */
 }
 
 .laser-card:hover {
-    background: rgba(255, 255, 255, 0.05); /* إضاءة خفيفة عند الوقوف */
+    background: rgba(255, 255, 255, 0.05) !important;
+    transform: translateY(-5px) !important; /* حركة خفيفة لزيادة التفاعل */
+    border-color: var(--gold) !important; /* الإطار ينور ذهبي عند الوقوف */
 }
 
-/* تنسيق الأيقونات والنصوص */
 .laser-card i {
-    font-size: 35px;
-    color: var(--aqua); /* الأيقونة أكوا زي كل أيقونات الموقع */
-    margin-bottom: 15px;
+    font-size: 35px !important;
+    color: var(--aqua) !important;
+    margin-bottom: 15px !important;
+    display: block !important; /* عشان الأيقونة تاخد سطر لوحدها */
 }
 
 .laser-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: var(--gold); /* العناوين ذهبي */
+    margin-bottom: 10px !important;
+    font-size: 1.2rem !important;
+    color: var(--gold) !important;
 }
 
 .laser-card p {
-    font-size: 0.9rem;
-    color: var(--offwhite); /* النصوص أوف وايت */
-    opacity: 0.8;
-    line-height: 1.5;
+    font-size: 0.9rem !important;
+    color: var(--offwhite) !important;
+    opacity: 0.8 !important;
+    line-height: 1.5 !important;
+    word-wrap: break-word !important; /* عشان لو في كلمة طويلة متكسرش عرض الكارت */
 }
 .steps-container {
     display: flex;
