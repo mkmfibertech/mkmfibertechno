@@ -1,6 +1,6 @@
-html, body {
+body {
   width: 100% !important;
-    max-width: 100% !important;
+    width: 100vw !important;
     overflow-x: hidden !important; /* هذا هو الأمر الذي يلغي السكرول الجانبي */
     margin: 0 !important;
     padding: 0 !important;
