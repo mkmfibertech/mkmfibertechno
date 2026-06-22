@@ -658,12 +658,13 @@ html { scroll-behavior: smooth !important; }
 
 /* التعديل الجوهري للجريد */
 .ftth-grid {
-    display: grid !important;
+    display: flex;
     /* استخدام fit-content أو تعديل الـ minmax لضمان عدم التجاوز */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; 
     gap: 20px !important;
     width: 100% !important;
     margin: 0 auto !important;
+  flex-wrap: wrap;
 }
 
 /* حماية الكروت من التمدد خارج الجريد */
