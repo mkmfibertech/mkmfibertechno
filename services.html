@@ -250,25 +250,6 @@
   <script src="app.js"></script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("serviceForm");
-        if (form) {
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                const name = document.getElementById("name").value.trim();
-                const phone = document.getElementById("phone").value.trim();
-                const service = document.getElementById("service").value;
-                const address = document.getElementById("address").value.trim();
-                const details = document.getElementById("details").value.trim();
 
-                const message = `طلب خدمة جديد\n\n👤 الاسم: ${name}\n\n📞 رقم الهاتف: ${phone}\n\n🛠️ الخدمة المطلوبة: ${service}\n\n📍 العنوان: ${address}\n\n📝 التفاصيل:\n${details}`;
-                const url = `https://wa.me/201012646236?text=${encodeURIComponent(message)}`;
-                
-                window.open(url, "_blank");
-            });
-        }
-    });
-</script>
 </body>
 </html>
