@@ -1,14 +1,13 @@
 html, body {
+  width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; /* هذا هو الأمر الذي يلغي السكرول الجانبي */
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
-    overflow-x: hidden !important; /* منع السكرول الجانبي نهائياً */
-    background: #0b132b !important; /* خلفية ثابتة أولاً */
-    background-image: linear-gradient(180deg, #0b132b 0%, #16213e 100%) !important;
-    background-attachment: fixed !important; /* تثبيت الخلفية */
-}
+    position: relative !important;
 * {
-    outline: 1px solid red !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
 }
 
 /* 2. تصحيح الحاويات التي تسبب المشكلة (إجبارها على العرض الكامل) */
