@@ -642,7 +642,9 @@ html { scroll-behavior: smooth !important; }
 /* تحصين الحاوية الرئيسية */
 .ftth-solutions-section {
     background: linear-gradient(180deg, #0f172a 0%, #003366 40%, #0055aa 75%, #00a8cc 100%) !important;
-    padding: 60px 15px !important; /* تقليل الـ padding الجانبي */
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    
     text-align: center !important;
     border-radius: 20px !important;
     margin: 40px auto !important;
