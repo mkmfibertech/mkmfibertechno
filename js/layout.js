@@ -7,13 +7,13 @@ async function loadLayout() {
         if (!headerRes.ok) throw new Error("Header not found");
         
         const headerData = await headerRes.text();
-        const headerContainer = document.getElementById('header-container');
+        const headerPlaceholder = document.getElementById('header-placeholder');
         
-        if (headerContainer) {
-            headerContainer.innerHTML = headerData;
+        if (headerPlaceholder) {
+            headerPlaceholder.innerHTML = headerData;
             // تأكد إن فيه عنصر قبل ما نعدل الـ ID
-            if (headerContainer.firstElementChild) {
-                headerContainer.firstElementChild.id = 'page-header';
+            if (headerPlaceholder.firstElementChild) {
+                headerPlaceholder.firstElementChild.id = 'page-header';
             }
 
             // تفعيل الرابط النشط
