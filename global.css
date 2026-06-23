@@ -147,3 +147,28 @@ footer {
     }
     .laser-line { display: none !important; }
 }
+
+
+
+/* تحويل خلفية الكروت للون الكحلي الأساسي */
+.card, .ftth-card, .service-card {
+    background-color: var(--navy) !important; /* لون الخلفية الكحلي */
+    border: 1px solid var(--gold) !important;  /* إطار ذهبي رقيق */
+    color: var(--offwhite) !important;       /* لون النص */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* تعديل العناوين داخل الكروت */
+.card h2, .card h3 {
+    color: var(--gold) !important;
+}
+
+/* تعديل الزرار (احجز موعدك الآن) */
+.btn-book, .card button {
+    background-color: var(--gold) !important;
+    color: var(--navy) !important; /* لون الخط يكون غامق عشان يوضح فوق الذهبي */
+    border: none !important;
+    font-weight: bold;
+}
+
