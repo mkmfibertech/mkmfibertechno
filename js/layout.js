@@ -3,7 +3,7 @@ async function loadLayout() {
     // 1. جلب الهيدر
     try {
         // إضافة "/" في البداية تعني ابدأ من جذر الموقع دائماً
-        const headerRes = await fetch('/header.html'); 
+        const headerRes = await fetch('header.html'); 
         if (!headerRes.ok) throw new Error("Header not found");
         
         const headerData = await headerRes.text();
@@ -30,7 +30,7 @@ async function loadLayout() {
 
     // 2. جلب الفوتر
     try {
-        const footerRes = await fetch('/footer.html');
+        const footerRes = await fetch('footer.html');
         if (!footerRes.ok) throw new Error("Footer not found");
         
         const footerData = await footerRes.text();
