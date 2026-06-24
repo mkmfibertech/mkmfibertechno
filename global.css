@@ -180,4 +180,38 @@ footer {
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
 
 
+/* الملاحظات */
+.notes-section { max-width: 950px; margin: 0 auto 40px auto; }
+.info-card { padding: 30px; border-right: 4px solid var(--gold); background: var(--navy); border-radius: 8px; }
+.info-card h3 { color: var(--gold); margin-bottom: 20px; }
+.info-card ul { list-style: none; padding: 0; color: var(--offwhite); }
 
+/* لماذا تختارنا */
+.why-us-details { padding: 60px 20px; max-width: 1100px; margin: 0 auto; text-align: center; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+.icon-circle { width: 120px; height: 120px; background: var(--aqua); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.icon-circle i { font-size: 40px; color: var(--navy); }
+.feature-item h3 { color: var(--gold); }
+.feature-item p { color: var(--offwhite); }
+
+/* صندوق التواصل */
+.cta-section-box { background: var(--navy); padding: 40px 20px; border-radius: 16px; margin: 40px auto; max-width: 1100px; text-align: center; border: 1px solid var(--gold); }
+.cta-section-box h2 { color: var(--gold); }
+.cta-section-box p { color: var(--offwhite); margin-bottom: 25px; }
+
+
+.features-section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+.features-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+.feature-card { 
+    flex: 1; 
+    min-width: 280px; 
+    background: var(--navy); 
+    padding: 25px; 
+    border-radius: 16px; 
+    border: 1px solid var(--gold); 
+    text-align: center; 
+}
+.feature-card i { font-size: 30px; color: var(--aqua); margin-bottom: 15px; }
+.feature-card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 8px; }
+.feature-card p { color: var(--offwhite); font-size: 0.9rem; margin: 0; }
