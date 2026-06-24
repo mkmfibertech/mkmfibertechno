@@ -800,7 +800,7 @@ html { scroll-behavior: smooth !important; }
 .featured-product-card {
     /* ... التنسيقات اللي عندك ... */
     width: 100% !important;
-    max-width: 320px !important; /* خليناه ثابت ومناسب بدل 308px */
+    max-width: 250px !important; /* خليناه ثابت ومناسب بدل 308px */
     margin: 0 auto !important;   /* السطر ده هو اللي هيسنتر الكارت نفسه في النص */
     
     display: flex !important;
