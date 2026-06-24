@@ -1140,7 +1140,16 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     border-radius: 16px !important; 
     border: 1px solid var(--gold) !important; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important; 
-    color: var(--offwhite) !important; /* لضمان أن أي نص داخلهم يظهر بوضوح */
+    color: var(--offwhite) !important;
+    
+    /* التعديلات هنا */
+    width: 100%;             /* ياخد عرض الحاوية اللي هو فيها بدل 238 */
+    max-width: 400px;        /* ده العرض اللي يخليه "أصغر شوية" وشكله متناسق */
+    margin: 0 auto;          /* بيخلي الكارت نفسه في نص الصفحة */
+    text-align: center;      /* بيسنتر كل النصوص اللي جواه */
+    display: flex;           /* بنستخدم فليكس عشان نتحكم في مكان العناصر */
+    flex-direction: column;  /* عشان يرتب العناصر تحت بعض */
+    align-items: center;     /* بيسنتر الزرار وكل حاجة في النص */
 }
 
 /* 1. كارت التقييم (Review Card) */
