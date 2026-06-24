@@ -104,7 +104,9 @@ footer {
     text-decoration: none !important;
     font-weight: 600 !important;
     transition: 0.3s !important;
-    display: inline-block !important; /* مهمة عشان الأزرار متدخلش في بعض */
+    display: inline-block !important;
+    color: #ffffff !important;
+    text-align: center !important;
 }
 
 .footer-btn { background: var(--aqua) !important; color: var(--navy) !important; }
