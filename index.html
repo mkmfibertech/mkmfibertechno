@@ -137,33 +137,47 @@
 
   <!-- ================= SERVICE ORDER FORM ================= -->
   <section class="service-order">
-    <div class="container order-form-container">
-        <h2>اطلب خدمة الآن</h2>
-        <p class="form-subtitle">املأ البيانات وسنتواصل معك لتنفيذ الخدمة</p>
+<div class="container order-form-container">
+    <h2>اطلب خدمة الآن</h2>
+    <p class="form-subtitle">حدد الخدمات المطلوبة (يمكنك اختيار أكثر من واحدة)</p>
+    
+    <form id="serviceForm" class="order-form">
+        <input type="text" id="name" placeholder="الاسم بالكامل" required>
+        <input type="tel" id="phone" placeholder="رقم الهاتف" required>
         
-        <form id="serviceForm" class="order-form">
-            <input type="text" id="name" placeholder="الاسم بالكامل" required>
-            <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+        <div class="services-selection" style="text-align: right; margin-bottom: 20px; padding: 15px; border: 1px solid var(--gold); border-radius: 8px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 10px; color: var(--gold);">خدمات الصيانة والإصلاح:</label>
+            <input type="checkbox" name="service" value="الكشف والتصليح لعطل UTP/FTTH"> الكشف والتصليح لعطل UTP / FTTH<br>
+            <input type="checkbox" name="service" value="تصليح/تغيير كيبل فايبر FTTH"> تصليح أو تغيير كيبل فايبر FTTH<br>
+            <input type="checkbox" name="service" value="تصليح كيبل إنترنت UTP"> تصليح كيبل إنترنت UTP<br>
             
-            <select id="service" required>
-                <option value="">اختر نوع الخدمة</option>
-                <option value="تركيب شبكات Fiber Optic">تركيب شبكات Fiber Optic</option>
-                <option value="تركيب شبكات UTP">تركيب شبكات UTP</option>
-                <option value="لحام فايبر">لحام فايبر</option>
-                <option value="صيانة أعطال الشبكات">صيانة أعطال الشبكات</option>
-                <option value="تنظيم وتركيب Rack">تنظيم وتركيب Rack</option>
-                <option value="اختبار واعتماد الشبكات">اختبار واعتماد الشبكات</option>
-            </select>
+            <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: var(--gold);">خدمات التمديد والتركيب:</label>
+            <input type="checkbox" name="service" value="لحام كيبل فايبر FTTH"> لحام كيبل فايبر FTTH<br>
+            <input type="checkbox" name="service" value="تمديد كيبل فايبر FTTH"> تمديد كيبل فايبر FTTH<br>
+            <input type="checkbox" name="service" value="تمديد مسارات"> تمديد مسارات داخل/خارج الشقة<br>
+            <input type="checkbox" name="service" value="تمديد كيبل داخل مسارات الكهرباء"> تمديد كيبل داخل مسارات الكهرباء<br>
+            <input type="checkbox" name="service" value="تغيير مكان الكيبل"> تغيير مكان الكيبل<br>
             
-            <input type="text" id="address" placeholder="العنوان بالتفصيل" required>
-            <textarea id="details" rows="4" placeholder="تفاصيل إضافية (اختياري)"></textarea>
+            <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: var(--gold);">شبكات وراوتر:</label>
+            <input type="checkbox" name="service" value="توصيل راوتر / Access Point"> توصيل راوتر / Access Point<br>
+            <input type="checkbox" name="service" value="تغيير واي فاي"> تغيير إعدادات واي فاي WIFI<br>
             
-            <button type="submit" class="submit-btn">
-                <i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب
-            </button>
-        </form>
-    </div>
-</section>
+            <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: var(--gold);">أخرى:</label>
+            <input type="checkbox" id="otherCheck" onclick="toggleOther()"> خدمة أخرى (حددها):<br>
+            <input type="text" id="otherText" name="otherService" placeholder="اكتب الخدمة هنا..." style="display:none; width: 100%; margin-top: 5px; padding: 8px;">
+        </div>
+        
+        <input type="text" id="address" placeholder="العنوان بالتفصيل" required>
+        <textarea id="details" rows="4" placeholder="تفاصيل إضافية (اختياري)"></textarea>
+        
+        <button type="submit" class="submit-btn">
+            <i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب
+        </button>
+    </form>
+</div>
+
+
+
 
 
   
@@ -321,5 +335,46 @@
         }
     });
 </script>
+
+          <script>
+document.getElementById("serviceForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // منع الإرسال التقليدي
+
+    // تجميع البيانات الأساسية
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+    const details = document.getElementById("details").value;
+
+    // تجميع الخدمات المختارة
+    let selectedServices = [];
+    const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+    checkboxes.forEach((cb) => {
+        selectedServices.push(cb.value);
+    });
+
+    // إضافة خدمة "أخرى" إذا تم اختيارها
+    if (document.getElementById("otherCheck").checked) {
+        selectedServices.push(document.getElementById("otherText").value);
+    }
+
+    // صياغة الرسالة
+    const message = `مرحباً، أريد طلب خدمة من موقع MKM FiberTechno:
+    
+👤 *الاسم:* ${name}
+📞 *الهاتف:* ${phone}
+📍 *العنوان:* ${address}
+🛠️ *الخدمات المطلوبة:*
+- ${selectedServices.join('\n- ')}
+📝 *تفاصيل إضافية:* ${details}`;
+
+    // تحويل الرسالة لرابط واتساب
+    const whatsappURL = `https://wa.me/201012646236?text=${encodeURIComponent(message)}`;
+    
+    // فتح الواتساب
+    window.open(whatsappURL, '_blank');
+});
+</script>
+
 </body>
 </html>
