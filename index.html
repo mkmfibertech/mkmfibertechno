@@ -315,65 +315,41 @@
   <script src="app.js"></script>
 
 
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("serviceForm");
-        if (form) {
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                const name = document.getElementById("name").value.trim();
-                const phone = document.getElementById("phone").value.trim();
-                const service = document.getElementById("service").value;
-                const address = document.getElementById("address").value.trim();
-                const details = document.getElementById("details").value.trim();
-
-                const message = `طلب خدمة جديد\n\n👤 الاسم: ${name}\n\n📞 رقم الهاتف: ${phone}\n\n🛠️ الخدمة المطلوبة: ${service}\n\n📍 العنوان: ${address}\n\n📝 التفاصيل:\n${details}`;
-                const url = `https://wa.me/201012646236?text=${encodeURIComponent(message)}`;
-                
-                window.open(url, "_blank");
-            });
-        }
-    });
-</script>
-
-          <script>
-document.getElementById("serviceForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // منع الإرسال التقليدي
-
-    // تجميع البيانات الأساسية
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
-    const details = document.getElementById("details").value;
-
-    // تجميع الخدمات المختارة
-    let selectedServices = [];
-    const checkboxes = document.querySelectorAll('input[name="service"]:checked');
-    checkboxes.forEach((cb) => {
-        selectedServices.push(cb.value);
-    });
-
-    // إضافة خدمة "أخرى" إذا تم اختيارها
-    if (document.getElementById("otherCheck").checked) {
-        selectedServices.push(document.getElementById("otherText").value);
+    // فتح وقفل قائمة الخدمات
+    function toggleServices() {
+        var menu = document.getElementById("servicesMenu");
+        menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
     }
 
-    // صياغة الرسالة
-    const message = `مرحباً، أريد طلب خدمة من موقع MKM FiberTechno:
-    
-👤 *الاسم:* ${name}
-📞 *الهاتف:* ${phone}
-📍 *العنوان:* ${address}
-🛠️ *الخدمات المطلوبة:*
-- ${selectedServices.join('\n- ')}
-📝 *تفاصيل إضافية:* ${details}`;
+    // إظهار خانة "أخرى"
+    function toggleOther() {
+        var checkBox = document.getElementById("otherCheck");
+        var textInput = document.getElementById("otherText");
+        textInput.style.display = checkBox.checked ? "block" : "none";
+    }
 
-    // تحويل الرسالة لرابط واتساب
-    const whatsappURL = `https://wa.me/201012646236?text=${encodeURIComponent(message)}`;
-    
-    // فتح الواتساب
-    window.open(whatsappURL, '_blank');
-});
+    // إرسال البيانات للواتساب
+    document.getElementById("serviceForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        let selectedServices = [];
+        document.querySelectorAll('input[name="service"]:checked').forEach((cb) => {
+            selectedServices.push(cb.value);
+        });
+        if (document.getElementById("otherCheck").checked) {
+            selectedServices.push(document.getElementById("otherText").value);
+        }
+
+        const message = `طلب خدمة جديد من: ${document.getElementById("name").value}
+        الهاتف: ${document.getElementById("phone").value}
+        العنوان: ${document.getElementById("address").value}
+        الخدمات: ${selectedServices.join(', ')}
+        التفاصيل: ${document.getElementById("details").value}`;
+
+        window.open(`https://wa.me/201012646236?text=${encodeURIComponent(message)}`, '_blank');
+    });
 </script>
 
 </body>
