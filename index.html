@@ -316,38 +316,25 @@
 
 
 <script>
-    // فتح وقفل قائمة الخدمات
     function toggleServices() {
         var menu = document.getElementById("servicesMenu");
-        menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+        menu.style.display = (menu.style.display === "none") ? "block" : "none";
     }
-
-    // إظهار خانة "أخرى"
     function toggleOther() {
-        var checkBox = document.getElementById("otherCheck");
-        var textInput = document.getElementById("otherText");
-        textInput.style.display = checkBox.checked ? "block" : "none";
+        document.getElementById("otherText").style.display = document.getElementById("otherCheck").checked ? "block" : "none";
     }
-
-    // إرسال البيانات للواتساب
     document.getElementById("serviceForm").addEventListener("submit", function(e) {
         e.preventDefault();
-        
-        let selectedServices = [];
-        document.querySelectorAll('input[name="service"]:checked').forEach((cb) => {
-            selectedServices.push(cb.value);
-        });
-        if (document.getElementById("otherCheck").checked) {
-            selectedServices.push(document.getElementById("otherText").value);
-        }
-
-        const message = `طلب خدمة جديد من: ${document.getElementById("name").value}
-        الهاتف: ${document.getElementById("phone").value}
-        العنوان: ${document.getElementById("address").value}
-        الخدمات: ${selectedServices.join(', ')}
-        التفاصيل: ${document.getElementById("details").value}`;
-
-        window.open(`https://wa.me/201012646236?text=${encodeURIComponent(message)}`, '_blank');
+        let selected = [];
+        document.querySelectorAll('input[name="service"]:checked').forEach(cb => selected.push(cb.value));
+        if(document.getElementById("otherCheck").checked) selected.push(document.getElementById("otherText").value);
+        const msg = `طلب خدمة:
+الاسم: ${document.getElementById("name").value}
+الهاتف: ${document.getElementById("phone").value}
+العنوان: ${document.getElementById("address").value}
+الخدمات: ${selected.join(', ')}
+التفاصيل: ${document.getElementById("details").value}`;
+        window.open(`https://wa.me/201012646236?text=${encodeURIComponent(msg)}`, '_blank');
     });
 </script>
 
