@@ -120,7 +120,7 @@ footer {
 /* الأقسام - التعديل هنا هو السر في الموبايل */
 .footer-left, .footer-right {
     flex: 1 !important;
-    min-width: 250px !important; /* قللناها شوية عشان تبقى آمنة */
+    min-width: 200px !important; /* قللناها شوية عشان تبقى آمنة */
     max-width: 100% !important; /* التعديل ده بيمنع أي خروج عن الشاشة */
     padding: 10px !important;
 }
