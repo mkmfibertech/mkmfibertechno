@@ -46,23 +46,32 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
 ============================================================================ */
 /* الفوتر والخط الليزري (نسخة نهائية) */
 footer {
-    background: linear-gradient(180deg, #050a1a 0%, var(--navy) 100%) !important;
-    padding: 50px 20px 20px !important;
-    border-top: 3px solid var(--gold) !important;
+    /* شلنا الخلفية والخط عشان يبقى شفاف زي الهيدر */
+    background: transparent !important; 
+    border-top: none !important; 
+    
+    /* سيبنا التنسيقات العامة للنص والمسافات */
+    padding: 30px 20px !important;
     color: var(--offwhite) !important;
     text-align: center !important;
-    width: 100% !important; /* ضمان العرض الكامل */
+    width: 100% !important;
 }
 
 .footer-container {
+    /* التعديلات لشفافية الفوتر */
+    background: transparent !important; /* شفافة تماماً */
+    border: none !important;            /* إلغاء أي حدود */
+    box-shadow: none !important;        /* إلغاء أي ظل (لو موجود) */
+    
+    /* التنسيق الأساسي اللي أنت عاوزه */
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center !important; /* خليناها سنتر عشان التوازن */
+    justify-content: center !important; 
     align-items: center !important;
     gap: 40px !important;
     max-width: 1000px !important;
     margin: 0 auto 30px !important;
-    width: 90% !important; /* القاعدة الذهبية عشان مفيش حاجة تخرج بره */
+    width: 90% !important;
 }
 
 /* الخط الليزري */
