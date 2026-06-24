@@ -4,6 +4,7 @@
     font-size: 30px !important; /* حجم مبدئي عشان نشوفها */
     color: var(--gold) !important; /* لون ذهبي عشان تظهر */
     margin: 5px;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
 }
 
 /* تنسيقات عامة نظيفة - شاملة للموقع بالكامل */
@@ -20,12 +21,9 @@ body {
     background-color: var(--navy); /* لون الخلفية الكحلي الأساسي */
     color: var(--offwhite);
     line-height: 1.6;
+    
 }
 
-/* إجبار الأيقونات على استخدام خط الأيقونات فقط */
-i, .fas, .fab, .fa, .fa-solid, .fa-brands {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-}
 
 /* توحيد الخطوط للعناصر (إضافي للضمان) */
 h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
