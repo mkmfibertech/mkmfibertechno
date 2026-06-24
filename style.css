@@ -798,24 +798,17 @@ html { scroll-behavior: smooth !important; }
 
 /* 2. الكارت المميز: تحويل من الأبيض للـ "لوحة الفخمة" */
 .featured-product-card {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid var(--gold) !important;
-    border-radius: 20px !important;
-    padding: 20px !important;
-    
-    /* التعديل الجوهري هنا */
-    display: flex !important;
-    flex-direction: column !important; /* النص تحت الصورة */
-    align-items: center !important;    /* سنتر للمحتوى */
-    text-align: center !important;     /* النصوص في المنتصف */
-    
-    gap: 15px !important;              /* مسافة مريحة بين الصورة والنص */
-    transition: 0.4s ease !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
-    
-    /* ضمان عدم الخروج عن الحدود */
+    /* ... التنسيقات اللي عندك ... */
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 320px !important; /* خليناه ثابت ومناسب بدل 308px */
+    margin: 0 auto !important;   /* السطر ده هو اللي هيسنتر الكارت نفسه في النص */
+    
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 15px !important;
+    /* ... باقي التنسيقات ... */
 }
 
 .featured-product-card:hover {
