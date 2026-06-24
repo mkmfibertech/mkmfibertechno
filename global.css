@@ -222,16 +222,7 @@ footer {
 .feature-card p { color: var(--offwhite); font-size: 0.9rem; margin: 0; }
 
 
-.dropdown-btn {
-    width: 100%;
-    padding: 15px;
-    background: #f8fafc;
-    border: 1px solid var(--gold);
-    color: #334155;
-    text-align: right;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+.service-item { display: flex; align-items: center; gap: 10px; padding: 5px 0; cursor: pointer; }
+.service-item input { width: 18px; height: 18px; accent-color: #d4af37; }
+.dropdown-btn { width: 100%; padding: 15px; background: #001a33; color: #d4af37; border: 1px solid #d4af37; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
 .dropdown-btn:hover { background: #e2e8f0; }
