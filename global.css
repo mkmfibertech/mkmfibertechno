@@ -220,3 +220,18 @@ footer {
 .feature-card i { font-size: 30px; color: var(--aqua); margin-bottom: 15px; }
 .feature-card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 8px; }
 .feature-card p { color: var(--offwhite); font-size: 0.9rem; margin: 0; }
+
+
+.dropdown-btn {
+    width: 100%;
+    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid var(--gold);
+    color: #334155;
+    text-align: right;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dropdown-btn:hover { background: #e2e8f0; }
