@@ -233,8 +233,25 @@ footer {
 .feature-card p { color: var(--offwhite); font-size: 0.9rem; margin: 0; }
 
 
-.service-item { display: flex; align-items: center; gap: 10px; padding: 5px 0; cursor: pointer; }
-.service-item input { width: 18px; height: 18px; accent-color: #d4af37; }
+.service-item {
+    display: flex !important;
+    align-items: center !important; /* عشان الـ checkbox والكلام يبقوا على خط واحد */
+    justify-content: flex-start !important; /* عشان يجمعهم في أول السطر */
+    gap: 15px !important; /* دي المسافة اللي بين الـ checkbox والنص (ظبطها زي ما تحب) */
+    margin-bottom: 10px !important;
+    text-align: right !important; /* عشان النص يفضل يمين */
+}
+.service-item input[type="checkbox"] {
+    margin: 0 !important; /* شيلنا أي margin كان مبعدهم */
+    width: 18px !important; /* حجم الـ checkbox */
+    height: 18px !important;
+    cursor: pointer;
+}
+.service-item label {
+    margin: 0 !important;
+    cursor: pointer;
+    line-height: 1.4;
+}
 .dropdown-btn { width: 100%; padding: 15px; background: #001a33; color: #d4af37; border: 1px solid #d4af37; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
 .dropdown-btn:hover { background: #e2e8f0; }
 
