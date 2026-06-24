@@ -136,50 +136,50 @@
   </div>
 
   <!-- ================= SERVICE ORDER FORM ================= -->
-  <section class="service-order">
-<div class="container order-form-container">
-    <h2>اطلب خدمة الآن</h2>
-    <p class="form-subtitle">حدد الخدمات المطلوبة (يمكنك اختيار أكثر من واحدة)</p>
-    
-    <form id="serviceForm" class="order-form">
-        <input type="text" id="name" placeholder="الاسم بالكامل" required>
-        <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+<section class="service-order">
+    <div class="container order-form-container">
+        <h2>اطلب خدمة الآن</h2>
+        <p class="form-subtitle">املأ البيانات واحصل على استشارة فورية</p>
         
-        <div class="services-selection" style="text-align: right; margin-bottom: 20px; padding: 15px; border: 1px solid var(--gold); border-radius: 8px;">
-            <label style="display: block; font-weight: bold; margin-bottom: 10px; color: var(--gold);">خدمات الصيانة والإصلاح:</label>
-            <input type="checkbox" name="service" value="الكشف والتصليح لعطل UTP/FTTH"> الكشف والتصليح لعطل UTP / FTTH<br>
-            <input type="checkbox" name="service" value="تصليح/تغيير كيبل فايبر FTTH"> تصليح أو تغيير كيبل فايبر FTTH<br>
-            <input type="checkbox" name="service" value="تصليح كيبل إنترنت UTP"> تصليح كيبل إنترنت UTP<br>
+        <form id="serviceForm" class="order-form">
+            <input type="text" id="name" placeholder="الاسم بالكامل" required>
+            <input type="tel" id="phone" placeholder="رقم الهاتف" required>
             
-            <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: var(--gold);">خدمات التمديد والتركيب:</label>
-            <input type="checkbox" name="service" value="لحام كيبل فايبر FTTH"> لحام كيبل فايبر FTTH<br>
-            <input type="checkbox" name="service" value="تمديد كيبل فايبر FTTH"> تمديد كيبل فايبر FTTH<br>
-            <input type="checkbox" name="service" value="تمديد مسارات"> تمديد مسارات داخل/خارج الشقة<br>
-            <input type="checkbox" name="service" value="تمديد كيبل داخل مسارات الكهرباء"> تمديد كيبل داخل مسارات الكهرباء<br>
-            <input type="checkbox" name="service" value="تغيير مكان الكيبل"> تغيير مكان الكيبل<br>
+            <button type="button" id="dropdownBtn" class="dropdown-btn" onclick="toggleServices()">
+                اختر الخدمات المطلوبة ▾
+            </button>
             
-            <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: var(--gold);">شبكات وراوتر:</label>
-            <input type="checkbox" name="service" value="توصيل راوتر / Access Point"> توصيل راوتر / Access Point<br>
-            <input type="checkbox" name="service" value="تغيير واي فاي"> تغيير إعدادات واي فاي WIFI<br>
+            <div id="servicesMenu" class="services-menu" style="display: none; margin-bottom: 20px; padding: 15px; border: 1px solid var(--gold); border-radius: 8px;">
+                <label style="display: block; font-weight: bold; margin-bottom: 10px; color: var(--gold);">🛠️ صيانة وإصلاح:</label>
+                <input type="checkbox" name="service" value="الكشف والتصليح لعطل UTP/FTTH"> الكشف والتصليح لعطل UTP / FTTH<br>
+                <input type="checkbox" name="service" value="تصليح/تغيير كيبل فايبر FTTH"> تصليح أو تغيير كيبل فايبر FTTH<br>
+                <input type="checkbox" name="service" value="تصليح كيبل إنترنت UTP"> تصليح كيبل إنترنت UTP<br>
+                
+                <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: var(--gold);">🏗️ تركيب وتأسيس:</label>
+                <input type="checkbox" name="service" value="لحام كيبل فايبر FTTH"> لحام كيبل فايبر FTTH<br>
+                <input type="checkbox" name="service" value="تمديد كيبل فايبر FTTH"> تمديد كيبل فايبر FTTH<br>
+                <input type="checkbox" name="service" value="تمديد مسارات"> تمديد مسارات داخل/خارج الشقة<br>
+                <input type="checkbox" name="service" value="تمديد كيبل داخل مسارات الكهرباء"> تمديد كيبل داخل مسارات الكهرباء<br>
+                <input type="checkbox" name="service" value="تغيير مكان الكيبل"> تغيير مكان الكيبل<br>
+                
+                <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: var(--gold);">🌐 شبكات وراوتر:</label>
+                <input type="checkbox" name="service" value="توصيل راوتر / Access Point"> توصيل راوتر / Access Point<br>
+                <input type="checkbox" name="service" value="تغيير واي فاي"> تغيير إعدادات واي فاي WIFI<br>
+                
+                <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: var(--gold);">➕ أخرى:</label>
+                <input type="checkbox" id="otherCheck" onclick="toggleOther()"> خدمة أخرى (حددها):<br>
+                <input type="text" id="otherText" placeholder="اكتب الخدمة هنا..." style="display:none; width: 100%; margin-top: 5px; padding: 8px;">
+            </div>
             
-            <label style="display: block; font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: var(--gold);">أخرى:</label>
-            <input type="checkbox" id="otherCheck" onclick="toggleOther()"> خدمة أخرى (حددها):<br>
-            <input type="text" id="otherText" name="otherService" placeholder="اكتب الخدمة هنا..." style="display:none; width: 100%; margin-top: 5px; padding: 8px;">
-        </div>
-        
-        <input type="text" id="address" placeholder="العنوان بالتفصيل" required>
-        <textarea id="details" rows="4" placeholder="تفاصيل إضافية (اختياري)"></textarea>
-        
-        <button type="submit" class="submit-btn">
-            <i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب
-        </button>
-    </form>
-</div>
-
-
-
-
-
+            <input type="text" id="address" placeholder="العنوان بالتفصيل" required>
+            <textarea id="details" rows="4" placeholder="تفاصيل إضافية (اختياري)"></textarea>
+            
+            <button type="submit" class="submit-btn">
+                <i class="fab fa-whatsapp"></i> إرسال الطلب عبر واتساب
+            </button>
+        </form>
+    </div>
+</section>
   
   
   <!-- ================= HERO FEATURES ================= -->
