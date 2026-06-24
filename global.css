@@ -1,3 +1,10 @@
+/* ده عشان يظهر أي أيقونة في الموقع */
+.fa, .fas, .fab {
+    display: inline-block;
+    font-size: 30px !important; /* حجم مبدئي عشان نشوفها */
+    color: var(--gold) !important; /* لون ذهبي عشان تظهر */
+    margin: 5px;
+}
 
 /* تنسيقات عامة نظيفة - شاملة للموقع بالكامل */
 *, *:before, *:after {
