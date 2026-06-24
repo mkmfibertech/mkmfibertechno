@@ -237,3 +237,8 @@ footer {
 .service-item input { width: 18px; height: 18px; accent-color: #d4af37; }
 .dropdown-btn { width: 100%; padding: 15px; background: #001a33; color: #d4af37; border: 1px solid #d4af37; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
 .dropdown-btn:hover { background: #e2e8f0; }
+
+i[class*="fa-"] {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 5 Brands", "Font Awesome 5 Free" !important;
+    display: inline-block !important;
+}
