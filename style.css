@@ -277,7 +277,7 @@ max-width: 1200px !important;
     font-weight: 700 !important; 
     width: 100% !important; 
     cursor: pointer !important; 
-    font-family: 'Cairo' !important; 
+    font-family: 'Cairo' ; 
 }
 
 /* 9. أزرار إضافة للسلة (عند الوقوف بالماوس) */
@@ -299,7 +299,7 @@ max-width: 1200px !important;
     font-weight: bold !important; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important; 
     z-index: 2000 !important; 
-    font-family: 'Cairo' !important; 
+    font-family: 'Cairo' ; 
     cursor: pointer !important; 
 }
 
