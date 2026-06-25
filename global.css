@@ -202,8 +202,24 @@ footer {
 /* لماذا تختارنا */
 .why-us-details { padding: 60px 20px; max-width: 1100px; margin: 0 auto; text-align: center; }
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
-.icon-circle { width: 120px; height: 120px; background: var(--aqua); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
-.icon-circle i { font-size: 40px; color: var(--navy); }
+.icon-circle { 
+    width: 120px; 
+    height: 120px; 
+    background: var(--aqua); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto 20px; 
+}
+/* 2. الأيقونة (دي الحماية اللي هتخليها تظهر دايماً) */
+.icon-circle i { 
+    font-size: 40px; 
+    color: var(--navy);
+    /* السطور دي هي اللي بتكسر سيطرة الخط الأساسي وتجبر الأيقونة تظهر */
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
+    font-style: normal !important;
+}
 .feature-item h3 { color: var(--gold); }
 .feature-item p { color: var(--offwhite); }
 
