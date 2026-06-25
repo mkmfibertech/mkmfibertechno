@@ -13,7 +13,7 @@ i[class*="fa-"] {
     margin: 0;
     padding: 0;
     max-width: 100vw !important;
-    font-family: var(--main-font) ;
+    /* الخط الأساسي يطبق على كل حاجة ما عدا الأيقونات */
 }
 
 /* تنسيق الخطوط الأساسية */
@@ -21,13 +21,15 @@ body {
     background-color: var(--navy); /* لون الخلفية الكحلي الأساسي */
     color: var(--offwhite);
     line-height: 1.6;
+    font-family: var(--main-font) !important;
     
 }
 
 
 /* توحيد الخطوط للعناصر (إضافي للضمان) */
 h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
-    font-family: var(--main-font) ;
+  font-family: var(--main-font) !important;
+    
 }   
 /* ==========================================================================
    1. تعريف الهوية البصرية (المرجع الأساسي)
