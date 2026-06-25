@@ -21,11 +21,14 @@ body {
 .steps-container, 
 .products-section, 
 .featured-wrapper {
-    width: 100% !important;
-    max-width: 100vw !important; /* لا تتجاوز عرض الشاشة أبداً */
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    margin: 0 auto !important;
+   display: flex !important;
+    justify-content: center !important; /* سنتر في النص */
+    align-items: stretch !important;    /* بيخلي الكارتين نفس الطول مهما كان الكلام جواهم */
+    flex-wrap: wrap !important;        /* عشان لو الشاشة صغرت ينزلوا تحت بعض */
+    gap: 30px !important;              /* مسافة ثابتة بين الكارتين */
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;         /* عشان يسنتر السيكشن كله في نص الصفحة */
 }
 
 /* 3. إجبار العناصر المسببة للمشكلة على التجاوب */
@@ -33,9 +36,10 @@ body {
 .footer-right, 
 .featured-column, 
 .step-card {
-    width: 100% !important; /* في الموبايل يأخذ العرض كامل */
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+   flex: 1 1 400px !important;        /* بياخد مساحة مرنة، بس مبيقلش عن 400px */
+    max-width: 500px !important;       /* عشان ميبقاش عريض أوي في الشاشات الكبيرة */
+    display: flex !important;
+    flex-direction: column !important;
 }
 * {
     color: var(--offwhite) !important; /* كل النصوص أوف وايت */
@@ -798,17 +802,15 @@ html { scroll-behavior: smooth !important; }
 
 /* 2. الكارت المميز: تحويل من الأبيض للـ "لوحة الفخمة" */
 .featured-product-card {
-    /* ... التنسيقات اللي عندك ... */
-    width: 100% !important;
-    max-width: 250px !important; /* خليناه ثابت ومناسب بدل 308px */
-    margin: 0 auto !important;   /* السطر ده هو اللي هيسنتر الكارت نفسه في النص */
-    
+  height: 100% !important;           /* بيملأ العمود كله */
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    gap: 15px !important;
-    /* ... باقي التنسيقات ... */
+    margin: 0 !important;              /* صفرنا المارجن عشان الزحزحة */
+    padding: 25px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 20px !important;
 }
 
 .featured-product-card:hover {
