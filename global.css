@@ -1,13 +1,8 @@
-/* ده عشان يظهر أي أيقونة في الموقع */
-/* حماية أيقونات الماركات (واتساب، تيك توك، إلخ) */
-.fab, .fa-brands {
-    font-family: "Font Awesome 6 Brands" !important;
+/* 1. أي عنصر `i` أو أي كلاس أيقونة، امنعه فوراً من وراثة الخط الأساسي */
+i, .fas, .fab, .fa, .fa-solid, .fa-brands {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
 }
 
-/* حماية باقي أيقونات الموقع (فون، تولز، إلخ) */
-.fas, .fa-solid {
-    font-family: "Font Awesome 6 Solid" !important;
-}
 
 /* تنسيقات عامة نظيفة - شاملة للموقع بالكامل */
 *, *:before, *:after {
