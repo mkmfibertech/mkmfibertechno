@@ -2,7 +2,10 @@
 i, .fas, .fab, .fa, .fa-solid, .fa-brands {
     font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
 }
-
+/* ده الكود الصح اللي يخلي الأيقونات تشتغل وتجاهل الخط الأساسي */
+i[class*="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid" !important;
+}
 
 /* تنسيقات عامة نظيفة - شاملة للموقع بالكامل */
 *, *:before, *:after {
