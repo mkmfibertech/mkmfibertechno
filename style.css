@@ -1143,6 +1143,7 @@ width: 50px; height: 50px; background: #00a8cc; color: #fff; font-size: 20px; fo
     display: flex;           /* بنستخدم فليكس عشان نتحكم في مكان العناصر */
     flex-direction: column;  /* عشان يرتب العناصر تحت بعض */
     align-items: center;     /* بيسنتر الزرار وكل حاجة في النص */
+  align:center;
 }
 
 /* 1. كارت التقييم (Review Card) */
