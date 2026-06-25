@@ -17,8 +17,7 @@ body {
 }
   
 /* 2. تصحيح الحاويات التي تسبب المشكلة (إجبارها على العرض الكامل) */
-.footer-container, 
-.steps-container, 
+.footer-container,  
 .products-section, 
 .featured-wrapper {
    display: flex !important;
@@ -948,19 +947,7 @@ html { scroll-behavior: smooth !important; }
     line-height: 1.5 !important;
     word-wrap: break-word !important; /* عشان لو في كلمة طويلة متكسرش عرض الكارت */
 }
-.steps-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch; /* عشان الكروت كلها تاخد نفس الطول وتكون متساوية */
-    gap: 20px;
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
+
 
 /* افتراضاً إنك عندك كلاس للكروت جوه الـ container ده */
 .step-card {
