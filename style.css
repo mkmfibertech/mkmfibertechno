@@ -932,12 +932,16 @@ html { scroll-behavior: smooth !important; }
     color: var(--aqua) !important;
     margin-bottom: 15px !important;
     display: block !important; /* عشان الأيقونة تاخد سطر لوحدها */
+  font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
+  font-weight: 900 !important; /* لازم عشان الأيقونة تظهر */
+    font-style: normal !important;
 }
 
 .laser-card h3 {
     margin-bottom: 10px !important;
     font-size: 1.2rem !important;
     color: var(--gold) !important;
+  font-family: var(--main-font) !important;
 }
 
 .laser-card p {
@@ -946,6 +950,7 @@ html { scroll-behavior: smooth !important; }
     opacity: 0.8 !important;
     line-height: 1.5 !important;
     word-wrap: break-word !important; /* عشان لو في كلمة طويلة متكسرش عرض الكارت */
+  font-family: var(--main-font) !important;
 }
 
 
