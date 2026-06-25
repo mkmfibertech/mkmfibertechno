@@ -190,8 +190,86 @@ footer {
     font-weight: bold;
 }
 
-.about-page h1, .vision-section h2, .why-us-section h2 { color: var(--gold); text-align: center; }
-.about-description { color: var(--offwhite); text-align: center; line-height: 1.8; }
+
+/* --- تنسيقات صفحة "من نحن" (About Page) --- */
+
+.about-page {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about__hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about__hero h1 {
+    color: var(--gold); /* أو اللون الأساسي للموقع */
+    margin-bottom: 15px;
+}
+
+.about__description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--offwhite);
+}
+
+/* قسم الإحصائيات */
+.about__stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.about__stat-card h3 {
+    font-size: 2rem;
+    color: var(--aqua);
+    margin: 0;
+}
+
+/* قسم المميزات - يستخدم الكلاس المشترك feature-card */
+.about__why-us h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about__features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* قسم الـ CTA */
+.about__cta {
+    text-align: center;
+    padding: 40px;
+    background: var(--navy);
+    border: 1px solid var(--gold);
+    border-radius: 15px;
+}
+
+.about__btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.about__btn:hover {
+    background: var(--aqua);
+}
+
 .feature-card { background: var(--navy); border: 1px solid var(--gold); padding: 20px; border-radius: 10px; text-align: center; }
 .feature-card i { color: var(--aqua); font-size: 2rem; }
 .feature-card h3 { color: var(--gold); }
