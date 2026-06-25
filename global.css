@@ -1,10 +1,12 @@
 /* ده عشان يظهر أي أيقونة في الموقع */
-.fa, .fas, .fab {
-    display: inline-block;
-    font-size: 30px !important; /* حجم مبدئي عشان نشوفها */
-    color: var(--gold) !important; /* لون ذهبي عشان تظهر */
-    margin: 5px;
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+/* حماية أيقونات الماركات (واتساب، تيك توك، إلخ) */
+.fab, .fa-brands {
+    font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* حماية باقي أيقونات الموقع (فون، تولز، إلخ) */
+.fas, .fa-solid {
+    font-family: "Font Awesome 6 Solid" !important;
 }
 
 /* تنسيقات عامة نظيفة - شاملة للموقع بالكامل */
@@ -267,10 +269,20 @@ footer {
 .dropdown-btn:hover { background: #e2e8f0; }
 
 /* استثناء أي عنصر هو أيقونة من الخط الأساسي للموقع */
+/* إجبار الأيقونات على أخذ خط الأيقونات فقط */
 i[class*="fa-"], 
 i[class*="fas "], 
 i[class*="fab "], 
 i[class*="fa-solid "], 
 i[class*="fa-brands "] {
     font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
+    font-weight: 900 !important; /* مهم جداً للأيقونات */
+    display: inline-block !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
 }
+
+/* استثناء خاص لمكتبة الـ Brands (عشان الواتساب وغيره) */
+
