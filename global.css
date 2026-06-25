@@ -232,14 +232,24 @@ footer {
 .feature-card h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 8px; }
 .feature-card p { color: var(--offwhite); font-size: 0.9rem; margin: 0; }
 
-
+#servicesMenu {
+    display: none; 
+    border: 1px solid #d4af37 !important; 
+    padding: 20px !important; 
+    border-radius: 12px !important; 
+    margin: 10px 0 !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    width: 100% !important;
+    box-sizing: border-box !important; /* دي اللي بتمنع العناصر تخرج بره الحاوية */
+}
 .service-item {
     display: flex !important;
-    align-items: center !important; /* عشان الـ checkbox والكلام يبقوا على خط واحد */
-    justify-content: flex-start !important; /* عشان يجمعهم في أول السطر */
-    gap: 15px !important; /* دي المسافة اللي بين الـ checkbox والنص (ظبطها زي ما تحب) */
-    margin-bottom: 10px !important;
-    text-align: right !important; /* عشان النص يفضل يمين */
+    align-items: center !important;
+    gap: 12px !important;
+    margin: 8px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    text-align: right !important;
 }
 .service-item input[type="checkbox"] {
     margin: 0 !important; /* شيلنا أي margin كان مبعدهم */
@@ -249,8 +259,9 @@ footer {
 }
 .service-item label {
     margin: 0 !important;
+    padding: 0 !important;
+    flex: 1; /* بيخلي النص ياخد المساحة المتبقية بانتظام */
     cursor: pointer;
-    line-height: 1.4;
 }
 .dropdown-btn { width: 100%; padding: 15px; background: #001a33; color: #d4af37; border: 1px solid #d4af37; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
 .dropdown-btn:hover { background: #e2e8f0; }
