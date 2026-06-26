@@ -439,7 +439,15 @@ button i,
 
 /* 2. تأكد إن الزرار نفسه (الـ container) هو اللي بيوزن الأيقونة */
 .submit-btn {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    position: relative !important;
+    z-index: 2; /* تأكد أن الزرار فوق الـ inner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* مسافة بين الأيقونة والنص */
+}
+.submit-btn i {
+    z-index: 3; /* الأيقونة هي الأعلى دائماً */
+    pointer-events: none; /* عشان الضوء يمر من تحتها بدون ما يلمسها */
+    font-size: 1.2rem;
 }
