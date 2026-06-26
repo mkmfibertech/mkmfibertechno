@@ -414,3 +414,22 @@ i[class*="fa-brands "] {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+/* 1. إجبار أيقونات الـ Buttons أو المربعات على أخذ أبعاد محددة */
+button i, 
+.order-form i, 
+.service-order i {
+    display: inline-block !important; /* بتخليها تاخد مساحة النص فقط مش عرض المربع */
+    width: auto !important;           /* بتمنع الأيقونة إنها تتمدد بالعرض */
+    font-size: 1.2rem !important;     /* تحكم في حجم الأيقونة براحتك */
+    margin-left: 8px !important;      /* مسافة بين الأيقونة والنص */
+    margin-right: 8px !important;
+    vertical-align: middle !important; /* بتخليها في نص السطر بالضبط */
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
+}
+
+/* 2. تأكد إن الزرار نفسه (الـ container) هو اللي بيوزن الأيقونة */
+.submit-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
