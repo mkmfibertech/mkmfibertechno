@@ -1,3 +1,13 @@
+
+/* هذا الكود في آخر ملف الـ style.css يضمن إن أي أيقونة في الموقع هتظهر صح */
+i[class*="fa-"] {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    font-style: normal !important;
+}
+
 /* 1. أي عنصر `i` أو أي كلاس أيقونة، امنعه فوراً من وراثة الخط الأساسي */
 i, .fas, .fab, .fa, .fa-solid, .fa-brands {
     font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Solid" !important;
