@@ -162,100 +162,109 @@
     
     <div id="footer-container"></div>
 
-    <script>
-    let cart = [];
+<script>
+let cart = [];
 
-    function toggleCart() {
-        const sidebar = document.getElementById("sidebar-cart");
-        sidebar.classList.toggle("active");
-    }
+// إشعار إضافة المنتج
+function showToast() {
+    const toast = document.getElementById("cart-toast");
+    if (!toast) return;
 
-    function addToCart(name, productsPrice = 0){
-        let item = cart.find(i => i.name === name);
+    toast.classList.add("show");
 
-        if(item){
-            item.qty++;
-        } else {
-            cart.push({
-                name: name,
-                productsPrice: productsPrice || 0,
-                qty: 1
-            });
-        }
-        renderCart();
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000);
+}
 
-        // التكة: فتح السلة تلقائياً لإشعار العميل بالإضافة
-        const sidebar = document.getElementById("sidebar-cart");
-        if(!sidebar.classList.contains("active")) {
-            sidebar.classList.add("active");
-        }
-    }
+function toggleCart() {
+    const sidebar = document.getElementById("sidebar-cart");
+    sidebar.classList.toggle("active");
+}
 
-    function renderCart(){
-        let box = document.getElementById("cart");
-        let countBadge = document.getElementById("cart-count");
-        let total = 0;
-        let totalQty = 0;
+function addToCart(name, productsPrice = 0){
+    let item = cart.find(i => i.name === name);
 
-        cart.forEach(i => totalQty += i.qty);
-        countBadge.innerText = totalQty;
-
-        if (cart.length === 0) {
-            box.innerHTML = "<div style='color: #64748b; padding: 20px 0;'>السلة فارغة حالياً.</div>";
-            return;
-        }
-
-        box.innerHTML = "";
-
-        cart.forEach(i => {
-            total += i.productsPrice * i.qty;
-            box.innerHTML += `
-            <div style="padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 13.5px; color: #1e293b; font-weight: 600;">
-                🔹 ${i.name}<br>
-                <span style="color: #0055aa;">${i.qty} قطع</span> × ${i.productsPrice} = <strong>${i.productsPrice * i.qty} EGP</strong>
-            </div>
-            `;
+    if(item){
+        item.qty++;
+    } else {
+        cart.push({
+            name: name,
+            productsPrice: productsPrice || 0,
+            qty: 1
         });
+    }
 
+    renderCart();
+    showToast(); // عرض إشعار فقط بدون فتح السلة
+}
+
+function renderCart(){
+    let box = document.getElementById("cart");
+    let countBadge = document.getElementById("cart-count");
+    let total = 0;
+    let totalQty = 0;
+
+    cart.forEach(i => totalQty += i.qty);
+    countBadge.innerText = totalQty;
+
+    if (cart.length === 0) {
+        box.innerHTML = "<div style='color:#64748b;padding:20px 0;'>السلة فارغة حالياً.</div>";
+        return;
+    }
+
+    box.innerHTML = "";
+
+    cart.forEach(i => {
+        total += i.productsPrice * i.qty;
         box.innerHTML += `
-            <div style="margin-top: 20px; padding: 12px; background: #f8fafc; border-radius: 8px; text-align: left;">
-                <span style="font-size: 14px; color: #475569;">الإجمالي الفعلي:</span><br>
-                <strong style="font-size: 18px; color: #003366;">${total} EGP</strong>
-            </div>
+        <div style="padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:13.5px;color:#1e293b;font-weight:600;">
+            🔹 ${i.name}<br>
+            <span style="color:#0055aa;">${i.qty} قطع</span> × ${i.productsPrice} = <strong>${i.productsPrice * i.qty} EGP</strong>
+        </div>
         `;
+    });
+
+    box.innerHTML += `
+        <div style="margin-top:20px;padding:12px;background:#f8fafc;border-radius:8px;text-align:left;">
+            <span style="font-size:14px;color:#475569;">الإجمالي الفعلي:</span><br>
+            <strong style="font-size:18px;color:#003366;">${total} EGP</strong>
+        </div>
+    `;
+}
+
+function sendWhatsApp(){
+    if(cart.length === 0){
+        alert("السلة فارغة! قم بإضافة منتجات أولاً.");
+        return;
     }
 
-    function sendWhatsApp(){
-        if(cart.length === 0){
-            alert("السلة فارغة! قم بإضافة منتجات أولاً.");
-            return;
-        }
+    let phone = "201012646236";
+    let total = 0;
+    let msg = "🛒 *طلب شراء جديد من متجر MKM Fiber Store*:%0A%0A";
 
-        let phone = "201012646236";
-        let total = 0;
-        let msg = "🛒 *طلب شراء جديد من متجر MKM Fiber Store*:%0A%0A";
-        
-        cart.forEach(i => {
-            total += i.productsPrice * i.qty;
-            msg += `• *${i.name}*%0A   العدد: ${i.qty} × السعر: ${i.productsPrice} = ${i.productsPrice * i.qty} EGP%0A`;
-        });
+    cart.forEach(i => {
+        total += i.productsPrice * i.qty;
+        msg += `• *${i.name}*%0A   العدد: ${i.qty} × السعر: ${i.productsPrice} = ${i.productsPrice * i.qty} EGP%0A`;
+    });
 
-        msg += `%0A------------------------%0A💰 *الإجمالي الكلي فودافون كاش / نقداً:* ${total} EGP`;
+    msg += `%0A------------------------%0A💰 *الإجمالي الكلي فودافون كاش / نقداً:* ${total} EGP`;
 
-        window.open(
-          `https://wa.me/${phone}?text=${msg}`,
-          "_blank"
-        );
-    }
-    </script>
+    window.open(
+        `https://wa.me/${phone}?text=${msg}`,
+        "_blank"
+    );
+}
+</script>
 
-    <script src="js/layout.js"></script>
-		<script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        });
+<script src="js/layout.js"></script>
+
+<script>
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    });
 </script>
 </body>
 </html>
